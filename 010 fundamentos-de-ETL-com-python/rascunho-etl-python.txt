@@ -1,0 +1,115 @@
+>>>>>>>> 31/03/2022 <<<<<<<<
+
+1) Fundamentos de ETL
+- Introdução ao ETL - definição 
+ETL dentro do processo de análise de dados
+Extract - Transform - Load (Extração-Transformação-Carregamento)
+
+- Por que precisamos?
+Dados podem vir em formas inconsistentes, por isso são tratados para 
+depois serem carregados em datawarehouses ou em cluster de Hadoop.
+Como tomar decisão com base de dados armazenados em diferentes fontes
+ou bases int/ext? Extração de dados por meio de Batch (lotes de grande 
+quantidade de dados), que é feita com agendamento para não interferir
+em atividades da empresa. Dados Real Time (API, redes sociais, sensores)
+
+- Visão geral do processo de ETL
+Para extração e carregamento de dados, outros processos são feitos dentro
+do processo maior de transformação (validação, limpeza, transformação,
+agregação, sumarização, carregamento). Ex: dataset traz a data 30 de fev 
+que não pode ser validada de imediato por ser errada, precisamos decidir
+o que fazer (excluir o dado o ajustar para último dia útil do mês?).Essa
+decisão correta depende do negócio, de alguém dizer o que deve ser feito.
+Já o caso de dado NA, por não estar disponível e não ser numérico, pode 
+ser eliminado. Pode transformar um dado de ocorrência diária em mensal e
+anual. As pessoas do negócio definem como carregar os dados para gerar as
+informações para tomada de decisões.
+Data Sources - fontes de dados (SO, ERP, CRM, arquivos, excel, API etc.)
+Data Flow - caminho dos dados até serem carregados e disponibilizado para
+ferramentas de análise (BI results)
+Pipeline - segmentação dos processos
+BI results - uso de ferramentas para análise em processos de OLAP analytics, 
+data mining, data visalization, dashboards, reports, alerts.
+- Ferramentas e pacotes
+Exemplificadas opções pra uso com Python. Há outras compatíveis com mais lgs. 
+Apache Airflow - plataforma concebida por eng. do Airbnb para gerenciar
+workflows em que pudessem intervir programando no fluxo. Tesla, Spotfy usam.
+Luigi - facilita a construção de ferramentas de visualização, recuperação
+de falhas, tem interface por linha de comando.
+Bonobo - kit de ferramentas de processamento para ETL, executa processos
+em paralelo, estrai de várias fontes (CSV, json, xml).
+Bubbles - cj de tools para processar, auditar, inspecionar dados, tem foco 
+na compreensão e transparência do ETL.
+Petl - pack de ETL de uso geral, projetado para facilitar o uso com Python
+e construção do ETL; não se aplica a cj de dados muito grandes, que exijam 
+muita memória, similar ao Pandas.
+Pandas - cj de dataframes (para tabelas), pode ser utilizado com uma massa
+maior de dados. Adotado no curso para ETL, escolhido por ser + difundido na
+comunidade de desenvolvimento.
+
+2) Preparação do projeto ETL
+- App Jupyter notebook
+- Instalação e configuração do ambiente - Jupyter no navegador
+Jupyter é usado com diversas lgs, como Markdown. Opções de uso pelo navegador
+ou instalando o JupyterLab (montar laboratorio online para projetos).
+Criado o notebook "projeto": https://jupyter.org/try-jupyter/lab?path=notebooks%2Fprojeto.ipynb
+
+- Instalação e configuração do ambiente - Jupyter na máquina
+comando: pip install jupyterlab no Windows PowerShell, porque travou no cmd.
+comando: jupyter-lab abre o app no desktop em uma porta de rede.
+A diferença é que o notebook já é salvo na máquina local. 
+** Use Ctrl+C to stop notebook, pra não consumir recursos da máquina local.
+Ao acessar pelo desktop, volta-se ao ponto onde parou a última utilização.
+- Conheça a ferramenta Anaconda 
+Entrar em anaconda.com e escolher download para Windows. Depois da instalação,
+acessar a seção Anaconda Navigator para acessar o Jupyter sem linha de comando.
+- Origem dos dados acessíveis para o projeto
+Fonte é a base de dados abertos do Cenipa (Centro de Investigação e Prevenção
+de Acidente Aeronáuticos) da Força Aérea Brasileira
+Link: https://www2.fab.mil.br/cenipa/  Base Opendata AIG Brazil
+Dados disponpíveis em arquivos CSV. A extração será de dados referentes às
+ocorrências de acidentes. Site em manutenção hoje 30/03/3022 19:07.
+Consegui os dados no github do professor e de outra dev:
+prof - https://github.com/ftiosso/dio-curso-etl
+dev - https://github.com/lucianobonfim/opendata_aig_brazil
+
+3) Desenvolvimento do projeto ETL - Extração e validação
+Etapas de: extração, validação, limpeza, transformação
+- Como a extração de dados será realizada; usa código para extrair dados
+do arq de ocorrencias.
+Na planilha de excel das ocorrencias, foram eliminadas colunas: ocorrências
+1, 3 e 4; latitude e longitude; país; investigacao aeronove liberada; 
+investigação status; divulgacao relatório numero; divulgacao de relatorio 
+publicado; dia de publicação; total aeronaves envolvidas; ocorrencias saida
+da pista. Restam 9 colunas para desenvolvimento do projeto. Foram exluídas
+para facilitar o trabalho com arquivo menor e entendimento das etapas.
+
+4) Desenvolvimento do projeto ETL - Limpeza
+Mesmo após validação, há dados que ainda não estão prontos pra transformação, 
+como colunas preenchidas por .,#, *, !, requerem correção antes de passarem
+pra etapa de transformação. Transformar dados inválidos em algo dito de modo
+melhor. O dono do negócio deve informar quais dados serão classificados como
+não informados, sendo depois substituídos por siglas e outros termos.
+
+5) Desenvolvimento do projeto ETL - Transformação 
+Transformação a partir de dados validados e limpos, podemos manipular os dados
+para criar novos cj de dados que geram novas informações a serem utilizadas por
+outros algoritmos ou ferramentas para auxiliar na tomada de decisões.
+
+Rever como ficarão as trocas por NaN nas proximas transformações!! ok
+
+Etapa de carregamento de dados para finalizar o ETL, pode ser feito a fim de
+inserir dados em uma base dados, em arquivo, em cluster de Hadoop, ou seja, há
+várias formas de descarregar os dados tratados em um novo repositório, e esses
+ambientes são diferentes.
+No curso foi utilizado o metodo .loc para fazer os filtros, há outra opção por
+meio do query, eles tem tempo de execucao diferentes.
+
+
+
+
+
+
+
+
+

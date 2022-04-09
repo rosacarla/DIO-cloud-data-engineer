@@ -1,0 +1,80 @@
+>>>>>>>> 26,27-03-2022 >>>>>>>>
+
+FUNDAMENTOS EM PYTHON
+1) Aprenda o que é a linguagem Python e como configurar o ambiente
+de desenvolvimento
+Instalação PY, ide PyCharm, meu_app.py
+
+2)O que são variáveis e como manipulá-las através de operadores
+aritméticos e interação com usuário
+Definição de variáveis, operações, impressão, concatenação, aula2.py
+Usa-se aspas para strings. Comando print imprime textos e strings.
+Comando Python no prompt de comando acessa o terminal Python
+
+3)Como criar um código em Python que funcione de acordo com a
+ relação das variáveis
+estruturas condicionais, calculo de media, aula3.py
+
+4) Como criar laços de repetição em Python
+laços com for e while, claculo de media, aula4.py
+
+5) Como organizar os dados em uma lista ou tupla e realizar 
+operações com elas
+gerar listas[] e tuplas(), alteraçoes e conversoes, aula5.py
+
+6) Organizando conjuntos e subconjuntos de elementos em Python
+gerar conjuntos {}, operacoes, atualizacoes, aula6.py
+Comando difference, por ex., verifica valor que tem um um conj e
+não tem em outro conjunto: cj_x.difference(cj_y)
+
+7) Construindo métodos, funções e classes em Python
+Método chama-se definição = def com retorno torna-se uma função.
+Mét. e fçs são escritos em minuscula e underscore se necessário;
+classe é escrita de letra maiúscula.
+Conceitos de orientação a objetos.
+
+8) Lidando com módulos, importação de classes, métodos e
+construção de funções anônimas (lambda)
+Importar modulos, acessar classes e métodos, fç lambda
+Importar módulo deixa o código mais limpo; importa os modulos
+separados, fica mais simples e elegante, facilita manutenção.
+Pode ter um arquivo principal que trabalha com demais modulos.
+A função lambda ou anônima é forma de simplificar algo usado
+mais de uma vez no código. É eficiente para coisas que serão
+resolvidas com uma única linha.
+
+9) Gere, copie, mova, escreva e leia informações de arquivos
+externos
+Manipulação de arquivos, escrita elegante de código, aula9.py
+Remove ult. elemento da lista ou elemento da posição inf= pop().
+Remove elemento da lista pelo nome do elemento= remove().
+Acrescenta novo valor sempre no final da lista= append().
+
+10) Aprenda a utilizar informações de data, horário e relacionar
+datas diferentes
+DATE, TIME, DATETIME, TIMEDELTA, aula10.py
+Ver "Comportamento de strftime() e strptime()" em:
+https://docs.python.org/pt-br/3.7/library/datetime.html#strftime-and-strptime-behavior
+
+11) Gerenciando e criando exceções customizadas com try, 
+except, else e finally(para o que sempre deve ser executado)
+Ver "Exception hierarchy": https://docs.python.org/3/library/exceptions.html#exception-hierarchy
+Comando raise entra com msg de erro personalizada.
+
+12) Instalando e utilizando pacotes em Python e realizar 
+requisição com requests
+PIP, requests, requisições API
+Projeto separado em pastas com mesmo assunto, cria-se estrutura
+de pastas por assuntos e módulo relacionados aos assuntos; pode
+transformar em pacote que é uma estrutura mais complexa.
+Pacotes ou blibliotecas; simplificam coisas mais complexas. 
+Exemplo: Requests HTTP for Humans; uma forma simples de fazer
+requisição HTTP. Outra opção é o urllib.
+Viacep API: site http://viacep.com.br/
+(json)viacep.com.br/ws/01001000/json/ 
+Pokemon API: https://pokeapi.co/api/v2/pokemon
+Criar ambiente virtual no PyCharm p/ separar versoes de projeto
+com o virtualenv, porque projeto foi feito com versão instalada
+de uma API e, se mudar a versao da API, pode perder funções e
+não rodar o codigo. Jango e Flask são pacotes do Python que se
+instalam da mesma forma.

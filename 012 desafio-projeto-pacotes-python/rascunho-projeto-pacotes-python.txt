@@ -1,0 +1,100 @@
+>>>>>>>> 03/04/2022 >>>>>>>>
+
+##PARTE 1
+Requisitos: Py - projeto empacotado - git
+Passos:criar projeto, gerar distribuições, publicar pacote
+
+Comandos explicados pra criação de projeto a empacotar, com
+arquivos que caracterizarão o projeto como pacote:
+arq principal é o setup.py feito com setuptools, a partir do
+arq são criadas distribuições wheel (distr. binaria) e sdist
+(source distribuition); as quais serão subidas para o Pypi
+usando o twine.Por fim , usa-se pip install nome_pacote pra
+instalar o pacote criado.
+
+##PARTE 2
+Criar projeto e gerar distribuições
+Estruturas de pacotes podem ser simples ou com vários módulos
+(estrutura complexa por ter mais hirearquia)
+ESTRUTURA SIMPLES
+project_name/ #nome do projeto na raiz
+	README.md #3 arquivos e 1 modulo vinculados à raiz
+	setup.py
+	requirements.txt
+	package_name/  #modulo dentro do projeto
+		__init__.py #possibilita diretorio ser invocado como modulo
+		file1_name.py #2 submodulos vinculados ao package
+		file2_name.py
+
+Opções para chamada de arquivo do pacote 
+1) import package_name.file1_name (chamada absoluta)
+2) from package_name import file1_name
+
+ESTRUTURA COMPLEXA
+project_name/ #nome do projeto na raiz
+	README.md #3 arquivos, 1 modulo com 2 submodulos vinculados à raiz
+	setup.py
+	requirements.txt
+	package_name/  #modulo dentro do projeto
+		__init__.py #possibilita diretorio ser invocado como modulo
+		module1_name/ #submodulo 1
+			__init__.py
+			file1_name.py #2 arq dentro do submodulo
+			file2_name.py
+		module2_name/ #submodulo 2
+			__init__.py
+			file1_name.py #2 arq dentro do submodulo
+			file2_name.py
+
+Opções para chamada de arquivo do pacote tem mais 1 nivel de hierarquia
+1) import package_name.module1_name.file1_name 
+2) from package_name.module1_name import file1_name
+Nesta estrut.complexas as 2 chamadas são absoutas.
+
+É boa prática deixar o nome do pacote igual ao do projeto para facilitar
+o import do pacote.
+
+##PARTE 3
+Demosntração do projeto de processamento de imagens
+
+##PARTE 4 
+Configuração dos arquivos do pacote
+
+#######################################################################################################
+##PARTE  5
+PUBLICAR NO FORUM O BUG SOLUCIONADO!! 
+Criação de distribuições do pacote - desafio de projeto 
+Houve erro na execução da linha de comando: python setup.py sdist bdist_wheel.
+A mensagem de erro do Python 3.10 foi esta: "error: invalid command 'bdist_wheel'".
+Neste caso, foi preciso apenas instalar o pacote "whell" com pip install wheel,
+depois reexecutar os comandos para criar as distribuições e conferir a pasta "dist" que foi criada 
+no diretorio do projeto.
+Solução pesquisada:
+https://stackoverflow.com/questions/34819221/why-is-python-setup-py-saying-invalid-command-bdist-wheel-on-travis-ci
+
+##PARTE  6
+PUBLICAR NO FORUM SOLUCAO DE BUG 2!!!!
+Falha no upload de pacote na plataforma TestPypi
+
+Falhou a tentativa de upload/publicação do pacote de teste, por não localizar o repositório e em outras
+tentativas por não reconhecer o comando twine, apesar de estar instalado. Inicialmente tentei executar os
+comandos pelo Git Bash.  
+A mensagem de erro do Python foi a seguinte: twine upload: error: argument --repository-url: expected one argument
+bash: https://test.pypi.org/legacy/: No such file or directory
+Tentei várias soluções sem resultado, como reinstalar o twine, alterar configuração do arquivo PATH, criar
+arquivo .pypirc na pasta Home com dados de login e senha do TestPypi e Pypi. O que funcionou no meu caso foi
+deletar e refazer os cadastros com outro login/senha nos sites TestPypi e Pypi, pois li uma postagem de alguém
+que conseguiu resolver o bug dessa forma, porém não guardei o link do fórum. Então executei os comandos pelo
+Windows PowerShell e rodou tudo como explicado nos vídeos do desafio de projeto.
+Como perdi bastante tempo com iso, deixo meu relato pra talvez ajudar quem tiver falha parecida. 
+
+Link do pacote publicado no TestPypi:https://test.pypi.org/project/package-simple-dio/0.0.1/
+Comando para instalar o pacote de teste: pip install -i https://test.pypi.org/simple/ package-simple-dio==0.0.1
+
+Link do pacote publicado no Pypi: https://pypi.org/project/package-simple-dio/0.0.1/
+Comando para instalar o pacote: pip install package-simple-dio
+
+##PARTE 7
+Resumo e execução de pacote processamento de imagens no Jupyter.
+
+

@@ -1,0 +1,1 @@
+CREATE (:Client {name: "Lula Molusco", age: 30, hobbies: ['Tocar clarinete']}) - [:Bloqueado]->(:Client {name: "Patrick", hobbies:['Caçar água-viva']})

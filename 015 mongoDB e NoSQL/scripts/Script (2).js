@@ -1,0 +1,7 @@
+db.getCollection('clientes').count({})
+db.getCollection('clients').count({})
+db.getCollection('clientes').find({})
+db.getCollection('clientes').find({_id: ObjectId("625075ca638fffbf8c4502e0")}).explain(true)
+db.getCollection('clientes').find({name: "Cliente0"}).explain(true)
+db.getCollection('clientes').createIndex({name : 1}, {"name": "idx_name"})
+db.getCollection('clientes').find({name: "Cliente0"}).explain(true)

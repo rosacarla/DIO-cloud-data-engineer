@@ -1,0 +1,1 @@
+MATCH (bob:Client {name:"Bob Esponja"}), (patrick:Client {name:"Patrick"}) CREATE (bob)-[:Amigo]->(patrick)

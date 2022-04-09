@@ -1,0 +1,34 @@
+>>>>>>>> 05/04/2022 >>>>>>>
+MySql - Explorando relacionamentos com workbench
+
+1) Introdução ao command line
+
+/opt/lampp/bin/mysql -u root (linux)
+
+mysql -u root (windows)
+
+
+
+2) Modelo realcional
+
+Quando há relacionamento de muitos pra muitos, não se faz 
+relacionamentos diretos
+
+playlists
+1 html css
+2 html php js
+3 python php
+
+
+Exibir nome da playlist e autor da playlist 'HTML + CSS'
+SELECT playlist.name_pl, author.name FROM playlist
+JOIN author ON playlist.fk_author = author.id_author WHERE playlist.id_playlist = 1;
+/*
+mostra nome da playlist e autor da playlist 1
+*/
+
+- JOIN faz a mescla de 2 tabelas existentes no banco de dados de acordo
+com os parâmetros informados.
+
+- Pelo princípio da atomicidade dos dados, um dado deve ser único e 
+exclusivo de um atributo de uma determinada entidade.

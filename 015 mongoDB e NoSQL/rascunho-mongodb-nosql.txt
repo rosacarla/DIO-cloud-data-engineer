@@ -1,0 +1,279 @@
+>>>>>>>> 07/04/2022 >>>>>>>>
+
+Introdução ao MongoDB e Banco de Dados NoSQL
+1) Introdução ao NoSQL
+- Apresentação: conteúdos e requistos técnicos
+- Introdução
+bancos dados nao relacionais = BD NoSQL
+Fatores para surgimento de bcos de dados não relacionais:
+Objetivo de suprir deficiencias de bco rel; Internet
+levou ao aumento do volume de dados, criação de app
+nao convencionais, necessidade de suprir demandas de apps
+escaláveis, flexibilização dos dados e armazenamento.
+NoSQL significa não somente SQL, agrupa tecnologias que tem
+em comum a característica de não serem relacionais.
+Hoje é comum o uso simultaneo de BD rel e não rel para apps
+funcionarem em condições mais amplas e adequadas.
+Diferenças entre BD rel e BD não rel
+Escalabilidade rel = vertical e horizontal (só leitura)
+Beneficios escalab horizontal: maior desempenho na aplicação,
+adaptando-se à demanda, escalabilidade infinita se usar nuvem.
+Exemplo: escalar nós do BD em período de maior uso dos dados,
+como durante a noite para app de entrega de comida.
+Schemas são rígidos em BD rel (tab, chaves, linhas, col etc)
+e por isso sao mais organizados; já o BD nao rel permite que
+se guarde qualquer tipo de informação, é free-schema, não tem
+diretriz de estrutura para pré-definir o tipo de dado contido,
+mas tem regras de boas práticas que organizam. Pode ter tipos
+de consultas diferentes para mesmo BD feito em não relacional.
+BD rel depende do disco do computador para performance e BD
+nao rel depende do tamanho do cluster e da latencia da rede
+para performar melhor.
+Atomicidade = executa por completo transação, nada pela metade,
+se há erro é feito rollback da transação
+Consistência = BD íntegro conforme schemas após transações
+Isolamento = uma transação não interfere na outra
+Durabilidade = concluida transação o dado nao será perdido
+BD nao rel não tem transações, somente MongoDB tem, eles abrem
+mão do ACID para ter alta disponibilidade e desempenho.
+Propriedade de base dos BD nao rel: priorizar disponibilidade,
+não precisa ser consistente o tempo todo, será consistente em 
+um tempo determinado.
+
+2) Conhecendo os tipos de bancos de dados NOSQL
+- Tipos de bancos NoSQL
+MongoDB é BD orientado a docs. Cassanda orientada a col, Neo4j
+orientado a grafos (para redes sociais, detecção de fraudes).
+BD de colunas é o que menos difere de BD tradicionais.
+Grafos sao estruturas matematicas compostas por nós (em BD sao
+dados) e vértices (em BD sao relacionamentos). 
+Exemplo: BD Neo4j (aplica ACID)
+Prática em: sandbox.neo4j.com; fornece chave e endereço para 
+usar o BD concatenado em aplicações. 
+NÓ pode ter propriedades e labels ou não ter nenhuma delas.
+Comando CREATE não precisa ser replicado para criar proximo
+nó, vale para toda a estrutura de nós e seus relacionamentos.
+Relacionamentos vão dentro de colchetes com seta [] -->. 
+Exemplo de labels: Bloqueado, Amigo, Client, Client_Premium
+Relacionamentos podem ter propriedades.
+- Coluna/familia de colunas
+BD nao rel baseados em colunas armazenam dados diretamente
+em colunas que são independentes entre elas.É diferente a 
+hierarquia de BD rel e BE não rel, apesar de serem parecidos.
+BD rel tem database com tabelas, linhas e colunas.
+BD nao rel tem keyspace com familias de colunas, equiparadas
+as tabelas dos BD rel. Cada col tem uma linha que armazena o
+valor, chave, timestamp (datas). Apesar de ser visualizada,
+por trás do BD não existe col com valor nulo.
+BD Cassandra baseado em colunas, modelo baseado no Big Table
+da Google, usado por Netflix, Twiter, Facebook. Apropriado
+pra banco com volume maior de leitura do que escrita; uso é
+adequado com consultas feitas por chave primaria, pode buscar
+por outros dados com uso de índices, mas a performance cai. 
+Chave primaria = row key, com sentido pensado p/ consulta.
+Cassandra tem ausência total de transações.
+Prática no site O'Reilly katacoda.com sem opção de integrar
+BD com aplicação. É ambiente de curso Cassandra CQL.
+https://www.katacoda.com/datastax/courses/cassandra-try-it-out/try-cql
+Tem diferença em nomenclaturas e arquitetura. Ao criar keyspace
+no Cassandra, passa por json as propriedades de configuração.
+Comando "SELECT age, WRITETIME(age) FROM clients" mostra que
+col age não contem dado nem data de uso, apesar de exibir a
+coluna com NULL. Em BD rel quando se atualiza uma coluna é
+feita alteração em todas as linhas, diferente do BD nao rel
+que só altera a col indicada porque col são individualizadas.
+- Chave-valor 
+Tem identificador exlusivo, pode conter string, json, valor
+numerico, inteiro, listas, hash, patch. A busca é limitada por
+ser feita somente com chave primária. 
+Base do Cassandra foi o DynamoDB. Exemplos: Redis, Amazon
+No Redis os dados são estruturados sem tabelas, somente com as
+chaves-valores; não existe schema para definir chave-valor.
+Prática: try.redis.io
+No Redis é possível passar o tempo de expiração de uma chave,
+útil para cache e sessão de usuário, durante a criação de 
+registros no banco.
+EX = quantos segundos expira a chave
+PX = quantos milissegundos expira a chave
+- Documento 
+BD doc é mais utilizado dentre os nao rel; MongoDB é o lider.
+Neo4j usa linguagem Cypher
+
+3) Introdução ao MongoDB e instalação
+- Introdução ao MongoDB
+MongoDB não tem suporta a SQL; tem linguagem própria.
+Instalação com Docker, criado arq docker-compose, mas não rodou.
+Código aberto, alta performance, schema-free (não precisa
+definir esquema pra gerar collections), usa json pra armazenar
+dados (usa bson = json com binarios, pares de chaves e valores).
+Dentro de mesma collection tem docs de estruturas diferentes.
+Tem suporte a indices para consultas mais complexas e garantir 
+a integridade do banco.
+Auto-sharding pra escalar de modo horizontal (nativo), permite
+escala vertical tendo rapidez de leituras; por ser livre de 
+schemas facilmente podem ser acopladas mais máquinas para 
+operar junto com o MongoDB.
+Escalabilidade vertical adiciona mais recurso na maquina
+Map-reduce é ferramenta de consulta e agregação, diferencial
+pra processar grande volume de dados.
+GridES é suporte a armazenamento de arquivos, útil pra uploads.
+Rica linguagem de consulta permite fazer tudo dentro do BD.
+Pra usar MongoDB, deve-se lembrar que dados não podem depender
+de outros dados.
+ESTRUTURAÇÃO DO mongoBD 
+Document ==> Tupla/Registro (), menor unidade, identificador,
+precisa ser autocontido e autodescritivo.
+Pode fazer referencia a outros docs, mas não é recomendada essa
+pratica; dados independentes podem gerar redundâncias.
+Collection ==> Tabela, recebe os docs, schema free por isso se
+aplicam autodescrições aos docs durante a criação; pode guardar
+varios tipos de docs.
+Embedding/linking ==> Join, hoje pode conter referencias dentro
+de docs para outras collections; dentro do docs deve ter a sub-
+estrutura dele; deve conter nome e lista de atributos.
+Quando usar: grande volume de dados; dados não necessariamente
+estruturados, ex: cardapio online tem dif itens, descricoes.
+Quando não usar: necessidade de relacionamento/joins, não sendo
+aconselhável buscar dados em outras collections porque prejudica
+a performance do BD.
+Hoje em dia se fala em ter estrutura de BD poliglota, por ex,
+site de delivery pode ter cardapio online e cadastro clientes
+em bco nao rel e parte financeira, ACID em bco rel, pois sistema
+de BD pode orquestrar tudo com boa performance e segurança.
+Exemplos de usuarios: Linkedin, OGlobo, MTV.
+
+- Instalação
+Docker, plataforma de codigo aberto, permite criar e administrar
+software em ambiente isolado antes da entrega. Objetivo: criar,
+testar, implementar aplicações em ambiente separado da máquina na
+qual será entregue ou na nuvem. 
+Docker compose é arquivo que especifica as propriedades de cada
+conteiner, links entre diferentes conteiners, consiga subir tudo
+para nuvem. Criado no editor de texto Sublime Text.
+Site https://www.sublimetext.com/
+Consultar versao do docker compose atual é 3.8 (07/04/2022)
+https://docs.docker.com/compose/compose-file/compose-versioning/
+https://hub.docker.com/
+Plataforma online para conectar ao MongoDB: robomongo.org
+
+LINK PARA MONGODB CLOUD, clicar no botão Connect para copiar:
+mongodb...://...:<senha>dio@cluster...
+
+- MongoDBCloud
+Criado o cluster0, user dio, password dio, quando usar o link
+acima, trocar senha para dio (funcionou no mongosh)
+Não funcionou comando mongosh (tinha no link do cluster cloud);
+fiz download pela instrução do mongodb cloud. 
+Instalei MongoDB Compass e consegui conectar ao cluster.
+Logon no MongoDB Cloud pelo sem cadastro de usuario, usado g.
+
+4) Schema Design e boas práticas
+- Schema Design
+Embedding vs Referência
+Embedding = doc autocontido, sem fazer referencia a outra collec
+tion e docs. Não tem conceito de foreing key, não tem restrição,
+mas terão atributos que farão referencias externas.
+Atributo parts guarda ids para referencia a outros docs
+Embedding tem relacionamentos dentro do proprio doc, que são
+chamados de subdocumentos. Aplica atomicidade dentro de mesmo
+doc, se trabalhar com alguma ref perde a atomicidade.
+Referência = usada quando a referencia é pouco consultada, se
+fizer consulta todas as vezes em outro doc, tira a função dos
+joins e coloca na aplicação. Não é boa prática, por fazer mais
+queries, exigir mais da memoria, diminuir performance. 
+
+- Boas práticas
+Evitar docs grandes, não tem local p/ schemas, usar campos
+pequenos e curtos com significado, analisar queries com 
+comando explain(). No UPDATE, a query pode receber um json 
+completo, cuidar para atualizar só campos alterados.
+MongoDB não consegue indexar condicoes e valores negativos,
+há escaneamento completo da query quando usado operador NE.
+
+- JSON vs BSON
+MongoDB armazena dados usando o BSON.
+
+5) Alguns conceitos na prática
+- Operaçoes de manipulação de dados
+database = collection = docs
+Criar collection explícita com comando responsável por criá-la
+e a outra forma é com comando "use" que cria coll se não existir
+uma com mesmo nome. Explícita: passa validadores como tamanho de
+doc, tam da coll, nro max de docs. 
+Implícita: sem validadores. Exemplo de criação implicita de coll
+c/ dado inserido em doc: db.test1.insertOne({"age": 10});
+
+capped = inf que coll será limitada c/ True ou False
+comando "insertOne" insere um unico doc, tem retorno de id do doc
+{
+  acknowledged: true,
+  insertedId: ObjectId("624fceb86b36ae249cc5a7bf")
+}
+
+BulkWriteResult = mostra o que foi feito na collection
+Criar docs interOnse(), insertMany(), insert()
+
+Insere dados na collection e cria se não exixtir outra com o 
+mesmo nome: db.clients.insert([{"name": "Karen", "age": 41}])
+
+Mostra dados inseridos em collection: db.clients.find({});
+
+{ _id: ObjectId("624fd1f56b36ae249cc5a7c2"), name: 'Karen', age: 41 }
+
+Comando "save" con inf de objeto novo, resulta em inserção de doc.
+Comando "update" atualiza todos docs indicados se houver junto o 
+parametro "multi:true".
+Operador and não tem um termo específico, quando passamos grupo
+de parametros dentro do mesmo json de consulta, ele aplica and
+automticamente. Operador ou sem operador.
+Find... $lt = procura todos abaixo de 
+Find... $lte = procura todos menor ou igual 
+Deleção de docs "deleteOne" e "deleteMin"
+
+- Performance e índices
+Indices em nosql sao semelhantes aos de sql, previnem um scan
+collection; dá direção ao banco de onde está a informação.
+
+Código para inserir docs em massa na coleção clients, coluna
+"Cliente" com nome e idade:
+use fenda_bikini;
+for(var i=0; i< 10000; i++){
+	db.clients.insert({name: "Cliente" + i, age:i});
+}
+
+db.getCollection('clientes').count({})
+
+db.getCollection('clients').count({})
+
+db.getCollection('clientes').find({})
+
+db.getCollection('clientes').find({_id: ObjectId("625075ca638fffbf8c4502e0")}).explain(true)
+
+db.getCollection('clientes').find({name: "Cliente0"}).explain(true)
+
+db.getCollection('clientes').createIndex({name : 1}, {"name": "idx_name"})
+
+db.getCollection('clientes').find({name: "Cliente0"}).explain(true)
+
+Comando "explain" analisa as queries, informa quantos docs foram
+analisados, tempo de execução, se usou índice ou não.
+Para evitar o connection scan na analise do explain, podemos 
+criar um índice com comando "createIndex".
+
+- Agregações
+Importado dataset sample no mongoDB. 
+Agregações combinam varios processamentos.
+Pipelines básicos de agregação são compostos por "filtros" (para
+fazermos match de quais dados processar) e "operadores" (funções
+que manipulam os dados e dao inputs para proximas etapas).
+Operadores para manipulação de resultados: $group e $addFields.
+$group é util pra agrupar por campo, contar o que tem, saber os
+valores max e min, media. O parâmetro enviado ao metodo de
+agregacao é um array. Group recebe cj de parametros como id
+(campo onde se quer aplicar a agregação), acumulador ou outra 
+operação que se deseja fazer dentro do agrupamento.
+$addFields adiciona novo campo ao resultado sem alterar a collec
+tio de origem.
+Funções: $sum (soma), $avg (media), $max, $min 
+$avg só pode ser aplicado em campos do tipo number
+Operadores lógicos: $and, $or, $not, $nor

@@ -1,0 +1,92 @@
+/*
+:server connect
+
+Connect to Neo4j
+
+Database access might require an authenticated connection
+You are connected as user neo4j
+to ...
+Connection credentials are stored in your web browser.
+*/
+
+-- Server version	Neo4j/4.4.5
+-- Server address	...
+
+-- Query 1
+CREATE (:Client {name: "Bob Esponja", age: 28, hobbies:['Caça água-viva, comer hamburger']})
+
+-- Query 2
+MATCH (bob_esponja) RETURN bob_esponja;
+
+-- Query 3
+CREATE (:Client {name: "Lula Molusco", age: 30, hobbies: ['Tocar clarinete']}) - [:Bloqueado]->(:Client {name: "Patrick", hobbies:['Caçar água-viva']})
+
+-- Query 4
+MATCH (todos) RETURN todos;
+
+-- Query 5
+CREATE (:Object)
+
+-- Query 6
+MATCH (todos) RETURN todos;
+
+-- Query 7 
+MATCH (lula:Client {name:"Lula Molusco"}), (patrick:Client {name:"Patrick"}) CREATE (lula) - [:Bloqueado] -> (patrick)
+
+-- Query 8
+MATCH (todos) RETURN todos;
+
+-- Query 9 com erro!
+MATCH (lula:Client {name:"Lula Molusco"})-[relaciona:Bloqueado->]-() DELETE relaciona
+
+/* ERROR Neo.ClientError.Statement.SyntaxError
+
+Invalid input '-': expected
+  "*"
+  "]"
+  "{"
+  "|"
+  a parameter (line 1, column 63 (offset: 62))
+"MATCH (lula:Client {name:"Lula Molusco"})-[relaciona:Bloqueado->]-() DELETE relaciona"
+                                                               ^
+*/
+
+-- Query 10 
+MATCH (lula:Client {name:"Lula Molusco"})-[relaciona:Bloqueado]-() DELETE relaciona
+
+-- Query 11
+MATCH (todos) RETURN todos;
+
+-- Query 12
+MATCH (lula:Client {name: "Lula Molusco"}) DELETE lula;
+
+-- Query 13
+MATCH (todos) RETURN todos;
+
+-- Query 14
+MATCH (bob:Client {name:"Bob Esponja"}), (patrick:Client {name:"Patrick"}) CREATE (bob)-[:Amigo]->(patrick)
+
+-- Query 15
+MATCH (todos) RETURN todos;
+
+-- Query 16
+MATCH (patrick:Client {name:"Patrick"}) SET patrick.age = [23];
+
+-- Query 17
+MATCH (todos) RETURN todos;
+
+-- 	Query 18 com erro na label!
+MATCH (patrick:Client {name:"Patrick"}) SET patrick.Client_Premium
+
+/* ERROR Neo.ClientError.Statement.SyntaxError
+
+Invalid input '': expected "." or "=" (line 1, column 67 (offset: 66))
+"MATCH (patrick:Client {name:"Patrick"}) SET patrick.Client_Premium"
+                                                                   ^
+*/
+
+-- Query 19
+MATCH (patrick:Client {name:"Patrick"}) SET patrick:Client_Premium
+
+-- Query 20
+MATCH (todos) RETURN todos;

@@ -1,0 +1,1 @@
+MATCH (bob_esponja) RETURN bob_esponja;

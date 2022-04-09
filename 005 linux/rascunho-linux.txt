@@ -1,0 +1,111 @@
+kernel = dá vida ao SO, núcleo ou linha de codigo que dá vida ao SO
+linux é multitarefa e multiusuário
+distribuído por empresas que podem personalizar o SO
+Distribuições: ubuntu, debian, suse, fedora, refhat, kali
+
+Terminal = shell ou Konsole, linha de comando p/ executar programas
+uso para automação de processos
+
+abre terminal = CTRL + ALT + T
+usuario admim Windows = usuario root Linux
+pasta pessoal = ~ é a pasta de usuário carla
+pwd = mostra pasta em que está
+dir Win = ls Lin (2 funcionam no linux)
+ls nome da pasta = mostra conteúdos/arquivos da pasta
+cd nome da pasta = entra no diretorio
+mkdir nome da pasta nova = cria pasta em um diretorio
+diretorio C: do Windows = diretorio / do Linux
+ls mostra todos diretorios do Linux no /
+ls -l = mostra diretorio com detalhes
+man ls = mostra manual do ls 
+ls --help = manual em PT do ls
+usar 1 traço com letra ou 2 traços com palavras
+cd ~ = volta a pasta pessoal
+history = lista comandos usados 
+seta para cima = mostra comandos usados no terminal
+!! = executa de novo ultimo comando
+tab = completa palavra
+rmdir nome pasta = remove pasta ou apaga arquivo (criado com touch)
+touch nome pasta = cria arquivo em pasta
+clear = limpa tela
+CRTL D ou exit = sai do terminal
+
+VMWare Workstation Player 15
+https://www.vmware.com/go/getplayer-win
+
+Ubuntu 20.04 LTS
+https://ubuntu.itsbrasil.net/ubuntu-releases/20.04/ubuntu-20.04-desktop-amd64.iso
+
+25-03-2022
+REDE = cj de equipamentos interligados para trocarem informações e
+compartilharem rescursos. Tem nós
+Rede Wan é rede de área mundial geograficamente distribuída, redes 
+continentais ou que interligam países.
+Rede Man é rede metropolitana, interligando cidades.
+Rede Lan é rede local de uma casa. um prédio ou único campus.
+Propotocolo é lgm usada por dispositivos de uma rede para se entender.
+IP - prot de internet, endereço IP, nro que identifica computador na
+rede de casa e na web.
+ICMP - prover msg de controle da comunicação entre nós.
+DNS - prot de aplicação, identifica endereços de IP para manter tabela 
+com endereços dos caminhos de algumas redes.
+Interface de rede - no diretorio /dev do Linux
+
+Comando ifconfig faz parte do pacote net-tools do Linux.
+IP do notebook
+inet xxxxxxxxx (ipv4, end da MV na rede local)
+netmask xxxxxxxx.0 (separa rede publ da rede privada)
+broadcast xxx.xxx.xxx.xxx (endereço publ da rede local)
+inet6 xxxxxxxx.xxxxxx (seq hexadecimal, permite mais pc na web))
+ether xxxxxx (end mac, é físico e único da placa de rede, vem
+gravado na placa de rede, como se fosse um cpf)
+inet xxx.x.x.x (end interface de loopback, end local)
+ens33 - nome de rede cabeada virtual
+
+Comando hostname = nome do computador na rede
+hostname -I = nro de IP
+hostname -i = nro de loopback
+ping + url = verifica se host está ativo 
+DNS transforma nro de IP em uma url ou nome de host
+
+init 0 = desliga maquina 
+telinit 0 = desliga a VM
+halt = pede autenticação antes de desligar a VM
+
+Revisao - https://bellard.org/jslinux/
+
+Dependencias = pacotes necessários ou pacotes extras de programas
+dpkg = instala pacotes tipo deb com sudo dpkg -i
+sudo dpkg -I pcote.deb = traz descrição so pacote
+sudo dpkg -r nomepacote = remove pacote  (ver descrição do pacote)
+
+Instalar Fedora = getfedora.org/pt_BR/
+ctrl + alt = sai da VM
+
+Instalar pacote rpm = rpm -ivh pacote.rpm 
+sudo rpm - ivh --nodeps pacote.rpm
+Atualizar pacote rpm = rpm -U pacote.rpm
+Remover pacote rpm = rpm -e pacote.rpm
+Instalar pacote rpm com yum = sudo yum install pacote
+Atualizar pacote rmp com yum = sudo yum update pacote
+Remover pacote rmp com yum = sudo yum remove pacote
+Erro "waiting for process with pid 1234..." deve-se reiniciar a MV.
+
+Permissões de diretorios : letra 'd' para diretorio e '-' para arquivo
+chmod = muda a permissao de um arq ou diretorio
+
+compactar arquivo  = gzip arquivo
+zip arquivo.zip arquivo.txt
+zip arquivos.zip maio.txt vazio.txt distros.txt (+ de 1 arq compacto)
+
+descompactar arquivo - gunzip arquivo.gz
+unzip arquivo.zip
+compactação máxima = gzip -9 arquivo 
+
+remover arquivo.zip = rm nomearq.zip
+bzip2 é compactador mais atualizado = bzip2 nomearq
+descompactar bzip2 =  bzip2 -d aularedes.txt.bz2 
+
+Instalar programa rar
+compactar com rar = rar arquivo.rar nomearq.txt
+descompactar com rar = rar x arquivo.rar

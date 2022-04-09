@@ -1,0 +1,145 @@
+>>>>>>>> 29/03/2022 >>>>>>>>
+
+1) Introdução aos conceitos de Segurança da Informação e Ping
+Informação tem sentido dentro de um contexto.
+Seg da info está implicada quando há informação envolvida
+em processo de comunicação.   
+Ciclo de vida da info: gerada-transportada-descartada
+
+- O que é segurança da informação?
+Principais principios da SI: Integridade (não se descarta 
+informação vazada ou corrompida), Confidencialidade (info
+sigilosa está disponivel a quem tem autorização de acesso), 
+Disponibilidade (garante que a info está disponpivel ou já
+foi perdida/danificada). Identificação (identifica entidade: 
+pessoa, crachá, símbolo da empresa, login, senha).Autenticação
+(senha, token, biometria); Autorização (entidade autorizada
+para entrar em sistema); Não repúdio (impede que entidade 
+negue o que fez no sistema).
+Desenvolver ferramentas que prezem por todos os princípios 
+da SI. Existe a área de desenv. de software seguro desde a
+criação até fim do seu ciclo de vida. Ex.: desenvolver em
+python um programa que envia pacotes ping a um host para ver
+se está ativo ou não, contempla princípio de disponibilidade.
+
+- O que é ping?
+Protocolo ICMP é usado pelo PING, que é dependente do SO. 
+Ping envia mensagem request e recebe uma resposta replay.
+Resposta: destino encontrado ou não
+Exemplo: testar se aplicação web, computador de uma serie,
+host estão respondendo ou não. 
+
+Para criar projeto no PyCharm (Pyton 3.10), editar nome do
+projeto no caminho e manter esse nome após a palavra "venv"
+no campo de ambiente virtual.Assim a criação do projeto não
+falha, pois falhou quando coloquei o nome antes do venv, do
+jeito que o professor fez no Python de versão anterior.
+
+2) Introdução a Socket e cliente TCP/UDP e Server
+- Bliblioteca Socket
+Faz parte do Pythone e outras lgns de programação; permite 
+controlar abertura, fechamento, sincronizacao de conexoes
+direto com a placa de rede. 
+Criação de server para que clientes TCP e UDP se conectem.
+
+** BUG RESOLVIDO - COMPARTILHAR NO FORUM DO BOOTCAMP!!!
+Solução para OSerror [WinError 10048] no Windows 10
+vinculado à linha de código: s.bind((host, port))
+OSError: [WinError 10048] Normalmente é permitida apenas uma
+utilização de cada endereço de soquete (protocolo/endereço de rede/porta)
+Em resumo, é necessário configurar inicialização limpa do
+Windows, deste modo: abrir Iniciar e digitar msconfig; na aba
+Inicialização de Programasclicar no link "Abrir Gerenciador de
+Tarefas", desabilitar todos os aplicativos; na aba Serviços
+selecionar "Ocultar todos os serviços Microsoft", clicar em
+"Desativar tudo", Aplicar e OK. Reiniciar o Windows e utilizar
+um antivírus atualizado. Depois disso, o servidor poderá ser 
+ativado. Ao concluir o exercício, é recomendável reativar pelo
+menos os aplicativos de segurança da sua máquina. 
+Executar instrução deste link: 
+https://answers.microsoft.com/pt-br/windows/forum/all/mensagem-de-erro-listener-windows-socket-error/f675edcd-8b6a-e011-8dfc-68b599b31bf5
+
+3) Desenvolvimento de Ferramentas parte 1
+O que é a biblioteca Random, um hash e Multithreading?
+encriptação (gera hash) e decriptação (quebra hash)
+site Hash md5 - https://md5decrypt.net/en/
+
+Exemplos de encriptação:
+Md5(Python para Segurança) = 4f194187be0f43976418aea2031feb79
+Md5(Pthon para Segurança) = dfbfd88496617237818d2f5bbb8809a5
+Sha1(Python para Segurança) = e0988b397ea4ab9ab0e1c21aa9ccc3dfd3d21dd7
+Sha1(Pthon para Segurança) = 11abd8bbcafefa27afb7fb802878b5dbcd1fbfe3
+Sha1(test123) = 7288edd0fc3ffcbe93a0cf06e3568e28521687bc
+Exemplo de decriptação:
+7288edd0fc3ffcbe93a0cf06e3568e28521687bc : test123
+Found in 0.365s
+
+Usado em provas de perícia forense em TI. O perito compara os
+hashes dos arquivos copiados com originais e coloca nos laudos.
+Numa audiência, pode comprovar a originalidade de um arquivo, 
+o perito pode gerar a hash e mostrar que é igual ao que está no
+dispositivo da parte envolvida.
+Maioria dos sites não guarda senha de usuários em caracteres ASCII,
+porque guarda em hash. No exemplo de decriptação, havia test123
+que é senha bastante usada e fácil de quebrar a criptografia.
+
+Multithreading = varios processos concorrem no mesmo procedimento;
+dentro de um processo conseguimos fazer várias solicitações de 
+processamento. Ex.: Google Chrome, podemos abrir várias guias, são  
+processos que concorrem simultaneamente com outras solicitações, o
+que dá impacto no processamento da máquina.
+
+Em Seg da Inf, um bom tamanho de senha tem 16 caracteres.
+No Brasil é possível gerar senhas com "ç".
+
+- Trabalhando com Threads e IP's
+** PortScanner em Pynthon - ver aula no DIO Pro!
+Com multithreads é possivel fazer 2 coisas ao mesmo tempo, sendo
+chamado também de paralelismo.
+No caso de somas com IPs, a numeração vai até 255 e depois passa
+para o proximo bloco.
+Exemplos de rede: 192.168.0.0/32 tem único IP; 192.168.0.0/24 
+tem 255 IPs; 192.168.0.0/4 tem +- 16 milh de IPs; 192.168.0.0/0
+tem 4 bi de IPs.
+
+4) Desenvolvimento de Ferramentas parte 2
+Exemplos de hashes gerados:
+A hash MD5 da string:  Python é:  a7f5f35426b927411fc9231b56382173
+A hash SHA1 da string:  Python é:  6e3604888c4b4ec08e2837913d012fe2834ffa83
+A hash SHA256 da string:  Python é:  18885f27b5af9012df19e496460f9294d5ab76128824c6f993787004f6d9a7db
+A hash SHA512 da string:  Python é:  fd9d4d5b7a8a8fae6b1bc099b799110f7e4338606e2610f5d9506a4346e0c3bfbc525f4eed1e05aa8c6f46b8efff526ec48b500928a1b341ade5a7855f533932
+
+- Gerador de Wordlists
+Na área de Seg da Inf, existe a área de segurança ofensiva, que faz
+testes de invasão, práticos e reais, feitos em sistemas com várias
+ferramentas. Por ex.: testa se autenticação de usuario/senha batem 
+com o que está na lista Wordlists.
+- Web Scraping
+Na área de pentest (dentro da seg. ofensiva); web scraping ajuda fazer
+a mineração de dados. Web scraping é um programa de análise, pode
+trazer somente informações procuradas com CTRL + F.
+Recorte do html 
+<h4 class="-gray-dark-2 -font-base -bold">
+            Recordes de frio à vista
+Frente fria provoca temporais no Sul e ZCIT no Norte e Nordeste
+
+-Web Crawler
+recebe outros nomes como spyder e robot, que captura informações dos 
+links da página e traz o mais importante (palavras chave). Usado em
+Data Mining e Data Science.
+
+5) Desenvolvimento de Ferramentas parte 3
+- verificador de telefone localiza de onde é o nro, pode usar nro de
+outros países, teste de invasão (penetration tests, ou pentests)
+Telefone do google +16502230000
+
+- ocultador de arquivos protege a segurança de arquivos
+
+- verificador de IP externo
+Ip externo que todo pc conectado a internet possui, é o endereço do
+computador. Usando site: http://ipinfo.io/json para consulta sobre
+IP do meu PC. IP gerado com proxy ==> 198.251.83.248
+
+- ferramenta gráfica para abrir o navegador
+cria uma janela com botão para abrir o google
+Vídeo ScreenCast: https://screencast-o-matic.com/watch/c3ewhAVqFve 

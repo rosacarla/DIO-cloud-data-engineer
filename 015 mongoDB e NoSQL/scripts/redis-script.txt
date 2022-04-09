@@ -1,0 +1,100 @@
+Welcome to Try Redis, a demonstration of the Redis database!
+
+Please type TUTORIAL to begin a brief tutorial, HELP to see a list of supported commands, or any valid Redis command to play with the database.
+
+
+> SET user1:name "Bob Esponja"
+OK
+> GET user1:name
+"Bob Esponja"
+> SET user '{"name": "Patrick", "age": 31}'
+OK
+> GET user1:name
+"Bob Esponja"
+> GET user
+"{\"name\": \"Patrick\", \"age\": 31}"
+> SET user2:name "Lula Molusco" EX 10
+OK
+> GET user:name
+(nil)
+> EXIST user2:name
+(error) I'm sorry, I don't recognize that command. Please type HELP for one of these commands: DECR, DECRBY, DEL, EXISTS, EXPIRE, GET, GETSET, HDEL, HEXISTS, HGET, HGETALL, HINCRBY, HKEYS, HLEN, HMGET, HMSET, HSET, HVALS, INCR, INCRBY, KEYS, LINDEX, LLEN, LPOP, LPUSH, LRANGE, LREM, LSET, LTRIM, MGET, MSET, MSETNX, MULTI, PEXPIRE, RENAME, RENAMENX, RPOP, RPOPLPUSH, RPUSH, SADD, SCARD, SDIFF, SDIFFSTORE, SET, SETEX, SETNX, SINTER, SINTERSTORE, SISMEMBER, SMEMBERS, SMOVE, SORT, SPOP, SRANDMEMBER, SREM, SUNION, SUNIONSTORE, TTL, TYPE, ZADD, ZCARD, ZCOUNT, ZINCRBY, ZRANGE, ZRANGEBYSCORE, ZRANK, ZREM, ZREMRANGEBYSCORE, ZREVRANGE, ZSCORE
+> EXISTS user2:name
+(integer) 0
+> EXISTS user1:name
+(integer) 1
+> LPUSH user1:hobbies "Caçar água-viva"
+(integer) 1
+> LPUSH user1:hobbies "Comer hamburgers"
+(integer) 2
+> GET user1:hobbies
+(error) WRONGTYPE Operation against a key holding the wrong kind of value
+> LINDEX user1:hobbies 0
+"Comer hamburgers"
+> LINDEX user1:hobbies 1
+"Caçar água-viva"
+> LINDEX user1:hobbies 2
+(nil)
+> LRANGE user1:hobbies 0 1
+1) "Comer hamburgers"
+2) "Caçar água-viva"
+> LRANGE user1:hobbies 0 0
+1) "Comer hamburgers"
+> TYPE user1:name
+"string"
+> TYPE user1:hobbies
+"list"
+> TTL user1:name
+(integer) -1
+> SET user2:name "Patrick" EX 60
+OK
+> TTL user2:name
+(integer) 46
+> TTL user2:name
+(integer) 39
+> TTL user2:name
+(integer) 30
+> PTTL user2:name
+8062
+> TTL user2:name
+(integer) 5
+> TTL user2:name
+(integer) 1
+> TTL user2:name
+(integer) -2
+> TTL user2:name
+(integer) -2
+> SET user2:name "Patrick" EX 30
+OK
+> TTL user2:name
+(integer) 27
+> GET user2:name
+"Patrick"
+> TTL user2:name
+(integer) 11
+> PERSIST user2:name
+(integer) 0
+> GET user2:name
+(nil)
+> SET user2:name "Patrick" EX 15
+OK
+> TTL user2:name
+(integer) 7
+> GET user2:name
+(nil)
+> SET user2:name "Patrick" EX 15
+OK
+> PERSIST user2:name
+(integer) 1
+> TTL user2:name
+(integer) -1
+> GET user2:name
+"Patrick"
+> GET user2:name
+"Patrick"
+> DEL user2:name
+(integer) 1
+> EXISTS user2:name
+(integer) 0
+> GET user2:name
+(nil)

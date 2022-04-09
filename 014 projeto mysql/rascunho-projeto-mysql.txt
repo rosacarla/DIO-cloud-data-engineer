@@ -1,0 +1,10 @@
+>>>>>> 07/04/2022 >>>>>>>
+MySql - Como modelar um banco de controle de séries assistidas
+Tabela de controle de series e filmes assistidos
+
+- Parte 1
+estrutura do projeto
+
+- Parte 2
+desenvolvimento do database, frontend, backend
+

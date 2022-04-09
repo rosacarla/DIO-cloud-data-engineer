@@ -1,0 +1,15 @@
+vi docker-compose.yml
+version: '3.8'
+
+services:
+        db:
+          image: mongo
+          container_name: db
+          restart: always
+          environment:
+            - MONGO_UNITDB_ROOT_USERNAME=dio
+            - MONGO_UNITDB_ROOT_PASSWORD=dio
+          ports:
+            - "27017:27017"
+          volumes:
+            - /Users/carla/DIO/dbdata:/data/db

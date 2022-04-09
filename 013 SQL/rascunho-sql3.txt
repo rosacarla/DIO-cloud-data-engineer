@@ -1,0 +1,49 @@
+>>>>>>>> 06/04/2022 >>>>>>>>
+
+MySQL - Consultas com Join
+- Introdução - arquivo pra download com código
+INNER JOIN e OUTTER JOIN; LEFT e RIGTH 
+UNION une consultas diferentes
+Tabelas: canais, videosyt, videos_canais
+
+- Apresentação da estrutura inicial do banco de dados
+Tabela videos_canais contém o relacionamento de muuitos para muitos
+entre videos e canais, estão nela as chaves estrangeiras. Ao fazer
+SELECT * FROM video_canais traz resultado somente com nros ou ids de
+cada canal e video associados à chave primaria dessa tabela para
+relacionamentos (id_canais_video).
+Consulta relacionando:
+tab video à tab canal e tab canal a tab canais_video
+
+- Realizando consultas com comandos JOIN e AS
+Usado AS para atribuir apelidos a nomes de tabelas.
+Criada tab videos_canais somente para relacionar (com chaves primaria
+e 2 estrangeiras) com as outras 2 tab (videos + canais).
+
+- Conceito inicial sobre RIGHT e LEFT JOIN
+Pra usar clausula OUTER JOIN é necessário identificar local da consulta
+onde não terá relacionamento. Estrutura da consulta com as tabelas:
+videos_canais[id_canais_video,fk_canal,fk_video], à direita de vc tem
+videos[id_video,nome_video,autor_video], à direita de v tem 
+canal[id_canal,nome_canal]. Informacoes desejadas (sem relacionamento)
+estão à direita.
+Primeira tabela da query está à esquerda e a segunda tabela à direita.
+Só pode usar UNION quando tabelas possuem nro de colunas iguais.
+
+- Realizando consultas com comando WHERE e conclusao da aula
+Clausula WHERE faz consulta de dado específico, traz só o que é filtrado.
+É melhor fazer buscas pelo id por ser único, pois pode haver mais de 
+uma dado com mesmo nome. Usada em busca exata para deleção de campo.
+
+INNER é o valor padrão da cláusula JOIN.
+JOIN une tabelas. UNION une consultas.
+WHERE requer uso de chave primaria como parâmetro para filtrar consulta.
+INNER JOIN é usado junto com operador ON.
+OUTER JOIN consulta dados de tabelas que nao tem relacionamento, junto 
+com indicadores de localização RIGTH ou LEFT das tabelas.
+Chave primaria é um identificador único de tabela.
+Chave estrangeira faz relacionamentos com outras tabelas.
+A chave estrangeira é uma referência em uma tabela a uma chave primária
+de outra tabela. 
+
+

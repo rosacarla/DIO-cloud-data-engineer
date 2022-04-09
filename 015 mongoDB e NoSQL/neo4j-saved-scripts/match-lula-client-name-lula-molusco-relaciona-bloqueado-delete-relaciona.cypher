@@ -1,0 +1,1 @@
+MATCH (lula:Client {name:"Lula Molusco"})-[relaciona:Bloqueado]-() DELETE relaciona

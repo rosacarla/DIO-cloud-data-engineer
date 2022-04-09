@@ -1,0 +1,52 @@
+>>>>>>>> 04/04/2022 >>>>>>>
+
+1) MySql - Trabalhando com as suas primeiras tabelas
+- Introdução ao curso e conceitos iniciais sobre modelo relacional
+tabela, manipular, inserir, deletar dados
+Em modelo relacional, a entidade é de fato a tabela. Exemplo: pessoa
+é a entidade(tab), nome e cpf são atributos.
+Dados atômicos = sao unicos e nao se repetem.
+
+- Ferramentas e configuração do ambiente
+MysQL e phpMyAdmin
+Lista de compras = atributos = itens, qtde, preço
+Pessoas = atributos = nome, idade, altura, peso
+XAMPP contém Apache, MySql, phpMyAdmin, servidor FTP
+Instalei nesta ordem: mysql server, workbench, xampp
+Após 1a instalação, XAMPP falhou para conectar; reinstalei e rodou.
+Tentei acessar o phpadmin pelo localhost e nao abriu. 
+Consultei fórum DIO, tinha sugestão para instalar como no vídeo de
+curso mysql do prof. Guanabara. Desinstalei os 3 programas, deletei
+mysql server, mantive XAMPP e workbench.
+Segui o vídeo o Guanabara, só instalei o XAMPP, quando abriu a tela
+inicial ativei os botoes do apache e mysql. Ativei o phpadmin pelo
+botao Admin do mysql no XAMPP. Reinstalei o workbench, depois criei 
+uma nova porta com nome MySQL XAMMP e acessei mesmo com janela de
+advertencia que não interferiu no acesso.
+- Criando tabelas
+No phpmyadmin, criado o banco de dados dio-mysql; criadas tabelas pessoas e pessoa
+pela aba sql. 
+- Inserindo dados na tabela
+Dentro da tab pessoa, INSERT TO para inserir dados na tab pessoas com id
+Dentro de pessoa, inseri dados em pessoa. Conferidas as atualizações.
+1a inserção de data de nascimento (1990 05 22) não entrou na tabela, pois
+aparecer 0000 00 00 no campo nascimento. Inseri de novo a data separada
+com traço (1990-05-22) e deu certo.
+Tab pessoa estava com 2 linhas preenchidas, talvez eu tenha clicado 2x 
+no botão continuar. Então usei o botao apagar para elimminar linha id 2.
+- Dicas e dúvidas
+criada subpasta dio-sql e, pelo vscode, criado arq dio.sql para guardar
+codigos sql do curso e depois subir para github.
+
+2) Realizando manautenção de suas tabelas 
+- Selecionando e alterando dados
+WHERE comando condicional
+- Deletando e ordenando dados
+comando DELETE é irreversível
+Para ordenar, usa-se ORDER BY por padrão mostra em ordem ascendente;
+ORDER BY ... DESC mostra em ordem descendente; também existe a opção
+ORDER BY ... ASC que ordena ascendente.
+- Agrupando dados
+
+contar quantas informações atendem um criterio selecionado.
+

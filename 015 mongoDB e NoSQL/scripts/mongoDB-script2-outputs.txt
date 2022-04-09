@@ -1,0 +1,1069 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/): para mongodbsh...chave connect your application
+Please enter a MongoDB connection string (Default: mongodb://localhost/): para mongodbsh...chave connect your application
+Current Mongosh Log ID: xxxxxxxxxxxxxxxx
+Connecting to:          mongodbxxx
+Using MongoDB:          5.0.6
+Using Mongosh:          1.3.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+Atlas atlas-z8je6c-shard-0 [primary] myFirstDatabase> use fenda_bikini
+switched to db fenda_bikini
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> show databases;
+fenda_bikini  1.83 MB
+admin          270 kB
+local         1.56 GB
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> show collections;
+clientes
+clients
+test
+test1
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> show clientes;
+MongoshInvalidInputError: [COMMON-10001] 'clientes' is not a valid argument for "show".
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> show clients;
+MongoshInvalidInputError: [COMMON-10001] 'clients' is not a valid argument for "show".
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> db.getCollection('clients').find({})
+[
+  {
+    _id: ObjectId("624fd0866b36ae249cc5a7c0"),
+    name: 'Patrick',
+    age: 38
+  },
+  {
+    _id: ObjectId("624fe2956b36ae249cc5a7c4"),
+    name: 'Lula Molusco',
+    age: 42
+  },
+  {
+    _id: ObjectId("625071601432523745783543"),
+    name: 'Cliente0',
+    age: 0
+  },
+  {
+    _id: ObjectId("625071601432523745783544"),
+    name: 'Cliente1',
+    age: 1
+  },
+  {
+    _id: ObjectId("625071601432523745783545"),
+    name: 'Cliente2',
+    age: 2
+  },
+  {
+    _id: ObjectId("625071601432523745783546"),
+    name: 'Cliente3',
+    age: 3
+  },
+  {
+    _id: ObjectId("625071601432523745783547"),
+    name: 'Cliente4',
+    age: 4
+  },
+  {
+    _id: ObjectId("625071601432523745783548"),
+    name: 'Cliente5',
+    age: 5
+  },
+  {
+    _id: ObjectId("625071601432523745783549"),
+    name: 'Cliente6',
+    age: 6
+  },
+  {
+    _id: ObjectId("62507160143252374578354a"),
+    name: 'Cliente7',
+    age: 7
+  },
+  {
+    _id: ObjectId("62507160143252374578354b"),
+    name: 'Cliente8',
+    age: 8
+  },
+  {
+    _id: ObjectId("62507160143252374578354c"),
+    name: 'Cliente9',
+    age: 9
+  },
+  {
+    _id: ObjectId("62507160143252374578354d"),
+    name: 'Cliente10',
+    age: 10
+  },
+  {
+    _id: ObjectId("62507160143252374578354e"),
+    name: 'Cliente11',
+    age: 11
+  },
+  {
+    _id: ObjectId("62507161143252374578354f"),
+    name: 'Cliente12',
+    age: 12
+  },
+  {
+    _id: ObjectId("625071611432523745783550"),
+    name: 'Cliente13',
+    age: 13
+  },
+  {
+    _id: ObjectId("625071611432523745783551"),
+    name: 'Cliente14',
+    age: 14
+  },
+  {
+    _id: ObjectId("625071611432523745783552"),
+    name: 'Cliente15',
+    age: 15
+  },
+  {
+    _id: ObjectId("625071611432523745783553"),
+    name: 'Cliente16',
+    age: 16
+  },
+  {
+    _id: ObjectId("625071611432523745783554"),
+    name: 'Cliente17',
+    age: 17
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("625071611432523745783555"),
+    name: 'Cliente18',
+    age: 18
+  },
+  {
+    _id: ObjectId("625071611432523745783556"),
+    name: 'Cliente19',
+    age: 19
+  },
+  {
+    _id: ObjectId("625071611432523745783557"),
+    name: 'Cliente20',
+    age: 20
+  },
+  {
+    _id: ObjectId("625071611432523745783558"),
+    name: 'Cliente21',
+    age: 21
+  },
+  {
+    _id: ObjectId("625071611432523745783559"),
+    name: 'Cliente22',
+    age: 22
+  },
+  {
+    _id: ObjectId("62507161143252374578355a"),
+    name: 'Cliente23',
+    age: 23
+  },
+  {
+    _id: ObjectId("62507161143252374578355b"),
+    name: 'Cliente24',
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini>
+  },
+  {
+    _id: ObjectId("62507161143252374578355c"),
+    name: 'Cliente25',
+    age: 25
+  },
+  {
+    _id: ObjectId("62507161143252374578355d"),
+    name: 'Cliente26',
+    age: 26
+  },
+  {
+    _id: ObjectId("62507161143252374578355e"),
+    name: 'Cliente27',
+    age: 27
+  },
+  {
+    _id: ObjectId("62507161143252374578355f"),
+    name: 'Cliente28',
+    age: 28
+  },
+  {
+    _id: ObjectId("625071611432523745783560"),
+    name: 'Cliente29',
+    age: 29
+  },
+  {
+    _id: ObjectId("625071621432523745783561"),
+    name: 'Cliente30',
+    age: 30
+  },
+  {
+    _id: ObjectId("625071621432523745783562"),
+    name: 'Cliente31',
+    age: 31
+  },
+  {
+    _id: ObjectId("625071621432523745783563"),
+    name: 'Cliente32',
+    age: 32
+  },
+  {
+    _id: ObjectId("625071621432523745783564"),
+    name: 'Cliente33',
+    age: 33
+  },
+  {
+    _id: ObjectId("625071621432523745783565"),
+    name: 'Cliente34',
+    age: 34
+  },
+  {
+    _id: ObjectId("625071621432523745783566"),
+    name: 'Cliente35',
+    age: 35
+  },
+  {
+    _id: ObjectId("625071621432523745783567"),
+    name: 'Cliente36',
+    age: 36
+  },
+  {
+    _id: ObjectId("625071621432523745783568"),
+    name: 'Cliente37',
+    age: 37
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("625071621432523745783569"),
+    name: 'Cliente38',
+    age: 38
+  },
+  {
+    _id: ObjectId("62507162143252374578356a"),
+    name: 'Cliente39',
+    age: 39
+  },
+  {
+    _id: ObjectId("62507162143252374578356b"),
+    name: 'Cliente40',
+    age: 40
+  },
+  {
+    _id: ObjectId("62507162143252374578356c"),
+    name: 'Cliente41',
+    age: 41
+  },
+  {
+    _id: ObjectId("62507162143252374578356d"),
+    name: 'Cliente42',
+    age: 42
+  },
+  {
+    _id: ObjectId("62507162143252374578356e"),
+    name: 'Cliente43',
+    age: 43
+  },
+  {
+    _id: ObjectId("62507162143252374578356f"),
+    name: 'Cliente44',
+    age: 44
+  },
+  {
+    _id: ObjectId("625071621432523745783570"),
+    name: 'Cliente45',
+    age: 45
+  },
+  {
+    _id: ObjectId("625071621432523745783571"),
+    name: 'Cliente46',
+    age: 46
+  },
+  {
+    _id: ObjectId("625071621432523745783572"),
+    name: 'Cliente47',
+    age: 47
+  },
+  {
+    _id: ObjectId("625071621432523745783573"),
+    name: 'Cliente48',
+    age: 48
+  },
+  {
+    _id: ObjectId("625071621432523745783574"),
+    name: 'Cliente49',
+    age: 49
+  },
+  {
+    _id: ObjectId("625071621432523745783575"),
+    name: 'Cliente50',
+    age: 50
+  },
+  {
+    _id: ObjectId("625071621432523745783576"),
+    name: 'Cliente51',
+    age: 51
+  },
+  {
+    _id: ObjectId("625071621432523745783577"),
+    name: 'Cliente52',
+    age: 52
+  },
+  {
+    _id: ObjectId("625071631432523745783578"),
+    name: 'Cliente53',
+    age: 53
+  },
+  {
+    _id: ObjectId("625071631432523745783579"),
+    name: 'Cliente54',
+    age: 54
+  },
+  {
+    _id: ObjectId("62507163143252374578357a"),
+    name: 'Cliente55',
+    age: 55
+  },
+  {
+    _id: ObjectId("62507163143252374578357b"),
+    name: 'Cliente56',
+    age: 56
+  },
+  {
+    _id: ObjectId("62507163143252374578357c"),
+    name: 'Cliente57',
+    age: 57
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("62507163143252374578357d"),
+    name: 'Cliente58',
+    age: 58
+  },
+  {
+    _id: ObjectId("62507163143252374578357e"),
+    name: 'Cliente59',
+    age: 59
+  },
+  {
+    _id: ObjectId("62507163143252374578357f"),
+    name: 'Cliente60',
+    age: 60
+  },
+  {
+    _id: ObjectId("625071631432523745783580"),
+    name: 'Cliente61',
+    age: 61
+  },
+  {
+    _id: ObjectId("625071631432523745783581"),
+    name: 'Cliente62',
+    age: 62
+  },
+  {
+    _id: ObjectId("625071631432523745783582"),
+    name: 'Cliente63',
+    age: 63
+  },
+  {
+    _id: ObjectId("625071631432523745783583"),
+    name: 'Cliente64',
+    age: 64
+  },
+  {
+    _id: ObjectId("625071631432523745783584"),
+    name: 'Cliente65',
+    age: 65
+  },
+  {
+    _id: ObjectId("625071631432523745783585"),
+    name: 'Cliente66',
+    age: 66
+  },
+  {
+    _id: ObjectId("625071631432523745783586"),
+    name: 'Cliente67',
+    age: 67
+  },
+  {
+    _id: ObjectId("625071631432523745783587"),
+    name: 'Cliente68',
+    age: 68
+  },
+  {
+    _id: ObjectId("625071631432523745783588"),
+    name: 'Cliente69',
+    age: 69
+  },
+  {
+    _id: ObjectId("625071631432523745783589"),
+    name: 'Cliente70',
+    age: 70
+  },
+  {
+    _id: ObjectId("62507163143252374578358a"),
+    name: 'Cliente71',
+    age: 71
+  },
+  {
+    _id: ObjectId("62507163143252374578358b"),
+    name: 'Cliente72',
+    age: 72
+  },
+  {
+    _id: ObjectId("62507163143252374578358c"),
+    name: 'Cliente73',
+    age: 73
+  },
+  {
+    _id: ObjectId("62507163143252374578358d"),
+    name: 'Cliente74',
+    age: 74
+  },
+  {
+    _id: ObjectId("62507164143252374578358e"),
+    name: 'Cliente75',
+    age: 75
+  },
+  {
+    _id: ObjectId("62507164143252374578358f"),
+    name: 'Cliente76',
+    age: 76
+  },
+  {
+    _id: ObjectId("625071641432523745783590"),
+    name: 'Cliente77',
+    age: 77
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("625071641432523745783591"),
+    name: 'Cliente78',
+    age: 78
+  },
+  {
+    _id: ObjectId("625071641432523745783592"),
+    name: 'Cliente79',
+    age: 79
+  },
+  {
+    _id: ObjectId("625071641432523745783593"),
+    name: 'Cliente80',
+    age: 80
+  },
+  {
+    _id: ObjectId("625071641432523745783594"),
+    name: 'Cliente81',
+    age: 81
+  },
+  {
+    _id: ObjectId("625071641432523745783595"),
+    name: 'Cliente82',
+    age: 82
+  },
+  {
+    _id: ObjectId("625071641432523745783596"),
+    name: 'Cliente83',
+    age: 83
+  },
+  {
+    _id: ObjectId("625071641432523745783597"),
+    name: 'Cliente84',
+    age: 84
+  },
+  {
+    _id: ObjectId("625071641432523745783598"),
+    name: 'Cliente85',
+    age: 85
+  },
+  {
+    _id: ObjectId("625071641432523745783599"),
+    name: 'Cliente86',
+    age: 86
+  },
+  {
+    _id: ObjectId("62507164143252374578359a"),
+    name: 'Cliente87',
+    age: 87
+  },
+  {
+    _id: ObjectId("62507164143252374578359b"),
+    name: 'Cliente88',
+    age: 88
+  },
+  {
+    _id: ObjectId("62507164143252374578359c"),
+    name: 'Cliente89',
+    age: 89
+  },
+  {
+    _id: ObjectId("62507164143252374578359d"),
+    name: 'Cliente90',
+    age: 90
+  },
+  {
+    _id: ObjectId("62507164143252374578359e"),
+    name: 'Cliente91',
+    age: 91
+  },
+  {
+    _id: ObjectId("62507164143252374578359f"),
+    name: 'Cliente92',
+    age: 92
+  },
+  {
+    _id: ObjectId("6250716414325237457835a0"),
+    name: 'Cliente93',
+    age: 93
+  },
+  {
+    _id: ObjectId("6250716514325237457835a1"),
+    name: 'Cliente94',
+    age: 94
+  },
+  {
+    _id: ObjectId("6250716514325237457835a2"),
+    name: 'Cliente95',
+    age: 95
+  },
+  {
+    _id: ObjectId("6250716514325237457835a3"),
+    name: 'Cliente96',
+    age: 96
+  },
+  {
+    _id: ObjectId("6250716514325237457835a4"),
+    name: 'Cliente97',
+    age: 97
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("6250716514325237457835a5"),
+    name: 'Cliente98',
+    age: 98
+  },
+  {
+    _id: ObjectId("6250716514325237457835a6"),
+    name: 'Cliente99',
+    age: 99
+  },
+  {
+    _id: ObjectId("6250716514325237457835a7"),
+    name: 'Cliente100',
+    age: 100
+  },
+  {
+    _id: ObjectId("6250716514325237457835a8"),
+    name: 'Cliente101',
+    age: 101
+  },
+  {
+    _id: ObjectId("6250716514325237457835a9"),
+    name: 'Cliente102',
+    age: 102
+  },
+  {
+    _id: ObjectId("6250716514325237457835aa"),
+    name: 'Cliente103',
+    age: 103
+  },
+  {
+    _id: ObjectId("6250716514325237457835ab"),
+    name: 'Cliente104',
+    age: 104
+  },
+  {
+    _id: ObjectId("6250716514325237457835ac"),
+    name: 'Cliente105',
+    age: 105
+  },
+  {
+    _id: ObjectId("6250716514325237457835ad"),
+    name: 'Cliente106',
+    age: 106
+  },
+  {
+    _id: ObjectId("6250716514325237457835ae"),
+    name: 'Cliente107',
+    age: 107
+  },
+  {
+    _id: ObjectId("6250716514325237457835af"),
+    name: 'Cliente108',
+    age: 108
+  },
+  {
+    _id: ObjectId("6250716514325237457835b0"),
+    name: 'Cliente109',
+    age: 109
+  },
+  {
+    _id: ObjectId("6250716514325237457835b1"),
+    name: 'Cliente110',
+    age: 110
+  },
+  {
+    _id: ObjectId("6250716514325237457835b2"),
+    name: 'Cliente111',
+    age: 111
+  },
+  {
+    _id: ObjectId("6250716514325237457835b3"),
+    name: 'Cliente112',
+    age: 112
+  },
+  {
+    _id: ObjectId("6250716514325237457835b4"),
+    name: 'Cliente113',
+    age: 113
+  },
+  {
+    _id: ObjectId("6250716514325237457835b5"),
+    name: 'Cliente114',
+    age: 114
+  },
+  {
+    _id: ObjectId("6250716514325237457835b6"),
+    name: 'Cliente115',
+    age: 115
+  },
+  {
+    _id: ObjectId("6250716514325237457835b7"),
+    name: 'Cliente116',
+    age: 116
+  },
+  {
+    _id: ObjectId("6250716614325237457835b8"),
+    name: 'Cliente117',
+    age: 117
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("6250716614325237457835b9"),
+    name: 'Cliente118',
+    age: 118
+  },
+  {
+    _id: ObjectId("6250716614325237457835ba"),
+    name: 'Cliente119',
+    age: 119
+  },
+  {
+    _id: ObjectId("6250716614325237457835bb"),
+    name: 'Cliente120',
+    age: 120
+  },
+  {
+    _id: ObjectId("6250716614325237457835bc"),
+    name: 'Cliente121',
+    age: 121
+  },
+  {
+    _id: ObjectId("6250716614325237457835bd"),
+    name: 'Cliente122',
+    age: 122
+  },
+  {
+    _id: ObjectId("6250716614325237457835be"),
+    name: 'Cliente123',
+    age: 123
+  },
+  {
+    _id: ObjectId("6250716614325237457835bf"),
+    name: 'Cliente124',
+    age: 124
+  },
+  {
+    _id: ObjectId("6250716614325237457835c0"),
+    name: 'Cliente125',
+    age: 125
+  },
+  {
+    _id: ObjectId("6250716614325237457835c1"),
+    name: 'Cliente126',
+    age: 126
+  },
+  {
+    _id: ObjectId("6250716614325237457835c2"),
+    name: 'Cliente127',
+    age: 127
+  },
+  {
+    _id: ObjectId("6250716614325237457835c3"),
+    name: 'Cliente128',
+    age: 128
+  },
+  {
+    _id: ObjectId("6250716614325237457835c4"),
+    name: 'Cliente129',
+    age: 129
+  },
+  {
+    _id: ObjectId("6250716614325237457835c5"),
+    name: 'Cliente130',
+    age: 130
+  },
+  {
+    _id: ObjectId("6250716614325237457835c6"),
+    name: 'Cliente131',
+    age: 131
+  },
+  {
+    _id: ObjectId("6250716614325237457835c7"),
+    name: 'Cliente132',
+    age: 132
+  },
+  {
+    _id: ObjectId("6250716614325237457835c8"),
+    name: 'Cliente133',
+    age: 133
+  },
+  {
+    _id: ObjectId("6250716614325237457835c9"),
+    name: 'Cliente134',
+    age: 134
+  },
+  {
+    _id: ObjectId("6250716614325237457835ca"),
+    name: 'Cliente135',
+    age: 135
+  },
+  {
+    _id: ObjectId("6250716614325237457835cb"),
+    name: 'Cliente136',
+    age: 136
+  },
+  {
+    _id: ObjectId("6250716614325237457835cc"),
+    name: 'Cliente137',
+    age: 137
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("6250716714325237457835cd"),
+    name: 'Cliente138',
+    age: 138
+  },
+  {
+    _id: ObjectId("6250716714325237457835ce"),
+    name: 'Cliente139',
+    age: 139
+  },
+  {
+    _id: ObjectId("6250716714325237457835cf"),
+    name: 'Cliente140',
+    age: 140
+  },
+  {
+    _id: ObjectId("6250716714325237457835d0"),
+    name: 'Cliente141',
+    age: 141
+  },
+  {
+    _id: ObjectId("6250716714325237457835d1"),
+    name: 'Cliente142',
+    age: 142
+  },
+  {
+    _id: ObjectId("6250716714325237457835d2"),
+    name: 'Cliente143',
+    age: 143
+  },
+  {
+    _id: ObjectId("6250716714325237457835d3"),
+    name: 'Cliente144',
+    age: 144
+  },
+  {
+    _id: ObjectId("6250716714325237457835d4"),
+    name: 'Cliente145',
+    age: 145
+  },
+  {
+    _id: ObjectId("6250716714325237457835d5"),
+    name: 'Cliente146',
+    age: 146
+  },
+  {
+    _id: ObjectId("6250716714325237457835d6"),
+    name: 'Cliente147',
+    age: 147
+  },
+  {
+    _id: ObjectId("6250716714325237457835d7"),
+    name: 'Cliente148',
+    age: 148
+  },
+  {
+    _id: ObjectId("6250716714325237457835d8"),
+    name: 'Cliente149',
+    age: 149
+  },
+  {
+    _id: ObjectId("6250716714325237457835d9"),
+    name: 'Cliente150',
+    age: 150
+  },
+  {
+    _id: ObjectId("6250716714325237457835da"),
+    name: 'Cliente151',
+    age: 151
+  },
+  {
+    _id: ObjectId("6250716714325237457835db"),
+    name: 'Cliente152',
+    age: 152
+  },
+  {
+    _id: ObjectId("6250716714325237457835dc"),
+    name: 'Cliente153',
+    age: 153
+  },
+  {
+    _id: ObjectId("6250716714325237457835dd"),
+    name: 'Cliente154',
+    age: 154
+  },
+  {
+    _id: ObjectId("6250716714325237457835de"),
+    name: 'Cliente155',
+    age: 155
+  },
+  {
+    _id: ObjectId("6250716714325237457835df"),
+    name: 'Cliente156',
+    age: 156
+  },
+  {
+    _id: ObjectId("6250716714325237457835e0"),
+    name: 'Cliente157',
+    age: 157
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> it
+[
+  {
+    _id: ObjectId("6250716714325237457835e1"),
+    name: 'Cliente158',
+    age: 158
+  },
+  {
+    _id: ObjectId("6250716714325237457835e2"),
+    name: 'Cliente159',
+    age: 159
+  },
+  {
+    _id: ObjectId("6250716814325237457835e3"),
+    name: 'Cliente160',
+    age: 160
+  },
+  {
+    _id: ObjectId("6250716814325237457835e4"),
+    name: 'Cliente161',
+    age: 161
+  },
+  {
+    _id: ObjectId("6250716814325237457835e5"),
+    name: 'Cliente162',
+    age: 162
+  },
+  {
+    _id: ObjectId("6250716814325237457835e6"),
+    name: 'Cliente163',
+    age: 163
+  },
+  {
+    _id: ObjectId("6250716814325237457835e7"),
+    name: 'Cliente164',
+    age: 164
+  },
+  {
+    _id: ObjectId("6250716814325237457835e8"),
+    name: 'Cliente165',
+    age: 165
+  },
+  {
+    _id: ObjectId("6250716814325237457835e9"),
+    name: 'Cliente166',
+    age: 166
+  },
+  {
+    _id: ObjectId("6250716814325237457835ea"),
+    name: 'Cliente167',
+    age: 167
+  },
+  {
+    _id: ObjectId("6250716814325237457835eb"),
+    name: 'Cliente168',
+    age: 168
+  },
+  {
+    _id: ObjectId("6250716814325237457835ec"),
+    name: 'Cliente169',
+    age: 169
+  },
+  {
+    _id: ObjectId("6250716814325237457835ed"),
+    name: 'Cliente170',
+    age: 170
+  },
+  {
+    _id: ObjectId("6250716814325237457835ee"),
+    name: 'Cliente171',
+    age: 171
+  },
+  {
+    _id: ObjectId("6250716814325237457835ef"),
+    name: 'Cliente172',
+    age: 172
+  },
+  {
+    _id: ObjectId("6250716814325237457835f0"),
+    name: 'Cliente173',
+    age: 173
+  },
+  {
+    _id: ObjectId("6250716814325237457835f1"),
+    name: 'Cliente174',
+    age: 174
+  },
+  {
+    _id: ObjectId("6250716814325237457835f2"),
+    name: 'Cliente175',
+    age: 175
+  },
+  {
+    _id: ObjectId("6250716814325237457835f3"),
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini>
+    age: 176
+  },
+  {
+    _id: ObjectId("6250716814325237457835f4"),
+    name: 'Cliente177',
+    age: 177
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> db.getCollection('clientes').find({})
+[
+  {
+    _id: ObjectId("625075ca638fffbf8c4502cd"),
+    name: 'Cliente0',
+    age: 0
+  },
+  {
+    _id: ObjectId("625075ca638fffbf8c4502ce"),
+    name: 'Cliente1',
+    age: 1
+  },
+  {
+    _id: ObjectId("625075ca638fffbf8c4502cf"),
+    name: 'Cliente2',
+    age: 2
+  },
+  {
+    _id: ObjectId("625075ca638fffbf8c4502d0"),
+    name: 'Cliente3',
+    age: 3
+  },
+  {
+    _id: ObjectId("625075ca638fffbf8c4502d1"),
+    name: 'Cliente4',
+    age: 4
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> db.getCollection('clientes').find({name: "Cliente0"}).explain(true)
+{   _id: ObjectId("625075ca638fffbf8c4502d2"),
+  explainVersion: '1',
+  queryPlanner: {
+    namespace: 'fenda_bikini.clientes',
+    indexFilterSet: false,
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini>
+    maxIndexedOrSolutionsReached: false,
+    maxIndexedAndSolutionsReached: false,
+    maxScansToExplodeReached: false,
+    winningPlan: {
+      stage: 'COLLSCAN',5ca638fffbf8c4502d4"),
+      filter: { name: { '$eq': 'Cliente0' } },
+      direction: 'forward'
+    },
+    rejectedPlans: []
+  },_id: ObjectId("625075ca638fffbf8c4502d5"),
+  executionStats: {',
+    executionSuccess: true,
+    nReturned: 1,
+    executionTimeMillis: 0,
+    totalKeysExamined: 0,ca638fffbf8c4502d6"),
+    totalDocsExamined: 789,
+    executionStages: {
+      stage: 'COLLSCAN',
+      filter: { name: { '$eq': 'Cliente0' } },
+      nReturned: 1,625075ca638fffbf8c4502d7"),
+      executionTimeMillisEstimate: 0,
+      works: 791,
+      advanced: 1,
+      needTime: 789,
+      needYield: 0,625075ca638fffbf8c4502d8"),
+      saveState: 0,1',
+      restoreState: 0,
+      isEOF: 1,
+      direction: 'forward',
+      docsExamined: 78975ca638fffbf8c4502d9"),
+    },me: 'Cliente12',
+    allPlansExecution: []
+  },
+  command: {
+    find: 'clientes',5075ca638fffbf8c4502da"),
+    filter: { name: 'Cliente0' },
+    '$db': '624fba3412dbf37ec87e257f_fenda_bikini'
+  },
+  serverInfo: {
+    host: 'cluster0-shard-00-01.2w3rv.mongodb.net',
+    port: 27017,te14',
+    version: '5.0.6',
+    gitVersion: '212a8dbb47f07427dae194a9c75baec1d81d9259'
+  },
+  serverParameters: {5075ca638fffbf8c4502dc"),
+    internalQueryFacetBufferSizeBytes: 104857600,
+    internalQueryFacetMaxOutputDocSizeBytes: 104857600,
+    internalLookupStageIntermediateDocumentMaxSizeBytes: 16793600,
+    internalDocumentSourceGroupMaxMemoryBytes: 104857600,
+    internalQueryMaxBlockingSortMemoryUsageBytes: 33554432,
+    internalQueryProhibitBlockingMergeOnMongoS: 0,
+    internalQueryMaxAddToSetBytes: 104857600,
+    internalDocumentSourceSetWindowFieldsMaxMemoryBytes: 104857600
+  },
+  ok: 1, ObjectId("625075ca638fffbf8c4502de"),
+  '$clusterTime': {7',
+    clusterTime: Timestamp({ t: 1649455692, i: 1 }),
+    signature: {
+      hash: Binary(Buffer.from("d404c6a529e40896b0fbf33868ba24c36026a6c6", "hex"), 0),tId("625075ca638fffbf8c4502df"),
+      keyId: Long("7060928712820129796")
+    }ge: 18
+  },
+  operationTime: Timestamp({ t: 1649455692, i: 1 })
+}   _id: ObjectId("625075ca638fffbf8c4502e0"),
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini>
+    age: 19
+  }
+]
+Type "it" for more
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> db.getCollection('clientes').count({})
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini>
+
+789
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> db.getCollection('clients').count({})
+16602
+Atlas atlas-z8je6c-shard-0 [primary] fenda_bikini> db.getCollection('clienAtAtlas Atlas atlAtlas AtAAAtlas atlas-z8je6c-shard-0 [primary] fenda_bikini>

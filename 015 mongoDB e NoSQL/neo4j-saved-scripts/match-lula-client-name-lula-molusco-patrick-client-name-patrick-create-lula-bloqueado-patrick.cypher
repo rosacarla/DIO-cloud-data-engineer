@@ -1,0 +1,1 @@
+MATCH (lula:Client {name:"Lula Molusco"}), (patrick:Client {name:"Patrick"}) CREATE (lula) - [:Bloqueado] -> (patrick)

@@ -1,0 +1,1 @@
+MATCH (patrick:Client {name:"Patrick"}) SET patrick:Client_Premium
