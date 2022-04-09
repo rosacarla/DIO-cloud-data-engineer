@@ -20,7 +20,7 @@ Repositório criado para o Desafio de Projeto do *Bootcamp Cognizant Cloud Data 
 - [MySql - Trabalhando com as suas primeiras tabelas](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
 - [MySql - Explorando relacionamentos com workbench](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
 - [NySql - Consultas com Join](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
-- [MySql - Como modelar um banco de controle de séries assistidas (desafio de projeto)](https://github.com/rosacarla/Movies-control-project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/014%20projeto%20mysql)
+- [MySql - Como modelar um banco de controle de séries assistidas (desafio de projeto)](https://github.com/rosacarla/Movies-control-project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/014%20desafio-projeto-mysql)
 - [Introdução ao MongoDB e Bancos de Dados NoSQL](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/015%20mongoDB%20e%20NoSQL)
 - [Explorando o poder do NoSQL com Cassandra e HBase]( )
 
