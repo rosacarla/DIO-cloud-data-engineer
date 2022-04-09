@@ -6,7 +6,7 @@ Repositório criado para o Desafio de Projeto do *Bootcamp Cognizant Cloud Data 
 - Mentoria #1: Aula Inaugural - Bootcamp Cognizant Cloud Data Engineer #2 (live)
 - [Pensamento Computacional](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/002%20pensamento-computacional)
 - [Introdução ao Git e ao GitHub](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/003%20introducao-git-github)
-- [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso (desafio de projeto)](https://github.com/rosacarla/DIO-cloud-data-engineer) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/004%20desafio-de-projeto-git-github)
+- [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso (desafio de projeto)](https://github.com/rosacarla/DIO-cloud-data-engineer) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/004%20desafio-projeto-git-github)
 - [Linux: Introdução ao Sistema Operacional e Terminal](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/005%20linux)
 - [Linux: Diretórios e Comandos Essenciais](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/005%20linux)
 - [Linux: Fundamentos de Redes e Comandos Avançados](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/005%20linux)
