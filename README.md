@@ -1,5 +1,5 @@
-# DIO Cloud Data
-Repositório criado para o Desafio de Projeto do *Bootcamp Cognizant Cloud Data Engineer*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, exemplos, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
+# DIO Cloud Data Engineer
+Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data Engineer*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, códigos, exemplos, exercícios, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
 
 ## **Conteúdos do bootcamp:**
 - [Boas-vindas ao Bootcamp Cognizant Cloud Data Engineer #2](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/001%20bootcamp-cognizant-cloud-data-engineer%232)
@@ -22,7 +22,7 @@ Repositório criado para o Desafio de Projeto do *Bootcamp Cognizant Cloud Data 
 - [NySql - Consultas com Join](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
 - [MySql - Como modelar um banco de controle de séries assistidas (desafio de projeto)](https://github.com/rosacarla/Movies-control-project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/014%20desafio-projeto-mysql)
 - [Introdução ao MongoDB e Bancos de Dados NoSQL](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/015%20mongoDB%20e%20NoSQL)
-- [Explorando o poder do NoSQL com Cassandra e HBase]( )
+- [Explorando o poder do NoSQL com Cassandra e HBase]( ) [material de apoio]( )
 
 - **Mentorias (lives):** <br/>
     10/03/2022 - Mentoria #2: Apresentação da empresa e empregabilidade na Cognizant <br/>
