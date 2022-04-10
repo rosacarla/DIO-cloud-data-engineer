@@ -22,7 +22,7 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [NySql - Consultas com Join](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
 - [MySql - Como modelar um banco de controle de séries assistidas (desafio de projeto)](https://github.com/rosacarla/Movies-control-project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/014%20desafio-projeto-mysql)
 - [Introdução ao MongoDB e Bancos de Dados NoSQL](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/015%20mongoDB%20e%20NoSQL)
-- [Explorando o poder do NoSQL com Cassandra e HBase]( ) [material de apoio]( )
+- [Explorando o poder do NoSQL com Cassandra e HBase](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/016%20NoSQL-Cassandra-HBase) - [material de apoio](https://github.com/rosacarla/DIO-Aceleracao-4-HBase-Cassandra)
 
 - **Mentorias (lives):** <br/>
     10/03/2022 - Mentoria #2: Apresentação da empresa e empregabilidade na Cognizant <br/>
