@@ -1,4 +1,4 @@
->>>>>>>> 10/04/2022 >>>>>>>>
+ip>>>>>>>> 10/04/2022 >>>>>>>>
 Monitoramento de clusters Hadoop de alto nível com HDFS e YARN
 Prof. Rodrigo Garcia - Big Data Projects Tema Lead
 
@@ -22,7 +22,7 @@ nó é um computador individual. Nó master é o driver.
 - O que é Hadoop
 É possivel escalar elasticamente quando usa nuvem privada ou
 pública, mantendo menor quantidade de recurso computacional
-e escalaando mais quando preciso, faz tanto de maneira manual
+e escalando mais quando preciso, faz tanto de maneira manual
 quanto automatica. Ex.: fazer um ElasticMapReduce na AWS. 
 Hadoop é chamado de SO de big data; framework para computação
 distribuída que elimina a ideia de dificuldade.
@@ -70,7 +70,7 @@ Login VM Everis: usuario = everis e senha = everis2021
 ou em nro começando por inet 192.xxx.x.xxx.
 #Se falhar ifconfig, instalar o comando:
 sudo yum install net-tools -y (ou pesquisar outra forma)
-#Outra opção pra achar IP: ip addr shoe (pegar end rede)
+#Outra opção pra achar IP: ip addr show (pegar end rede)
 #Com IP, executar comando ssh pra logar na VM via Moba:
 ssh <nro.ip.xxx.xxx> -l everis
 logout (desloga da VM)
