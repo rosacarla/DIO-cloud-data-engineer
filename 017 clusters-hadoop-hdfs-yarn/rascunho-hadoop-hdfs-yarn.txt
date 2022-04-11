@@ -1,0 +1,169 @@
+>>>>>>>> 10/04/2022 >>>>>>>>
+Monitoramento de clusters Hadoop de alto nível com HDFS e YARN
+Prof. Rodrigo Garcia - Big Data Projects Tema Lead
+
+1) Teoria e Prática com HDFS
+- Introdução, objetivos e requisitos básicos
+Linux, Shellscript, processamento clusterizado
+
+- Conceitos de big data, escalabilidade e cluster
+Evolução: ERP -> CRM -> WEB -> BIG DATA
+Escalabilidade vertical = mainframe, aumentar potencia computa
+cional da máquina, sistema ou servidor; aumenta processador,
+memoria true boot de rede. 
+Escalabilidade horizontal = pra processamento distribuído de 
+dados, maquinas menores acopladas atraves de rede pra aumentar
+o poder computacional de maneira distribuída. Antigamente nao
+havia sistemas específicos pra trabalhar com processamento
+distribuído, como por exemplo no C#.
+Escalabilidade horiz trouxe clusters; composto por nós, cada
+nó é um computador individual. Nó master é o driver.
+
+- O que é Hadoop
+É possivel escalar elasticamente quando usa nuvem privada ou
+pública, mantendo menor quantidade de recurso computacional
+e escalaando mais quando preciso, faz tanto de maneira manual
+quanto automatica. Ex.: fazer um ElasticMapReduce na AWS. 
+Hadoop é chamado de SO de big data; framework para computação
+distribuída que elimina a ideia de dificuldade.
+-Core do Hadoop-
+Processing = Spark + MapReduce
+Ressource Management = Yarn + Storage = HDFS
+
+- O que é HDFS
+Hadoop Distributed File System, com base Google FS;
+bloco padrão de arquivo com 128mb; replica arq 3x
+entre as máquinas; localização: hd na base, SO no meio
+e HDFS na última camada, mas não substitui SO nativo
+porque funciona em cima dele.
+Componentes HDFS: NameNode(NN) gerencia namespace que é
+responsável por metadados; DataNode(DN) armazena arq de
+metadados; Secondary NameNode(SNN) não é backup, ajuda
+o NN, assume lugar do NN se cair e o NN fica como SNN.
+Dados são separados ou quebrados em blocos de no máx
+128mb cada e são armazenados (distribuídos) em workers
+(servidores) ou nós diferentes no cluster HDFS. Arq é
+chamado de log (/logs/031512.log: B1, B2, B3=metadata).
+Para gravação nos nós do cluster, ocorre a replicação
+dos blocos por 3, cada 1 é distribuído em nó diferente.
+NN guarda informações dos metadados e sua distribuição.
+Se um dos nós é perdido, é possivel recuperar blocos
+em outros nós, pois o sistema de arquivo distribuído é
+tolerante à falha e os arq estão sempre disponíveis.
+Perguntamos pelo log? sistema responde o nº de B(loco).
+#copiar arq do HDFS para local
+hdfs dfs -get /tmp/file_test.txt
+#ingestao manual
+hdfs dfs -put file_teste.txt /user/everis-bigdata/
+
+- Configuração Inicial da VM
+- downloads (VM Everis, ISO Ubuntu, VM VirtualBox) 
+- instalar VirtualBox e configurar VM com Linux Ubuntu
+(https://www.treinaweb.com.br/blog/criando-uma-maquina-virtual-com-a-virtualbox)
+- importa VM Everis na VirtualBox e configurar cf. aula
+- iniciar VM cf. aula; logar na VM pelo Moba c/ IP da VM.
+Configurar com 4 cpus, 4gb (ou 8gb) memoria - VM  Everis
+Não tem problema se estiver sem conexão de internet.
+Login VM Everis: usuario = everis e senha = everis2021
+É melor trabalhar com editor Moba.
+## Usar "ifconfig" para pegar endereço de rede no meio
+ou em nro começando por inet 192.xxx.x.xxx.
+#Se falhar ifconfig, instalar o comando:
+sudo yum install net-tools -y (ou pesquisar outra forma)
+#Outra opção pra achar IP: ip addr shoe (pegar end rede)
+#Com IP, executar comando ssh pra logar na VM via Moba:
+ssh <nro.ip.xxx.xxx> -l everis
+logout (desloga da VM)
+
+- Principais comandos - Parte 1
+#Mostrar se arq existe, tornal disponível:
+hdfs dfs -get /tmp/file_teste.txt
+saída=> get: `file_teste.txt': File exists
+#Comandos para startar hadoop e outros 
+sudo service hadoop-hdfs-namenode start 
+Todo o script com inputs e outputs do terminal Moba pode
+ser impresso em PDF.
+#comando ll mostra pastas/arquivos da VM, entre elas está 
+'script_apoio' na ordem em que deve startar as aplicações.
+#reiniciar a VM: shutdown -r 0
+
+- Principais comandos - Parte 2
+#tornar arq disponivel no hdfs:
+hdfs dfs -get /tmp/file_teste.txt
+#ingestao manual de arq file_teste.txt em pasta everis-bigdata (falhou):
+hdfs dfs -put file_teste.txt /user/everis-bigdata/
+Saída = put: Cannot create file/user/everis-bigdata/file_teste.txt._COPYING_. Name node is in safe mode.
+Motivo: namenode não está ativo
+Solução: reiniciar a VM (não funcionou)
+#Para desativar safemode com comando hdfs:
+sudo -u hdfs hdfs dfsadmin -safemode leave
+Após execução foi possível fazer a ingestão manual de arquivo
+com o comando -put.
+#copiar arq em outro diretorio:
+hdfs dfs -cp /tmp/file_teste.txt /tmp/delete/
+#mover arq pra outro diretorio:
+hdfs dfs -mv /tmp/file_teste.txt /tmp/delete
+#excluir diretorio:
+hdfs dfs -rm -R /tmp/delete
+#excluir arquivo:
+hdfs dfs -rm /tmp/file_teste.txt
+#acessa usuario hdfs (se necessário dar permissão): 
+hdfs dfs -du -h /user
+#mostra uso de disco de cada diretorio: 
+hdfs fsck /tmp/ -files -blocks 
+#lista comandos hdfs: hdfs fsck
+Bloco subreplicado deve ser tratado pelo gestor porque
+não podem cair datanodes nem replicacoes abaixo do esperado.
+Mensagem do fsck:
+/tmp/file_teste.txt 4784 bytes, 1 block(s):  Under replicated 
+BP-295589643-10.0.2.15-1610551694034:blk_1073741925_1109.Target
+Replicas is 3 but found 1 live replica(s), 0 decommissioned
+replica(s), 0 decommissioning replica(s). 0. BP-295589643-10.0.2.15-1610551694034:blk_1073741925_1109 len=4784 Live_repl=1
+
+- Preparação da aula
+Este curso tem como material complementar uma Máquina Virtual (VM)
+preparada com as principais ferramentas e configurações para o 
+acompanhamento das atividades práticas. Nesse sentido, a VM pode
+ser obtida pelo seguinte link:
+https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
+
+
+2) Teoria e Prática com YARN
+- Introdução a YARN e primeiros comandos
+Yet Another Resource Negotiator = YARN
+A mesma máquina é NManager também pode ser DNode, assim o
+processamento distribuído ocorre próximo do arq, pois se
+trabalha com dados sendo transmitidos por cabo de rede,
+entao primeiro processa o dado e depois poe na rede. 
+Para práticas com yarn, é preciso que Hadoop esteja com 
+nomenclatura diferente no yarn site.
+#caminho do hdfs pra gravar logs:
+sudo sed -i 's|hdfs://|hdfs://bigdata-srv:8020/|g' /etc/hadoop/conf/yarn-site.xml
+[sudo] password for everis:
+[everis@bigdata-srv ~]$ cat /etc/hadoop/conf/yarn-site.xml |grep bigdata-srv
+    <value>bigdata-srv</value>
+    <value>hdfs://bigdata-srv:8020/bigdata-srv:8020/var/log/hadoop-yarn/apps</value>
+Linha acima é o caminho dos logs.
+
+- Comandos com YARN - Parte 2
+#exemplo de job para rodar:
+sudo –u hdfs yarn jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount /tmp/file_teste.txt /tmp/wc_output
+Link pra ver job do hadoop no browser nao abriu, talvez por
+causa do firewall.
+
+- Comandos com YARN - Parte 3
+applicatiom id 1649633181319_0001
+#acompanhar log em tempo de execucao:
+sudo -u hdfs yarn logs -applicationId application_1649633181319_0001 |tail -f
+
+- Resumo do curso
+Acompanhar job com link pela porta 8088.
+
+- Dúvidas e comentários extras
+#problema de namenode que nao conecta:
+sudo vim /etc/hosts
+senha everis:
+Na tela mostrará localhosts. Tecla i, desce cursor até começo do
+meu IP bigdata-srv, digita #, dá :wq. Rodar ssh:
+ssh script_apoio/star_all_service.sh
+Pode não funcionar se houver algo rodando ainda.
