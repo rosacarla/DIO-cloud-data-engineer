@@ -33,3 +33,6 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 
 ## Links Úteis
 [Sintaxe básica Markdown](https://www.markdownguide.org)
+
+## Licença
+[MIT](https://choosealicense.com/licenses/mit/)
