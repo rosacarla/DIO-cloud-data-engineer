@@ -1,0 +1,9 @@
+sh install_sqoop.sh
+
+mysql -u root -h localhost -pEveris@2021 < pokemon.sql
+
+sh sqoop_import.sh
+
+hdfs dfs -text /user/everis-bigdata/pokemon/*.gz |more
+
+hdfs dfs- cat /user/everis-bigdata/pokemon/1/*

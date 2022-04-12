@@ -1,0 +1,108 @@
+>>>>>>>> 11/04/2022  <<<<<<<<
+Orquestrando ambientes de Big Data distribuídos com Zookeeper, Yarn e Sqoop
+
+1) Conhecendo o ambiente do Sqoop
+- Preparação para instalação do Sqoop
+Instalação inicial do sqoop nao deu certo.
+Tentar solução com URL do repositorio cloudera: (falhou!!)
+https://archive.cloudera.com/cdh5/redhat/7/x86_64/cdh/5/repodata/repomd.xml
+Reintalei a VM, ficou versao 4, antes era v.3.
+IP 192.xxx.x.xxx 
+ABRIR ISSUE NO GITHUB: POR QUE NÃO CONSEGUI INSTALAR SQOOP!?!
+
+- Instalando Sqoop e importando o banco de dados
+#instalar arq pokemon:
+criar arq com editor Vim: vim pokemom.sql
+tecla i para habilitar Insert
+copiar e colar conteudo do arq.sql (até linha 800) 
+salvar: (ESC + :wq) ou (ESC + ZZ) e sair - ok!!!
+#mostrar 10 ult linhas do pokemon.sql
+cat pokemon.sql |tail
+Verificada tabela do pokemon.sql
+
+- Inicializando os serviços e importando tabela
+login em 11/04/2022 15h00  IP IP 192.xxx-x-xxx
+Para exibir logs no yarn, usar URL do job application
+e substituir nome do cluster por IP da minha maquina.
+#mostrar IP: ip addr show
+Quando o job já acabou, não é mais possível visualizar
+com a URL no navegador.
+Após "Importando a tabela", desconsiderar mensagens Warning
+sobre HCatalog e Accumulo porque não serão utilizados. Parte
+final inf nº de registros feitos: "Retrieved 800 records".
+#mostra arquivos da pasta pokemon:
+hdfs dfs -ls /user/everis-bigdata/pokemon/
+#leitura com descompressao de arq .gzip (divido em partes):
+hdfs dfs -text /user/everis-bigdata/pokemon/part-m-00000.gz |more
+Trouxe arquivo dividido em 4 maps, apesar do comando split pedir
+por Generation que é 6 ou 8 no total.
+
+2) O que é Zookeeper e Sqoop
+- Introdução, objetivos e requisitos basicos
+Requisitos: linux, shellscript, processamento clusterizado
+
+- O que é Zookeeper (zkr)
+Serviço de coordenação distribuído que atende o HDFS
+Gerenciamento de cj de hosts(nós); funciona como DNS; precisa
+ter no mín 3 zookeeper, tem esquema de líder; indisponibiliza
+o dado durante modificações, por isso trabalha junto com HDFS;
+recuperação automatica de falhas no HBase, mantém o HBase de
+pé e conectado, coordena as regions. Fornece rotas ao cluster.
+Arquitetura Zookeeper
+Desenvolvedor não vê zookeeper funcionando nem em log, quem 
+trabalha com infraestrutura tem contato com zkr; todos os nós
+de zkr podem ter a mesma configuração; trabalha em paralelo
+com outros serviços/daemons (hadoop-hdfs-datanode etc).
+Leader = processa requests de escrita, não é master, é lider
+aquele que ficou pronto primeiro.
+Followers = recebe requests de leitura
+Clients = hbase, hdfs, yarn
+
+- Conceitos iniciais sobre Sqoop
+Feito por Cloudera; move dados entre bd rel e HDFS; importa
+tab inteira ou parte dela pro HDFS; exporta do hdfs pra bd;
+permite automatizar ingestao com lgm shellscript e outras.
+Leitura linha por linha, por isso fica lento; resultado do 
+import é uma cópia da tab; under the hood gera classes Java, 
+sem que desenvolvedor faça, para o mapreduce rodar; importa 
+dados e metadados de bd sql para Hive.
+Usa mapreduce para import/export de dados; traz intervalo e 
+col no import; pode especificar delimitador, formato de arq
+e até compressão; conexao com bd em paralelo; conecta com
+diversos plugins, como mysql, portgresql, oracle, sql server
+etc; formato de arq importado é csv.
+
+-Exemplos e comandos do Sqoop
+Cada Map roda num datanode, se for um cluster; vai para a
+gravação do hdfs, onde replica e conversa com namenode. 
+#especificar diretorio no hdfs como destino, em geral, pra
+importação com hive: --warehouse-dir /etl/input/
+#definir regras de importação: --where "country= 'Brazil'"
+
+- Lista de comandos
+baixei no repostorio
+
+- Arquivos necessários
+baixei na pasta do curso
+
+
+3) Proposta de exercício final
+- Proposta de exercício final - Parte 1
+#remover conteudo do diretorio pokemon
+sudo -u hdfs hdfs dfs -rm -R /user/everis-bigdata/pokemon
+#copiar tabela.sql 
+Fatiamento dos dados ficou com 4 partes, embora a linha de 
+comando indicasse --split-by Generation, que é mais de 4.
+Foi sugerido não usar um nome de coluna como Generation e
+indicar a quantia de fatias (4, 6, 10 etc...).
+Exercicio 1: listar pokemons lendarios, no dataset é dado
+booleano (Legendary BOOLEAN)
+#mostrar quantidade de linhas da tabela:
+hdfs dfs -cat /user/everis-bigdata/pokemon/1/* |wc -l
+
+- Proposta de exercício final - Parte 2
+Exercicio 2: todos pokemons de um tipo (codigo = exerc 1)
+Comando para desativar firewall, libera acesso por browser.
+Saida: lista com 386 itens
+Respostas de exercicios em: dontpad.com/spoileraceleracao
+(não abriu!)
