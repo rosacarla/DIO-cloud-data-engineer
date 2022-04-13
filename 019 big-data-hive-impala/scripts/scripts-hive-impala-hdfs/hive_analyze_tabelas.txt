@@ -1,0 +1,7 @@
+analyze table br_sas_manuales.mg_dados_arrecadacao compute statistics;
+
+analyze table br_sas_manuales.mg_dados_arrecadacao compute statistics for columns corr_pagos;
+
+analyze table BR_BA_CREDITSCORE.V00_TARGET compute statistics for columns;
+
+ANALYZE TABLE BI_IGE_INFORME_GESTAO PARTITION(input_date) COMPUTE STATISTICS NOSCAN;

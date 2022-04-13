@@ -1,0 +1,11 @@
+-- criação de index no hive
+
+CREATE INDEX table02_index ON TABLE table02 (column3) AS 'COMPACT' WITH DEFERRED REBUILD;
+ALTER INDEX table02_index ON table2 REBUILD;
+SHOW FORMATTED INDEX ON table02;
+DROP INDEX table02_index ON table02;
+
+CREATE INDEX compliance_fat_index ON TABLE bi_icg_compliance_fat (icg_referencia) AS 'COMPACT' WITH DEFERRED REBUILD;
+
+
+CREATE INDEX compliance_fat_index ON TABLE bi_icg_compliance_fat (icg_referencia) AS 'BITMAP' WITH DEFERRED REBUILD;

@@ -1,0 +1,19 @@
+-- script para Concatenar várias linhas com delimitador no Hive
+
+
+id,palavra,confianca
+
+create table teste_jon(id int,palavra string,confianca double);
+
+insert into teste_jon values(1,'eu',0.1);
+insert into teste_jon values(1,'te',0.9);
+insert into teste_jon values(1,'amo',1.1);
+insert into teste_jon values(1,'viny',2.1);
+insert into teste_jon values(2,'teste',0.1);
+insert into teste_jon values(2,'teste01',0.8);
+
+select 
+id,
+concat_ws('~',collect_list(palavra)) as palavra 
+from teste_jon 
+group by id;

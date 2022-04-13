@@ -1,0 +1,208 @@
+>>>>>>>> 12/04/2022 <<<<<<<<
+Como realizar consultas de maneira simples no ambiente 
+complexo de Big Data com Hive e Impala
+Prof. Vinicius Bueno - Data Engineer
+
+- Introdução e comparação entre Hive e Impala
+Ferramentas Apache Hive e Apache Impala são softwares
+de frontend; conexão através de drive jbc com HDFS e 
+HBase. Construído na base do Hadoop em Java; lgm HQL,
+similar a SQL. Tem baixa latência, por isso é muito
+rápido. Bom pra queries interativas e análise de dados.
+Hive melhor pra processamento em lote de dados.
+Impala melhor pra processamento em tempo real, consultas
+ad-hoc em subconjunto de dados.
+Impala é + rapido que Hive, não quer dizer que é melhor.
+
+- Sobre metastore e modelos de dados
+Metastores tem schemas/tab utilizadas no Hive e Impala.
+Mod de dados são organizados em tab e partições, como
+um file system do Linux (pasta + arquivos). Para criar
+uma tab é preciso definir o nome e tipo do campo, como
+é feito em sql. Pode criar tab a partir de outra tab ou
+por um path de tabelas. Há 2 tipos de tab: GERENCIADA
+(arq criado pelo HDFS, se apagar tab será eliminado do
+processo o arq criado depois) e EXTERNA (cria metadado
+pra acessar arq no HDFS, se apagar tab arqs permanecem,
+podem ser recuperados). 
+#Se não escrever nada (EXT...) é criada tab gerenciada:
+CREATE EXTERNAL TABLE nametab;
+#ver como foi criada uma tab pra reaproveitar comando:
+SHOW CREATE TABLE jobs;
+
+- Formatos de arquivos e particionamento
+#indicar no final da query formato de armazenamento:
+CREATE TABLE order_details_parquet (
+	order_id INT,
+	prod_id INT)
+      STORED AS PARQUET;
+Parquet é formato colunar desenvolvido pela Cloudera;
+reduz espaço armaz, aumenta performance, eficiente pra
+add muitos registros de uma vez, melhora acesso a dados
+colunares. Outros formatos: 
+==> avro(schema é separado do schema da tab, gera 2 arq,
+1 do tipo .avsc);
+==> orc(semelhante ao parquet, armaz orient col, origi-
+nalmente é arq colunar de linhas do Hive, tem schema de 
+dados no rodapé).
+Particionamento ajuda leitura e performance do cluster.
+BD ou tab = diretorio no hdfs
+Partição = pasta com subpastas, col em tab
+Se houver pouca partição, leitura não é bem distribuída
+no cluster; se particionar demais pode haver sobrecarga
+no NN e derrubar o cluster (deixá-lo lento). 
+
+- Primeiros comandos da VM para criação de BD
+IP 192.xxxxxxxxxxxxx
+#criado arq restart_all_service_hive.sh
+vim restart_all_service_hive.sh
+colar linhas de comandos
+#leitura do arq
+cat restart_all_service_hive.sh
+#desativar mode safe do hive
+sudo -u hdfs hadoop dfsadmin -safemode leave
+#executar script restart_all_service_hive
+sh restart_all_service_hive.sh
+ATENÇÃO! Desativar safe mode do hive, executar script
+restart...hive, que ativa o Impala, por fim abrir hive
+e impala; ignorar msg de erro, aguardar msg conectado:
+hive
+impala-shell
+#mostra BD: show databases; (SEMPRE USAR ; NO FINAL !!!)
+#criacao de BD:
+create database teste01;
+create database if exist teste01;
+create databese if not exist teste01;
+#se não especificar BD, hive cria tab no dir default
+create table teste01.teste01 (id int);
+###habilitar header com nome do DB e tab pra mostrar:
+set hive.cli.print.header=true;
+A saída do show tables; é: 
+OK
+tab_name
+teste01
+teste02
+#selecionar tudo do BD:
+select * from teste01;
+saída: teste01.id
+###habilitar pra printar qual DB está em uso:
+set hive.cli.print.current.db=true;
+#mudar de BD: use teste;
+
+- Inserindo novos registros
+#descrever nome de col e tipo:
+desc teste01;
+#inserir dados em tab:
+insert into table teste01 values(1);
+#mostra comando de criação de tab:
+show create table teste01;
+#criar tab gerenciada:
+create external table teste03 (id int);
+
+- Comandos para inserção e transferência de arquivos
+Antes da ingestao de dados, colocar cj de dados numa 
+row data ou área de dados inicial, onde a tab é ext e
+referencia um arq; todas col sao strings pra nao perder
+nenhum registro da tab. Carrega 1a. camada como string.
+Tabela employee.txt (arq scv, delimitado por ;)
+Header/col = id;groups;age;active_lifestyle;salary
+Pode tratar o arquivo por shellscript antes da ingestao,
+ou fazer ingestao no hive e com query trata algum campo
+ou um type.
+
+- Criando uma tabela com partição e entendendo arquivos Parquet na prática
+Criar tab melhorada com mudança do formato de txt para
+parquet; inluindo partição para ser usada como index ou
+filtro, melhora performance de acordo com volumetria e
+depende de como isso foi criado.
+Criada tab com campos especializados por tipo de dado,
+add col dt_processamento como partição, campos delimit
+por |; armazenamento tp parquet e compressao snappy.
+Como não especifica se é ext, criará tab gerenciada.
+#copiar arq do hdfs para maq local:
+hdfs dfs -copyToLocal  /user/hive/warehouse/teste01.db/tb_employee/dt_processamento=20201118/000000_0
+#confere arq no diretorio:
+ls -ltrh 
+#mostrar schema da partição:
+parquet-tools schema 000000_0
+
+- Relacionando tabelas com o comando JOIN
+Pode relacionar tabelas sem chaves, mesmo que não sejam
+relacionadas, porque a chave é lógica.
+Tabela base_localidade.csv
+Header/col = street,city,zip,state,beds,baths,sq__ft,
+type,sale_date,price,latitude,longitude
+Escrever query com letras maiusculas conforme script de
+tab employee e base_localidade, mantendo nome igual dos
+arq originais. Para base_local..., aceitou delimitador
+como ','. Só assim não houve erros de sintaxe-java.
+
+- Diferença entre Impala e Hive na prática
+#mostra BD: show databases;
+Não mostrou DB teste01 do hive, porque precisa atualizar
+essa info para o Impala; no 1o. acesso do Impala sao
+gravadas infs no metastore, ele não precisa busca-las
+de novo no metastore e ganha velocidade. Para atualizar o
+metastore precisa invalidar a gravação inicial pra que
+busque as infos atuais.
+#juntar info de 2 tab com JOIN:
+> select
+    > tab01.id,
+    > tab02.zip
+    > from tb_ext_employee tab01
+    > full outer join tb_localidade_parquet tab02
+    > on tab01.id = tab02.zip;
+
+#juntar info de 2 tab com JOIN criando col teste:
+> select
+    > tab01.id,
+    > tab02.zip,
+    > "teste" col_fixa,
+    > concat(tab01.id,tab02.zip) as col_concatenada
+    > from tb_ext_employee tab01
+    > full outer join tb_localidade_parquet tab02
+    > on tab01.id = tab02.zip;
+
+- Dúvidas e comentários finais
+Como fazer conexão ext com Hive? da mesma forma que é
+feito com BD, se houver porta ext, IP, hostname, dá
+pra conectar normalmente.
+Pra atualizar partição de tab, usa insert overwrite
+e mata o que está lá, se já existe a partição, exclui
+tudo, como se fosse um truncate. 
+Hive e Impala não fazem update e delete de lin indiv.
+Ferramenta HUE de acesso direto a dados em plataforma
+Hive ou Impala, com interface amigável, tipo web.
+Ferramentas ETL: Apache NIFI, Talend, PowerCenter
+Como é feita carga de dados em suspensao, como uma NF
+que foi cancelada? Hive não é plataforma transacional,
+tem log de leitura, é diferente de BD transacional.
+Uso com NoSQL é possível no cluster Hadoop, depende do
+BD, se for de chave-valor é diferente. Ex: DBeaver
+Backup de dados pode ser no hdfs; área intermediaria
+no formato original antes da ingestao.
+Pra importar dados de BD relacional usa-se sqoop, como
+trazer do Cassandra, SAP, Oracle pro Hive.
+Se não especificar o tipo de dado, sist. não configura.
+Hive funciona como datalake pra armazenar várias fontes
+de dados, em diversos formatos, como texto e outros.
+Pipeline de produção:fontes de dados tem info do SAP e
+do BI, para cruzar essas info pode criar um datalake e
+gerar tab especializadas, ainda plugar ferramenta de
+datavisa como PowerBI. Usa Hive para tratar as tab e o
+Impala para ler as inf com PowerBI.
+Cientista de dados pode fazer o tratamento com Python
+ou Jupyter, quando nao tem um eng de dados. Nem toda
+demanda será atendida dessa forma, por isso existem
+ferramentas Hive e Impala.
+
+- Preparação da aula
+Este curso tem como material complementar uma Máquina
+Virtual (VM) preparada com as principais ferramentas e
+configurações para o acompanhamento das atividades
+práticas. Nesse sentido, a VM pode ser obtida pelo
+seguinte link: https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
+
+- Arquivos de suporte
+https://gitlab.com/vmb1/hive
+

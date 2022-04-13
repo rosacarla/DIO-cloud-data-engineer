@@ -1,0 +1,9 @@
+CREATE TABLE TB_EMPLOYEE(
+id INT,
+groups STRING,
+age INT,
+active_lifestyle STRING,
+salary DOUBLE)
+PARTITIONED BY (dt_processamento STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+STORED AS PARQUET TBLPROPERTIES ("parquet.compression"="SNAPPY");

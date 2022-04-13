@@ -1,0 +1,11 @@
+CREATE EXTERNAL TABLE TB_EXT_EMPLOYEE(
+id STRING,
+groups STRING,
+age STRING,
+active_lifestyle STRING,
+salary STRING)
+ROW FORMAT DELIMITED FIELDS
+TERMINATED BY '\;'
+STORED AS TEXTFILE
+LOCATION '/user/hive/warehouse/external/tabelas/employee'
+tblproperties ("skip.header.line.count"="1");

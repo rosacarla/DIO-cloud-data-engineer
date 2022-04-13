@@ -1,0 +1,71 @@
+hdfs fs -get /ingesta/br_pangea/input_files/novodwbrefaturas/2018-08-31/NovoDWBRefaturamento_20190710_20190710170250.txt /ingesta/br_ba_CreditScore/teste/Scripts
+
+Listar arquivos:
+hdfs dfs -ls /ingesta/br_pangea/input_files/novodwbrefaturamento/2019-07-10
+
+
+hdfs fs -get /ingesta/br_pangea/input_files/novodwbrefaturas/2018-08-31/ .
+
+hdfs dfs -mkdir /ingesta/br_pangea/input_files/novodwbrefaturamento/2019-07-10
+
+hdfs dfs -mkdir /ingesta/br_pangea/input_files/novodwbrefaturamento/
+
+hdfs dfs -copyToLocal hdfs://nameservice1/ingesta/br_pangea/lake/faturamento/parquet/input_date=20191101/part-r-00001-beb86b51-3d48-4758-974c-64f3081e5df2.snappy.parquet .
+
+hdfs dfs -copyToLocal /ingesta/br_pangea/input_files/novodwbrefaturas/2018-08-31/ /ingesta/br_ba_CreditScore/teste/Scripts
+
+parquet-tools schema part-r-00001-beb86b51-3d48-4758-974c-64f3081e5df2.snappy.parquet
+
+/ingesta/br_pangea/input_files/novodwbrefaturas/2018-08-31
+
+
+NovoDWBRefaturamento_20190710_20190710170250.txt
+
+
+hdfs dfs -put NovoDWBRefaturamento_20190710_20190710170250.txt /ingesta/br_pangea/input_files/novodwbrefaturamento/2019-07-10
+
+/ingesta/br_pangea/input_files/novodwbrefaturamento/2019-07-10
+
+hdfs dfs -chmod -R 775 /ingesta/br_pangea/input_files/
+
+
+hdfs dfs -cat hdfs://nameservice1/data/user/hive/warehouse/br_sas_manuales.db/mg_dados_arrecadacao/input_date=22-07-2019/000000_0
+
+hdfs dfs -cat hdfs://nameservice1/data/user/hive/warehouse/br_sas_manuales.db/mg_dados_arrecadacao/input_date=31-07-2019/000000_0
+
+hdfs dfs -cat /ingesta/br_pangea/input_files/dwbarrecadaca/2019-07-31/DWBArrecadacao20190716_20190716105013.txt
+
+
+hdfs dfs -du -h hdfs://nameservice1/ingesta/br_pangea/lake/faturamento/parquet
+
+hdfs dfs -du -s -h hdfs://nameservice1/ingesta/br_pangea/lake/faturamento/parquet
+
+hdfs dfs -du -h hdfs://nameservice1/ingesta/br_pangea/lake/refaturamento/parquet
+
+hdfs dfs -du -s -h hdfs://nameservice1/ingesta/br_pangea/lake/refaturamento/parquet
+
+hdfs dfs -du -s -h 'hdfs://nameservice1/ingesta/br_pangea/lake/parcelamento/parquet'
+
+hdfs dfs -ls hdfs://nameservice1/data/user/hive/warehouse/br_sas_manuales.db/bi_ige_informe_gestao
+
+hdfs dfs -ls hdfs://nameservice1/data/user/hive/warehouse/bi_brasil.db/bt_brrj_facturacion_recaudacion/atr_periodo_movimento=202001/"atr_desc_grupo_tension=Grupo A"
+
+hdfs supergroup
+
+hdfs dfs -ls /ingesta/br_pangea/input_files/historico/novodwbdiarioenc/201909
+
+hdfs dfs -rm -R /ingesta/br_pangea/input_files/historico/novodwbdiarioenc/201909/*.txt
+
+
+hdfs dfs -put NovoDWBDiarioEnc*.txt /ingesta/br_pangea/input_files/historico/novodwbdiarioenc/201909/
+
+
+hdfs dfs -chown hdfs:supergroup -R hdfs://nameservice1/data/user/hive/warehouse/bi_brasil.db/bt_brrj_facturacion_recaudacion/atr_periodo_movimento=202001/
+
+hdfs dfs -chown hdfs:supergroup hdfs://nameservice1/data/user/hive/warehouse/bi_brasil.db/bt_brrj_facturacion_recaudacion/atr_periodo_movimento=202001/"atr_desc_grupo_tension=Grupo A"
+
+hdfs dfs -ls -h /ingesta/br_pangea/input_files/historico/novodwbrefaturasenc/201909
+
+hdfs dfs -rm -R /ingesta/br_pangea/input_files/historico/novodwbrefaturasenc/201909/*.txt
+
+hdfs dfs -put NovoDWBRefaturasEnc_*.txt /ingesta/br_pangea/input_files/historico/novodwbrefaturasenc/201909/

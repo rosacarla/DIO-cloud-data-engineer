@@ -1,0 +1,10 @@
+-- show locks em tabelas
+
+SHOW LOCKS rt_informe_gestao;
+SHOW LOCKS rt_informe_gestao EXTENDED;
+SHOW LOCKS rt_informe_gestao PARTITION (input_data);
+SHOW LOCKS rt_informe_gestao PARTITION (input_data) EXTENDED;
+
+-- tirar lock da tabela:
+
+unlock table nometabela;

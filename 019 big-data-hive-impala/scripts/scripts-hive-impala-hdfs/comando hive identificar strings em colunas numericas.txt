@@ -1,0 +1,7 @@
+-- indentificar se existem strings em coluna inteira
+
+select
+setor
+from
+br_sas_manuales.mg_refaturamento
+where setor rlike '[^0-9]';

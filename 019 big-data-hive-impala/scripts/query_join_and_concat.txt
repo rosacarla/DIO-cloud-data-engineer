@@ -1,0 +1,21 @@
+#juntar info de 2 tab com JOIN:
+
+> select
+    > tab01.id,
+    > tab02.zip
+    > from tb_ext_employee tab01
+    > full outer join tb_localidade_parquet tab02
+    > on tab01.id = tab02.zip;
+
+
+
+#juntar info de 2 tab com JOIN + criação de col teste:
+
+> select
+    > tab01.id,
+    > tab02.zip,
+    > "teste" col_fixa,
+    > concat(tab01.id,tab02.zip) as col_concatenada
+    > from tb_ext_employee tab01
+    > full outer join tb_localidade_parquet tab02
+    > on tab01.id = tab02.zip;

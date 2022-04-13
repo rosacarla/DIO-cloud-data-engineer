@@ -1,0 +1,8 @@
+insert into table TB_EMPLOYEE partition (dt_processamento='20201118')
+select
+id,
+groups,
+age,
+active_lifestyle,
+salary
+from TB_EXT_EMPLOYEE;
