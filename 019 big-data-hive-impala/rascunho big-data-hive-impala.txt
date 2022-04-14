@@ -57,7 +57,7 @@ IP 192.xxxxxxxxxxxxx
 #criado arq restart_all_service_hive.sh
 vim restart_all_service_hive.sh
 colar linhas de comandos
-#leitura do arq
+#leitura do arq.vim
 cat restart_all_service_hive.sh
 #desativar mode safe do hive
 sudo -u hdfs hadoop dfsadmin -safemode leave
