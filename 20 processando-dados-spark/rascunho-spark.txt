@@ -1,0 +1,197 @@
+>>>>>>>>> 13/04/2022 <<<<<<<<<
+Processando grandes conjuntos de dados de forma paralela
+e distribuída com Spark
+Prof. Ivan Falcão
+
+1) Conceitos iniciais sobre Spark
+- Introdução, objetivos e requisitos básicos
+shellscrip, Linux, lgm python-java-R,
+Assunto SparkSQL 
+
+- Conhecendo o Spark
+Framework de big data para análise e processamento de dados, 
+trabalha nativamente de modo distribuído. Começou com
+Cloudera e Horton, saiu da estrutura trad do Hadoop, tem
+workloads em cloud. Gerido pela Apache como boa parte do que
+há para big data. Suporte é databricks, trabalha com notebook,
+integração em cloud, cluster nao precisa estar sempre de pé
+pra atender. Voltado mais pra cloud. 
+Spark é framework in-memory, traz dados para RAM que tem
+acesso + rapido, acelera o processamento de dados. Core da
+ferramenta é a RAM, é multilinguagem, inclui SQL. Naturalmente
+distribuído, não depende do hadoop. Spark é 100x mais rapido
+do que mapreduce. Algoritmo que usa muito a memoria RAM, pode
+ser definido se usa disco ou RAM.
+
+- Arquitetura do Spark
+SparkContext gerencia acesso a arq, sol de recurso,
+se derrubar programa ou maq em que está o SparkContext
+o programa Spark paralisa. Máquina que administra os
+recursos de Spark é maq driver, usa no processamento
+e no gerenciamento de recursos do Spark. Primeiro
+procura recurso de memoria, cpu, cluster pra iniciar
+o processo; conversa com cluster manager, como o Yarn
+pra buscar recursos. SparkContext quebra o processo
+em tasks, joga pra executores em diferentes máquinas
+(worker node). Se perde um executor, Spark cria um
+novo e repassa as tasks. O executor é uma jvn com 
+programa java executando. Tarefa de ordenação mesmo
+dividida em partes, é reunida na maquina driver pra
+fazer fechamento geral.
+
+- Duvidas e comentarios sobre Arquitetura do Spark
+Driver program do spark já vem compilado; maquina
+driver pode ser muito requisitada para ordenação e
+agrupamento. Versoes + recentes do Spark tem opção
+de usar placas de video. Por baixo implementa proc
+essos de mapreduce, porque lê, analisa, monta plano
+de trabalho, divide as tarefas, envia a workers pra
+execução. Tanto pode pedir pra ler arq grande quanto
+pedir pra repartir em tarefas.
+
+- As 5 bibliotecas do Spark
+Apache Spark (core), apache Streaming, MLin (ml),
+GraphX (graph). Trabalha com RDD (resilient, dis-
+tributed dataset), estrutura de dados pra executar
+o maprecude. Boa parte de dados são estruturados,
+spark usa SQL pra dados tabulares; Streaming(dados
+do Kafka); GraphX (google maps). Dados nao estrut.
+(foto, som, arq binarios) são pouco trabalhados com spark.
+
+- Resilient Distributed Dataset (RDD)
+Lista de fotos, linhas, livros que RDD distribui
+em diversos nós do cluster. Relisiente (resiste a
+falhas); Distribuído por existir em diversos nós
+de um cluster; Dataset imutável, pode transformar
+em outro RDD quando é feita modificação. Se fizer 
+um GROUP BY no dataset, gera outro RDD, é possível
+voltar aos dados em RDD anterior. Existe a garbage
+collection do java que elimina rdd não usados. São
+imutaveis dataframes, data-sites. 
+
+- Processamento do SPARK
+Pode rodar em single node = única maq.; mesmo assim
+roda de maneira distribuída, porque usa recursos da
+maq para criar executores menores com processador e 
+memoria proprios. Cluster mode ou gerenciadores de 
+recursos(Yarn, Mesos, EC2, Kubernetes). 
+Spark distribui carga em diversas maquinas.
+
+- Prepação da aula
+VM Everis
+Slides em repositorio da aceleração Everis
+https://github.com/MarceloJSSantos/acelereracao-global-dev-4-everis-dio
+
+2) Instalação e execução do Spark
+- Duvidas e comentarios sobre o conteudo da aula 1
+Cluster mode roda em Docker; spark cria imagem do 
+docker e sobe no kubernetes. Spark funciona sem ter
+hadoop instalado; pode usar em hd normal.
+Possivel conectar c/ S3 (tem analogo no google cloud
+storage), colocar bibliotecas do S3 junto com spark
+pra acesso direto.
+
+- Passo a passo para instalar o Spark
+spark.apache.org, download, prebuitl apache hadoop 2.7,
+copiar link tar.gz (binario)
+jars = arq binarios do java para trabalhar, pra jobs
+Olhar pasta sbin/ (estão bashes ou arq de execucao)
+pra montar cluster com spark.
+Na pasta bin estao ferramentas do hadoop, coisas que
+serão executadas; tem o pyspark (programa-se em spark
+usando lgm python) que é o client interativo pra trab
+com spark python. Permite trabalhar de modo interativo
+ou maneira batch com pre processos pra executar.  
+#Dentro da pasta bin, escolher com o que trabalhar:
+spark-shell (abre shell do spark com scala).
+
+- Acessando o Spark pelo Spark shell
+#dentro do spark-shell, baixar csv:
+wget https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv
+Comando acima não funcionou, porque deu falhas de conexão.
+Abri o link no navegador pra copiar o conteúdo em arq.csv
+na pasta do curso, depois criei arq avengers.csv na pasta 
+home da VM com comando "vim". Foi possível explorar com 
+spark-shell e pyspark.
+#print do conteudo na tela dividido em paginas:
+cat avengers.csv |more
+#leitura -cria datafame- do arquivo csv em spark-shell(scala):
+val insurance = spark.read.format("csv").option("sep", ",").option("header", "true").load("file:///home/everis/avengers.csv")
+Houve erro porque digitei somente "//" antes de home/everis, o esperado era "///".
+#mostra a leitura do daraframe: insurance.show()
+#mostra dataframe com 10 linhas do arq original:
+insurance.show(10, false)
+dataset2.show(10, false)
+#mostra dataframe com 1 lin do original:
+insurance.select("URL").show(1, false)
+#cria dataframe da selecção de URL com variavel pra receber:
+val dataset2 = insurance.select("URL")
+#seleciona 1 lin do dataframe pra mostrar:
+insurance.select("URL").show(1, false)
+
+- Outros meios de acessar o Spark
+Documentação e guias de programação no site Spark Apache
+https://spark.apache.org/docs/latest/
+#trabalhar com PySpark, é só digitar: pyspark
+#ler arquivo csv
+insurance = spark.read.format("csv").option("sep",",").option("header","true").load("file:///home/everis/avengers.csv")
+insurance.show()
+
+
+3) SparkSQL
+- Introdução a Dataframes e Datasets
+Dataframes podem ser trabalhados quase só com SQL; permite 
+trabalho com varias fontes de dados (arq hdfs, tab hive, 
+tab hbase, BD rel etc), por ser ferramenta que transforma
+e agrega dados. Aceita dados semi estruturados, como os do
+ElasticSearch. 
+
+- Spark Session
+Trabalhar com SQL por meio dp Spark Session. Quando usa o 
+Spark Context fica sinalizado como "SC".
+#criação de Spark Session (na lg scala, internamente já tem
+sparkcontext associado):
+
+import org.apache.spark.sql.SparkSession
+
+val spark = SparkSession
+.builder()
+.appName("Spark SQL")
+.config("configuracao","valor da configuracao")
+.getOrCreate()
+
+- Comandos com SparkSQL - Parte 1
+#carregar dados de json em um dataframe:
+val dfJson = spark.read.json("file:///home/spark/Downloads/people.json")
+val dfJson = spark.read.format("json").load("file:///home/spark/Downloads/people.json")
+Comando "load" aponta onde a leitura ficará acessível.
+Spark não tem todos os drivers jdbc.
+#comando para trazer estrutura da tab:
+df.printSchema()
+#mostrar alguns dados da tab:
+df.show(16, false)
+#mostrar tab com agrupamento e contagem de "Honorary":
+df.groupBy("Honorary").count().show()
+
+- Comandos com SparkSQL - Parte 2
+#renomear dataframe:
+df.createOrReplaceTempView("av")
+df.printSchema()
+#selecionar campo com dado (URL) especificado:
+spark.sql("SELECT Appearances FROM av WHERE URL = 'http://marvel.wikia.com/Anthony_Stark_(Earth-616)'").show(10, false)
+
+- Duvidas e comentarios finais
+Spark integra com Cassandra, HBase. 
+Ferramenta transforma e consulta dados.
+Leitura de arq do hadoop: substituir na linha de comando o
+"file:///" por hdfs = caminho do arq.
+Spark-shell faz analise exploratoria de dados, consultas.
+Leitura de PDF é feita se for tabela, mas texto requer uma
+outra ferramenta. Parecido com Pandas, tem o projeto Koalas
+que traduz comandos do Pandas e roda do spark. O dataframe
+de Pandas não é distribuído, tomar cuidado.
+Eng de dados especifica mem ram, processadores, executores
+(max e min), qtde de particoes (partes a serem quebradas).
+As tasks são divididas pelo Spark.
+
+
