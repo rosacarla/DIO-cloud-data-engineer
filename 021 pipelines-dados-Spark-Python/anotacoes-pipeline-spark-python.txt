@@ -1,0 +1,245 @@
+>>>>>>>> 14/04/2022 >>>>>>>>>
+Criando pipelines de dados eficientes com Spark e Python
+Prof. Marco Antonio Pereira 
+
+1) Conceitos iniciais sobre Spark
+
+- Introdução, objetivos e requisitos básicos
+Ingestao de dados do tipo bet são mais communs.
+StreamContexto = leitura de dados streaming
+Plataforma cloud databricks community, cluster de 15gb
+Requisitos --> VM Everis, Python ou Scala
+
+- O que é Spark
+Escrito em Scala em cima do Java (JVM) e roda em máquina
+virtual Java. Reuso de memoria pelo Spark propicia opera
+coes iterativas de ML e consultas interativas.
+
+- Aplicabilidade e uso interativo e não interativo
+Ingestao/ETL (extract, transform, load), analise preditiva
+e ML; acesso a dados (cons SQL); mineração e processamento
+de texto (graphex pra analise de sentimento, redes sociais);
+processa eventos em tempo real; app graficos; reconhecimento
+de padroes; recomendações. Lgm R é menos comum com Spark.
+Terminal Scala é de uso interativo, possibilita trabalhar
+com file system, hdfs on premise, bucket na cloud, debugar
+codigo, preparar codigo. Não se usa pra produção por ter umas
+limitacoes. Uso não interativo ocorre ao digitar spark-submit,
+consegue submeter progr. em Python, Java ou Scala pra criar 
+configurações do conteiner sobre drive, memoria, nro de core.
+Conteiner reune recursos para uso dentro do Spark. É uma boa
+pratica configurar fila de jobs (queue "SquadFI").
+
+- Anatomia do Spark
+Componentes macros = driver, cluster manager, workers
+Driver determina o ciclo de vida, cria o SparkContext.
+DAG visualization tem detalhes do job. Em big data uma tab é
+uma representação de arq. Cluster manager monitora os nós
+dos workers; jobs sao visualizado pela porta 8088 em app
+do Hadoop. Spark Master pede recursos no cluster e entrega
+ao driver Spark, gerencia o tamanho do conteiner.
+Yarn cliente = não usa todos os recursos do cluster, pois o
+Yarn escolhe uma maq para processamento.
+
+- Passo a passo para iniciar
+#iniciar sessao do Spark-shell
+pyspark --master local
+No contexto cloud, há ambientes hadoop gerenciados por empresas
+como Amazon. Ex.: EMR (Managed Hadoop Framework, tem custo alto,
+acesso cai csh pela porta 22); AWS Glue DataBrew (visual data 
+preparation tool to clean anda normalize for analytics and ML).
+As 2 tools são pedidas a quem trabalha com data visualization.
+O Glue é um spark visual. EMR é usado para criar cluster na 
+cloud, pode selecionar maqs que ficam disponiveis no EC2. 
+Glue é servless, só liga o job quando preciso. 
+Criar conta databricks: https://community.cloud.databricks.com/
+Criadas contas AWS e databricks com email pucpr.
+
+- Sobre Streaming
+Usado com eventos em tempo real, é considerado near real time;
+processamento e lotes com chave-valor. RDD trabalha linha a 
+linha um arq posicional ou nao estruturado, jobs guardados em
+pequenos lotes RDD para Spark processar.
+
+- Revisao de conteudo
+SparkContext acessa SQLContext (operação em SQL) e HiveContext
+(ler metadados do Hive). Necessario iniciar um contexto com
+SparkContext pra iniciar SQLContext. O SparkContest junta 
+configurações do cluster e recursos. Com comando setConf pode
+incluir configurações de memoria, nº de executores etc. Depois
+de criar HiveContext (ou acesso ao Hive), pode selecionar tab
+do metadados do Hive (BD nosql da VM cloudera). Codigo Scala
+usa val pra criar constante e var pra criar variavel.
+
+- Preparação da aula
+VM Everis
+
+
+2) Primeiro contato com databricks
+- Como criar uma spark session e sobre StreamContext
+Criei cluster cesrs75, depois de criar o Worspace e acessá-lo
+pela URL que esta em configuração.
+
+- Casos de uso e compatibilidade
+Exemplo: aplicação do torpedão do Faustao, com uso de Spark
+Streaming pra capturar as informações (msg texto); persiste
+info no HBase (BD nao rel chave-valor); Phoenix é interface
+pra HBase; MicroStrategy é ferramenta de visualização pra 
+dashboard. Dados ingeridos pelo SparkStreaming podem ser ar-
+mazenados em HDFS, BD, dashboards ou qualquer file system. 
+Exemplos de uso do sparkSteaming: Ebay, Netflix, Amazon tem 
+pagina de casos de usos.
+Ver "netflix" de livros: https://www.safaribooksonline.com/
+
+- Duvidas e comentarios finais
+Usar Kafka junto com Spark é vantajoso para colher dados em
+tempo real sem perdas, porque persistem mensagens que sao
+armazenadas num topico pra consumir.
+Expurgo de dados depende do interesse do cliente (historico
+de 5 anos sobre black friday, de leis aplicaveis ao negocio.
+Se estiver na cloud, dinheiro é o limite pra definir se vai
+manter ou apagar dados. 
+
+- Slides
+Fiz download!
+
+
+3) Sobre arquitetura e armazenamento de dados
+- Introdução, objetivos e requisitos básicos
+VM Everis, conta databricks, lgm Python ou Scala
+
+- Falando sobre dados
+Caso de uso - criar painel de movimentação de vendas por
+produto, pode ser do varejo. Extrair da solicitação do 
+cliente infos lógicas e físicas pra montar estrategia de
+ingestao de dados. Não carregar arq compactado tgz no 
+hdfs porque a primeira linha da external table fica com
+o nome do arquivo e há quebra de colunas, só na quarta
+ou quinta col entra o dado, entao arq fica desordenado. 
+Tipos de arquivos: .txt é posicional, .csv é delimitado,
+outros são parquet, json, orc, avro, zip ...
+
+- Visao geral de Arquitetura e On Premises
+On Premises seria infraestrutura, datalake ou datacenter
+dentro do cliente, fisicamente com servidores. Problemas:
+nao ter boa governança; armazenamento limitado.
+CSV não é tipo de arq pra trabalhar em datalake, por nao
+ser comprimido, é arq texto, é grande, não é performático.
+Arquitetura on premises = Data Source+Data Ingestion+File
+System+Storage+Data Visualization
+No caso de uma fonte de BD em RDBMS é preciso usar Sqoop
+para import/export de tab de bco rel para hdfs. Também
+poderia usar Spark, Apache Nifi, Flume.
+Spark trabalha com RDD (bx nível, dados nao estr, rapido)
+e com Dataframe (dados estrut). Arq com menos de 100 mb
+podem ficar no hdfs, mas é problema porque é triplicado
+pelas replicações; pode ser resolvido com estratégia de
+particionamento para contornar lentidão da tab. 
+
+- Visão geral sobre Cloud (AWS)
+Arquitetura Cloud AWS = Data Visualization+File System+
+Spark ETL (DEvOps e Git)+Storage (NoSQL, RDBNS..)+
+DataConsulting+DataVisualization
+
+- As camadas Raw Zone, Trusted Zone e Refined Zone
+Ingestao de dados deve ser dividida em etapas, pensar
+qual tipo de arquivo, tipo de uso, por que dividir em
+camadas, quanta carga é guardada por quanto tempo etc.
+Raw Zone - guarda infos da origem do jeito que vieram,
+é feita uma movimentação para pasta raw zone, converte
+em parquet com compressao snappy. Pode fazer backup do
+arq original, compactado em tgz.
+Trusted Zone - ingestao dirigida a regras de negocio,
+onde é feito ETL e gerado 2o. parquet consolidado.
+Refined Zone - visoes para relatorios, como Tableau,
+com seleção do que precisa.
+
+- Tipos de armazenamento
+Avro - Parquet - ORC
+Avro bom pra evolução de schemas; ORC bom pra compressao;
+Avro parecido com Json; Parquet é colunar, bom pra analise
+pesada de leitura. ORC tem compressao ZLIB, compativel com
+HiveQL, cria um arq pra cada coluna.
+
+4) Spark SQL
+- Prepração com a plataforma Kaggle e databricks
+DontPad: dontpad.com/PySparkParte2 (ok!)
+Download de Datasets para testes - necessário se registrar:
+https://www.kaggle.com/
+Dataset 1:
+https://www.kaggle.com/gpreda/covid-world-vaccination-progress
+Notebook:
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/5191291087587071/3239850342304675/2520349622255950/latest.html
+Caminho arq(dataset) no databricks:
+/FileStore/tables/country_vaccinations.csv
+/FileStore/tables/arquivo_rdd.txt
+
+- Praticando comandos - DataFrame
+#propriedade indica que 1a linha da tab é cabeçalho:
+option("header","true")
+#mostra o esquema e adivinha os tipos de dados:
+option("inferSchema", "true")
+#mostra schema e somente col do dataframe: 
+df1 = spark.read.option("header","true").option("inferSchema","true").csv(path_dataset1)
+df1.columns
+#indicar modo de salvamento do job (faz merge):
+mode("overwrite")
+#modo de salvamento add arq na pasta:
+mode("append")
+#dividir arq em particoes de 2 pra mais:
+df.repartition(2)
+#mudar delimitador padrao do arq (delimiter ou sep):
+df1 = spark.read.option("header","true").option("delimiter", "|").option("inferSchema","true").csv(path_dataset1)
+#leitura de arq json com várias linhas em blocos diferentes:
+(não se aplica se o json é desestruturado)
+option("multiline", "true")
+
+- Praticando comandos - RDD
+## exibir arq RDD
+
+rdd = sc.textFile(path_rdd)
+#rdd.show() = Errado, não é possível exibir um SHOW() de um RDD, somente um Dataframe
+rdd.collect()
+
+- Praticando comandos - Tabela temporaria
+Serve pra exexutar uma query, criar representação do arq em tab
+temporaria na memoria.
+#registrar tab temporaria: createOrReplaceTempView()
+#trazer coluna especificada do dataframe:
+spark.sql("SELECT country, iso_code FROM tempTableTerere").show()
+#agrupar dados contados por coluna "country" a partir do arq:
+spark.sql("SELECT count(*) tt, country FROM tempTableTerere Group By country").show()
+Functions em Spark: col, column, substring, substl, concat; tudo
+que é usado no SQL é funcao no Spark. 
+#converter formato de dado com "cast", ex: string p/ date.
+.cast("date")
+
+- Praticando comandos - Schema e nova coluna
+StructType é lista [] de col no Spark, usado pra renomear col.
+Col é representada pelo StructField. 
+#selecionar col por expressões ou strings:
+df1.selectExpr("country", "date", "iso_code").show()
+Não pode acrescentar col a dataframe que já existe, deve ser 
+criado um novo df com o acrescimo.
+
+- Praticando comandos - Filtrar e ordenar dados
+#conversao de tipo de dado com "cast":
+df5 = df1.withColumn("PAISSSSS", col("country").cast("string").alias("PAISSSSSSS"))
+df5.select(df5.PAISSSSS).show(2)
+
+- Casos de uso, duvidas e comentarios finais
+Documentação do Spark: https://spark.apache.org/docs/3.2.1/ 
+Ao usar dataframe.write, arq sao gravados diretamente no hdfs.
+Alterações em arq parquet requerem reprocessamento deles.
+Se usar append, são feitos acrescimos sem necessidade de 
+nova compressao. Se usar overwrite, precisa reprocessar.
+Propriedade withColumn é usada pra criar novas colunas.
+
+
+
+
+
+- Slides
+baixei!!
+
+- 
