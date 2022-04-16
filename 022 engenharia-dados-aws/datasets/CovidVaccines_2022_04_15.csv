@@ -1,0 +1,101 @@
+country_name,Column_2,Column_3,Column_4,Column_5,Column_6,Column_7,Column_8,Column_9,Column_10,Column_11,Column_12,Column_13,Column_14,Column_15
+Greece,GRC,2021-02-10 00:00:00,459535,353412,106123,21663,17345,4.41,3.39,1.02,1664,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-11 00:00:00,482416,360800,121616,22881,17528,4.63,3.46,1.17,1682,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-12 00:00:00,506038,366749,139289,23622,17986,4.85,3.52,1.34,1726,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-13 00:00:00,526369,371462,154907,20331,18359,5.05,3.56,1.49,1761,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-16 00:00:00,575766,397840,177926,21021,19699,5.52,3.82,1.71,1890,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-17 00:00:00,603667,412970,190697,27901,20590,5.79,3.96,1.83,1975,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-18 00:00:00,634037,430124,203913,30370,21660,6.08,4.13,1.96,2078,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-19 00:00:00,664347,449073,215274,30310,22616,6.37,4.31,2.07,2170,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-20 00:00:00,693436,465842,227594,29089,23867,6.65,4.47,2.18,2290,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-22 00:00:00,730410,486820,243590,33165,25095,7.01,4.67,2.34,2408,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-23 00:00:00,762624,505148,257476,32214,26694,7.32,4.85,2.47,2561,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-28 00:00:00,234285,210488,23797,18245,15480,2.25,2.02,0.23,1485,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-29 00:00:00,253363,220621,32742,19078,15641,2.43,2.12,0.31,1501,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-02 00:00:00,315628,261543,54085,21811,16839,3.03,2.51,0.52,1616,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-04 00:00:00,359723,291259,68464,21601,17920,3.45,2.79,0.66,1719,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-05 00:00:00,380136,306441,73695,20413,18110,3.65,2.94,0.71,1737,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-06 00:00:00,397857,318097,79760,17721,18081,3.82,3.05,0.77,1735,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-23 00:00:00,160101,156966,3135,16224,11387,1.54,1.51,0.03,1092,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-26 00:00:00,197755,184610,13145,17804,14757,1.9,1.77,0.13,1416,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-27 00:00:00,216040,198161,17879,18285,15173,2.07,1.9,0.17,1456,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-30 00:00:00,271287,232399,38888,17924,15884,2.6,2.23,0.37,1524,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-03 00:00:00,338122,276103,62019,22494,17440,3.24,2.65,0.6,1673,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-09 00:00:00,437872,345290,92582,20307,17463,4.2,3.31,0.89,1675,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-21 00:00:00,697245,467656,229589,3809,22384,6.69,4.49,2.2,2148,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-20 00:00:00,109831,108167,1664,15377,6414,1.05,1.04,0.02,615,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-21 00:00:00,125928,123667,2261,16097,7853,1.21,1.19,0.02,753,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-22 00:00:00,143877,141298,2579,17949,9781,1.38,1.36,0.02,938,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-19 00:00:00,94454,93382,1072,8556,5426,0.91,0.9,0.01,521,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-01 00:00:00,293817,247251,46566,,16267,2.82,2.37,0.45,1561,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-08 00:00:00,417565,332812,84753,,17678,4.01,3.19,0.81,1696,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-15 00:00:00,554745,386049,168696,,19597,5.32,3.7,1.62,1880,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-25 00:00:00,179951,171890,8061,,13436,1.73,1.65,0.08,1289,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-16 00:00:00,80391,80389,2,4979,5709,0.77,0.77,0,548,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-18 00:00:00,85898,85475,423,,5122,0.82,0.82,0,491,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-05 00:00:00,16631,16631,,6304,2222,0.16,0.16,,213,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-07 00:00:00,26445,26445,,5829,3444,0.25,0.25,,330,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-08 00:00:00,35272,35272,,8827,4667,0.34,0.34,,448,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-09 00:00:00,40427,40427,,5155,5325,0.39,0.39,,511,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-10 00:00:00,44645,44645,,4218,5825,0.43,0.43,,559,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-11 00:00:00,50045,50045,,5400,5674,0.48,0.48,,544,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-12 00:00:00,56475,56475,,6430,5692,0.54,0.54,,546,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-13 00:00:00,64932,64932,,8457,6331,0.62,0.62,,607,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-14 00:00:00,70960,70960,,6028,6359,0.68,0.68,,610,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-15 00:00:00,75412,75412,,4452,5734,0.72,0.72,,550,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-04 00:00:00,10327,10327,,6458,1411,0.1,0.1,,135,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-06 00:00:00,20616,20616,,3985,2699,0.2,0.2,,259,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2020-12-29 00:00:00,1077,1077,,630,630,0.01,0.01,,60,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2020-12-30 00:00:00,1722,1722,,645,638,0.02,0.02,,61,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2020-12-31 00:00:00,2339,2339,,617,631,0.02,0.02,,61,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-01 00:00:00,2603,2603,,264,539,0.02,0.02,,52,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-02 00:00:00,3149,3149,,546,540,0.03,0.03,,52,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-03 00:00:00,3869,3869,,720,570,0.04,0.04,,55,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Gibraltar,GIB,2021-05-05 00:00:00,72674,37988,34686,780,392,215.71,112.75,102.95,11635,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-06 00:00:00,73476,38454,35022,802,449,218.09,114.14,103.95,13327,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-07 00:00:00,74256,38727,35529,780,449,220.4,114.95,105.46,13327,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-19 00:00:00,75961,38953,37008,780,219,225.46,115.62,109.85,6500,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-28 00:00:00,77231,39060,38171,520,160,229.23,115.94,113.3,4749,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-29 00:00:00,77519,39080,38439,288,190,230.09,116,114.09,5639,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-04 00:00:00,71894,37614,34280,,337,213.39,111.64,101.75,10003,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-13 00:00:00,74461,38905,35556,,141,221.01,115.48,105.54,4185,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-18 00:00:00,75181,38923,36258,,113,223.15,115.53,107.62,3354,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-22 00:00:00,76189,38990,37199,,206,226.14,115.73,110.41,6114,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-02 00:00:00,77717,39098,38619,,159,230.68,116.05,114.63,4719,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-27 00:00:00,76711,39033,37678,,96,227.69,115.86,111.83,2849,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-08 00:00:00,77753,39118,38635,,12,230.78,116.11,114.67,356,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-12 00:00:00,77831,39133,38698,,14,231.01,116.15,114.86,416,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Greece,GRC,2020-12-28 00:00:00,447,447,,,,0,0,,,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-24 00:00:00,0,,,,12412,,,,1191,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-31 00:00:00,0,,,,16075,,,,1542,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-07 00:00:00,0,,,,17880,,,,1715,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-02-14 00:00:00,0,,,,18978,,,,1821,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Greece,GRC,2021-01-17 00:00:00,0,,,,5500,,,,528,"Johnson&Johnson, Moderna, Oxford/AstraZeneca, Pfizer/BioNTech",Ministry of Health,https://www.data.gov.gr/datasets/mdg_emvolio/
+Gibraltar,GIB,2021-05-02 00:00:00,0,,,,421,,,,12496,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-03 00:00:00,0,,,,421,,,,12496,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-08 00:00:00,0,,,,426,,,,12644,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-09 00:00:00,0,,,,403,,,,11962,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-10 00:00:00,0,,,,380,,,,11279,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-11 00:00:00,0,,,,357,,,,10596,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-12 00:00:00,0,,,,250,,,,7420,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-20 00:00:00,0,,,,225,,,,6678,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-21 00:00:00,0,,,,215,,,,6382,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-23 00:00:00,0,,,,200,,,,5936,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-24 00:00:00,0,,,,194,,,,5758,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-25 00:00:00,0,,,,189,,,,5610,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-30 00:00:00,0,,,,182,,,,5402,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-31 00:00:00,0,,,,174,,,,5165,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-01 00:00:00,0,,,,166,,,,4927,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-03 00:00:00,0,,,,145,,,,4304,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-14 00:00:00,0,,,,50,,,,1484,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-15 00:00:00,0,,,,66,,,,1959,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-16 00:00:00,0,,,,81,,,,2404,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-17 00:00:00,0,,,,97,,,,2879,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-05-26 00:00:00,0,,,,92,,,,2731,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-04 00:00:00,0,,,,71,,,,2107,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-05 00:00:00,0,,,,31,,,,920,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-06 00:00:00,0,,,,25,,,,742,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-07 00:00:00,0,,,,18,,,,534,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-10 00:00:00,0,,,,10,,,,297,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-11 00:00:00,0,,,,12,,,,356,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865
+Gibraltar,GIB,2021-06-09 00:00:00,0,,,,8,,,,237,Pfizer/BioNTech,Government of Gibraltar,https://twitter.com/GibraltarGov/status/1403686370242084865

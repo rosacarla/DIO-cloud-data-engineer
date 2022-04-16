@@ -1,0 +1,159 @@
+>>>>>>>> 15/04/2022 <<<<<<<<<
+Introdução a Engenharia de Dados na AWS
+Prof. Cassiano Peres - Linkedin peres-cassiano
+
+1) Conheça os serviços da AWS
+- Apresentação inicial e objetivos do curso
+Ferramentas SnowBall (hardware para migração de dados),
+Kinesis (streaming de dados), MapReduce (análise, redu
+ção de dados), Glue (preparação de dados), Redshift
+(forma de armazenamento pra montar data warehouse).
+Requisitos: python, ssh, linux, conta AWS.
+
+
+- Conceitos básicos sobre Big Data
+Big Data trata do gerenciamento de BD com volume, variedade,
+velocidade. Demanda grande esforço computacional. Vantagens
+são reducao de custos e ganho de eficiencia. Etapas do 
+processamento do big data: coletar, armazenar, processar+
+analisar, consumir e visualizar.
+
+- Visão geral de Big Data na AWS
+Ferramentas divididas em setores: collection, storage, 
+processing, analysis, visualization
+
+- AWS Snow Family
+Dispositivos portateis ou offline pra migração de dados com
+alta segurança. Bucket S3 é o data lake (repositório centra
+lizado que permite armazenar todos os dados estruturados e
+não estruturados em qualquer escala.).
+Edge computing sao dados criados em locais sem acesso cons-
+tante ou acesso ruim pra transferencia dos dados. Exemplos:
+navio, caminhao, mina. Aplicações da Snow Family para casos
+de conectividade limitada. 
+
+- AWS Kinesis
+Gerenciado por Apache Kafka, ferramenta pra input, captura 
+de streaming de dados (metricas de logs de apps, videos,
+clicks em sites, IoT). Faz processamento em tempo real.
+Um registro compoe um shard (fragmento/partição) e varios
+shards compoem um stream. Producers (insere registros de 
+dados de usuarios, ingestao), Consumers (lê, processa reg),
+Agent (monitora cj de arq, base java). Kinesis Analytics
+tem ETL, gera métricas, análise responsiva. Firehose tem 
+escala automatica. 
+
+- AWS Elastic Mapreduce
+Serviço gerenciado, usa imagens de VM EC2 da AWS; cria o 
+cluster, processa info, gera resultado, mata cluster pra
+não consumir recursos e encarecer processamento. Composto
+por Master Node (ponto de acesso, nó lider), Core Node
+(hospeda dados hdfs, executa task, perde inf se removido),
+Task Node (executa task, pode desligar sem perder dados).
+
+- AWS Glue
+Integra dados sem servidor. Fornece recursos DataBrew pra
+ETL sem escrita de código e Elastic Views pra combinar e 
+replicar dados com uso de SQL. Trabalha com catálogos, só
+armazena a definição da tab; dados nao estrut são tratados
+como estruturados.
+
+- AWS Redshift
+Armazenamento de dados gerenciado em escala de petabytes,
+projetado pra OLAB e nao OLAP; interface SQL, ODBC, JDBC.
+Bom pra cargas grandes de análises de dados. Um nó lider
+distribui planos de trab pra nós de computação que tratam
+e armazenam os dados.
+
+
+2) Mãos à obra
+- Apresentação da parte prática
+Criar Stream Delivery - AWS Kinesis Firehose, configurar
+instancia AWS EC2, logs de processam. de dados com Python,
+armazena logs no AWS3, manipular dados no Glue Data Brew.
+
+- Criando o delivery stream
+Nome: CovidVaccinesLog
+Bucket: covid-vaccine-log01
+Instancia: dio-inst
+Par chave: DioKey
+
+- Implementando o serviço de instâncias EC2 e configurando
+através do Putty
+Baixei Putty app; gerei chave privada com puttygen; acessei
+EC2 com chave SSH AWS e chave do putty. 
+#acessar instancia EC2 com login: ec2-user
+#instalar Kinesis Agent
+sudo yum install -y aws-kinesis-agent
+#instalar Git
+sudo yum install -y git
+#clonar repositorio Dio Live AWS Big Data 2:
+git clone https://github.com/cassianobrexbit/dio-live-aws-bigdata-2
+#entrar no diretorio dio-live... e descompactar dataset:
+cd dio-live...
+ls (ver arq)
+unzip Dataset.zip
+#abrir com editor nano o cod python:
+nano LogGenerator.py
+#transformar cod.py em executavel:
+chmod a+x LogGenerator.py
+#visuzalizar arq csv:
+cat vaccinations.csv
+less country_vaccinations.csv (visualização com limpeza)
+#criar diretorio de logs:
+sudo mkdir /var/log/diolive
+#acessar pasta Kinesis:
+cd /etc/aws-kinesis/
+ls
+#abrir com editor nano o codigo agent:
+nano agent.json
+#editar arq com nano:
+sudo nano agent.json
+## Foram alteradas as permissoes de acesso AWS, como adm.
+
+- Iniciando o serviço Kinesis e desenvolvendo os arquivos de log
+#iniciar Kinesis:
+sudo service aws-kinesis-agent start
+#muda config pra iniciar kinesis-agent quando instancia startar:
+sudo chkconfig aws-kinesis-agent on
+#volta para diretorio dio-live...
+cd ~/dio-live-aws-bigdata-2/
+#escrever logs processando arq csv (500mil registros):
+./LogGenerator.py 500000
+## Não gerou porque tinha erro no arq jason, foi preciso
+corrigir region "west" e nome do deliverystream no json
+na pasta /etc/aws-kinesis/ e, antes de reescrever logs,
+restartar agent:
+sudo service aws-kinesis-agent restart
+### Demorou pra corrigir porque usei comando start várias 
+vezes no lugar de restart, sempre aparecia region errada.
+firehose:us-west-2 
+deliverystream: CovidVaccinesLog
+
+- Criando um data Stream e acessando os dados devolvidos
+Criar endpoint dentro do kinesis para conexao c/ stream,
+disponibilzar dados a outras aplicações.
+Data Stream: CovidVaccinesLogStream
+Restartado agent, volta no diretorio dio-live...
+#rodar log sem indicar linhas (padrao = 100 lin):
+sudo ./LogGenerator.py
+Não deu certo por falta de region no endpoint do kinesis.
+Mensagem de sucesso informa envio de dados replicados no
+total de 200 registros.
+
+- Visualizando os dados com o serviço Glue Data Brew
+Existem dados de teste já implemantados e podemos criar o
+nosso projeto. Foi carregado um arq de log pra visualizar.
+
+- Conclusão do curso
+Foi gerada analise de perfil de dados. Arq de log = dataset
+menor com partição do maior.
+
+
+- Github
+Fiz o fork no repositorio do bootcamp.
+https://github.com/cassianobrexbit/dio-live-aws-bigdata-2
+
+
+- Slides
+Baixei na pasta do curso
