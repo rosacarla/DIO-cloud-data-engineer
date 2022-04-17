@@ -46,9 +46,11 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
     11/04/2022 - Mentoria #7: Como se tornar um desenvolvedor de sucesso na Cognizant
 
 ---
+
 ## Dados adicionais 
-Carga horária: 91hs </br>
-Finalizado em: [16/04/2022](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/001%20bootcamp-cognizant-cloud-data-engineer%232#readme)
+Carga horária: 91 hs </br>
+Data de conclusão: 16/04/2022 </br>
+Credencial do certificado nº: [0B2C33B1](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/001%20bootcamp-cognizant-cloud-data-engineer%232#readme)
 
 ---
 
