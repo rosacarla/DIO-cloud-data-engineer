@@ -1,6 +1,6 @@
 # <p align="center">Bootcamp Cognizant Cloud Data Engineer #2</p>
 
-<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/001%20bootcamp-cognizant-cloud-data-engineer%232/logo-bootcamp%232.png" width="200"></p>
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/001%20bootcamp-cognizant-cloud-data-engineer%232/images/logo-bootcamp%232.png" width="200"></p>
 
 Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data Engineer #2*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, códigos, exemplos, exercícios, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
 
