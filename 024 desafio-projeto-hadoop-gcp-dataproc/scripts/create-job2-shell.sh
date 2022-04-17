@@ -1,0 +1,1 @@
+gcloud dataproc jobs wait 8664ee58a79e451880adc5ad60c3e921 --project desafiodataproc-347418 --region us-central1

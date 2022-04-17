@@ -1,0 +1,85 @@
+>>>>>>>>>>> 16/04/2022 <<<<<<<<
+
+Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud Dataproc
+Prof. Marcelo Marques
+
+- Como usar os desafios de projeto para criar seu portfolio OK
+
+- Apresentação inicial OK
+
+- Visão geral do curso OK
+Créditos do GCP; cluster Hadoop com 3 nós, forma simples.
+Conta Gmail, ambiente GCP; cluster Hadoop (Dataptoc) com camadas de gerencia-
+mento feita pelo Google; workload do cluster.
+Requisitos: conhecimento em cloud e big data, cartao de crédito pra ativar a
+conta; apagar recursos depois dos testes.
+https://cloud.google.com/docs/overview
+https://cloud.google.com/architeture/data-lifecycle-cloud-plataform
+
+- Introdução da estapa 1: GCP OK
+Criar conta Gmail, acessar console GCP, alerta de budget (controle de uso).
+
+- Criando sua conta no Gmail OK
+
+- Conceitos iniciais sobre GCP OK
+Links de 2 papers pra leitur prévia?
+
+
+- Criando sua conta no GCP
+### Nome do projeto: desafiodataproc-347418
+### ID do projeto: desafiodataproc-347418
+Nº do projeto: 1027
+
+- Introdução da etapa 2: Preparando o ambiente
+Budget Notification; APIs de serviços; Compute Engine (VM)
+
+- A interface de faturamento OK
+
+- Entendendo o Compute Engine 
+
+- Introdução da etapa 3: Dataproc
+Criar cluster (console e SDK); Dataproc, Workload de teste do cluster.
+
+- Ativando o serviço Dataproc
+ID cliente OAuth: 1027[...].apps.googleusercontent.com
+
+### bucket: dataproc-cesrs
+URL do console cloud: https://console.cloud.google.com/storage/browser/dataproc-cesrs
+URL da gsutil: gs://dataproc-cesrs
+
+- Como criar um cluster
+### Nome do cluster: cluster-dataproc
+Criado cluster e enviados job por gcloud e shell.
+Copiados codigos em gcloud, rest, shell.
+
+- Introdução da etapa 4: Workload
+Exe Workload no cluster dataproc
+Val Workload no cluster dataproc
+End!
+
+- Resolvendo o desafio
+Deu tudo certo como previsto.
+
+- Entendendo o desafio
+Descrição do Desafio
+Sua missão será criar um ecossistema de Big Data usando o Google Cloud Plat
+form (GCP). Para isso, o expert te ensinará a configurar o Google Cloud 
+Dataproc, um Hadoop totalmente gerenciado, usando seus créditos gratuitos 
+da GCP.
+
+Agora é a sua hora de brilhar! Reproduza o projeto criado pelo expert e,
+opcionalmente, crie sua próprias evoluções com o objetivo de fixar ainda 
+mais os conceitos e ferramentas/serviços da GCP.
+
+Dica: Caso não tenha um cartão para cadastrar e usar seus créditos gratúitos
+na GCP, você pode apenas dar um "fork" no repositório original. Com isso, 
+você poderá analisar a implementação de referência do expert com calma, 
+além de isolar suas eventuais alterações e evoluções, mantendo um link para
+o código original (devido ao "fork"). Por fim, basta entregar o seu projeto
+e completar este desafio wink.
+
+Links Úteis
+Repositório no GitHub (implementação de referência)
+https://github.com/marcelomarques05/dio-desafio-dataproc
+Imagem do Hadoop: "C:\Users\carla\Área de Trabalho\meu-github\dio-desafio-dataproc\Hadoop-1280x959.png"
+
