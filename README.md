@@ -2,8 +2,6 @@
 
 <p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/001%20bootcamp-cognizant-cloud-data-engineer%232/logo-bootcamp%232.png" width="200"></p>
 
---- 
-
 Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data Engineer #2*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, códigos, exemplos, exercícios, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
 
 ---
@@ -65,7 +63,9 @@ Contato: rosa.carla@pucpr.edu.br
 [AWS](https://aws.amazon.com/pt/console/) </br>
 [Databricks](https://databricks.com/) </br>
 [Google Cloud Platform](https://cloud.google.com/) </br>
-[Portal Azure](https://azure.microsoft.com/pt-br/) </br>
+[Hadoop Documentation](https://hadoop.apache.org/docs/stable/) </br>
+[Portal Azure](https://portal.azure.com/) </br>
+[Python Documentation](https://docs.python.org/3/) </br>
 [Sintaxe básica Markdown](https://www.markdownguide.org) </br>
 
 ---
