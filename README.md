@@ -35,7 +35,7 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [Criando pipelines de dados eficientes com Spark e Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/021%20pipelines-spark-python)
 - [Introdução a Engenharia de Dados na AWS](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/022%20engenharia-dados-aws)
 - [Introdução a Engenharia de Dados na Azure]()
-- [Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud (desafio de projeto)]() - [material de apoio](https://github.com/rosacarla/Dio-desafio-dataproc)
+- [Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud (desafio de projeto)](https://github.com/rosacarla/Dio-desafio-dataproc) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/024%20desafio-projeto-hadoop-gcp-dataproc)
 
 - **Mentorias (lives):** <br/>
     10/03/2022 - Mentoria #2: Apresentação da empresa e empregabilidade na Cognizant <br/>
