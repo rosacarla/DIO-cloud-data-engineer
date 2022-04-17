@@ -1,5 +1,12 @@
-# DIO Cloud Data Engineer
-Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data Engineer*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, códigos, exemplos, exercícios, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
+# <p align="center">Bootcamp Cognizant Cloud Data Engineer #2</p>
+
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/001%20bootcamp-cognizant-cloud-data-engineer%232/logo-bootcamp%232.png" width="200"></p>
+
+--- 
+
+Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data Engineer #2*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, códigos, exemplos, exercícios, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
+
+---
 
 ## **Conteúdos do bootcamp:**
 - [Boas-vindas ao Bootcamp Cognizant Cloud Data Engineer #2](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/001%20bootcamp-cognizant-cloud-data-engineer%232)
@@ -23,16 +30,42 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [MySql - Como modelar um banco de controle de séries assistidas (desafio de projeto)](https://github.com/rosacarla/Movies-control-project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/014%20desafio-projeto-mysql)
 - [Introdução ao MongoDB e Bancos de Dados NoSQL](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/015%20mongoDB%20e%20NoSQL)
 - [Explorando o poder do NoSQL com Cassandra e HBase](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/016%20NoSQL-Cassandra-HBase) - [material de apoio](https://github.com/rosacarla/DIO-Aceleracao-4-HBase-Cassandra)
+- [Monitoramento de clusters Hadoop de alto nível com HDFS e YARN](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/017%20clusters-hadoop-hdfs-yarn)
+- [Orquestrando ambientes de Big Data distribuídos com Zookeeper, Yarn e Sqoop](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/018%20big-data-zookeeper-yarn-sqoop)
+- [Como realizar consultas de maneira simples no ambiente complexo de Big Data com Hive e Impala](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/019%20big-data-hive-impala)
+- [Processando grandes conjuntos de dados de forma paralela e distribuída com Spark](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/020%20processando-dados-spark)
+- [Criando pipelines de dados eficientes com Spark e Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/021%20pipelines-spark-python)
+- [Introdução a Engenharia de Dados na AWS](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/022%20engenharia-dados-aws)
+- [Introdução a Engenharia de Dados na Azure]()
+- [Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud (desafio de projeto)]() - [material de apoio](https://github.com/rosacarla/Dio-desafio-dataproc)
 
 - **Mentorias (lives):** <br/>
     10/03/2022 - Mentoria #2: Apresentação da empresa e empregabilidade na Cognizant <br/>
     17/03/2022 - Mentoria #3: Explorando o GitHub como uma Ferramenta para a Criação de seu Portfólio <br/>
     23/03/2022 - Mentoria #4: Como resolver o desafio de código <br/>
+    04/04/2022 - Mentoria #5: Introdução ao IOT (Internet das coisas) </br>
+    07/04/2022 - Mentoria #6: IOT e o fluxo de dados </br>
+    11/04/2022 - Mentoria #7: Como se tornar um desenvolvedor de sucesso na Cognizant
 
+---
 
+## Autora
+Carla Edila Silveira
+Contato: rosa.carla@pucpr.edu.br
 
-## Links Úteis
-[Sintaxe básica Markdown](https://www.markdownguide.org)
+---
 
 ## Licença
 [MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+## Links Úteis
+[Apache.org](https://www.apache.org/) </br>
+[AWS](https://aws.amazon.com/pt/console/) </br>
+[Databricks](https://databricks.com/) </br>
+[Google Cloud Platform](https://cloud.google.com/) </br>
+[Portal Azure](https://azure.microsoft.com/pt-br/) </br>
+[Sintaxe básica Markdown](https://www.markdownguide.org) </br>
+
+---
