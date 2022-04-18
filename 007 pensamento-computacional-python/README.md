@@ -7,7 +7,7 @@
 ## Exemplo de abstração
 
 A nota de alunos é uma abstração, obtida por um método qualquer que isola aspectos relevantes para chegar na informação pretendida. </br>
-```
+```python
 # Código média geral de alunos
 print('Hello World!\n')
 nota_aluno1 = 7.0
@@ -24,7 +24,7 @@ print(media)
 ## Exemplo de decomposição
 
 Dividir um problema maior em partes menores para resolvê-las e obter a resposta, como calcular o valor do salário líquido a receber no mês. </br>
-```
+```python
 # Código salário líquido mensal
 descontos = 300.00
 salario_fixo = 1650.00
@@ -44,7 +44,7 @@ print('O salario liquido é R$ %.2f.'%(valor_salario_liquido))
 ## Exemplo de pensamento algorítmico
 
 Podemos resolver um problema de diferentes formas, como a decisão de dividir igualmente um valor para comprar 2 itens no supermercado. </br>
-```
+```python
 # Código compra de 2 itens com R$ 20,00 
 arroz_kg = 7.00
 feijao_kg = 9.00
@@ -73,8 +73,8 @@ else:
 ## Exemplo de identificação de padrões
 
 Reconhecer o padrão de estruturas reduz esforço na solução de problemas, como reescrever código anterior com estrutura de repetição. </br>
-```
-# Código
+```python
+# Código compra de 2 itens com R$ 20,00 - versao com loop for
 arroz_kg = 7.00
 feijao_kg = 9.00
 carne_kg = 35.00
