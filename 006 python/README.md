@@ -33,7 +33,7 @@ Objetivos: consumir API do Pokemon com Python, fazer uma requisição http.
       dados_pokemon = response.json()  #converte resposta em bytes para formato de dicionario em Json
       return dados_pokemon  #retorna o resultado da funcao
 
-  if __name__ == '__main__':
+  if __name__ == '__main__':   #execucao direta pra testar a funcao e mostrar somente a saída da estrutura do if
       dados_pokemon = retorna_dados_pokemon('pikachu')  #variavel recebe dados do Pikachu
       print(dados_pokemon['sprites']['front_shiny'])  #parametro do print é conteudo filtrado da variável dados_pokemon
       #retorna link da imagem do Pikachu
