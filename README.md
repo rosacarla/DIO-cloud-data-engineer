@@ -1,6 +1,6 @@
 # <p align="center">Bootcamp Cognizant Cloud Data Engineer #2</p>
 
-<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/001%20bootcamp-cognizant-cloud-data-engineer%232/logo-bootcamp%232.png" width="200"></p>
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/001%20bootcamp-cognizant-cloud-data-engineer%232/images/logo-bootcamp%232.png" width="200"></p>
 
 Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data Engineer #2*, disponibilizado na plataforma [Digital Innovation One Inc.](https://web.dio.me). Contém anotações, códigos, exemplos, exercícios, telas e comprovantes de conclusão para consultas sobre conteúdos e atividades dos cursos realizados.
 
@@ -35,7 +35,7 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [Criando pipelines de dados eficientes com Spark e Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/021%20pipelines-spark-python)
 - [Introdução a Engenharia de Dados na AWS](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/022%20engenharia-dados-aws)
 - [Introdução a Engenharia de Dados na Azure]()
-- [Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud (desafio de projeto)]() - [material de apoio](https://github.com/rosacarla/Dio-desafio-dataproc)
+- [Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud (desafio de projeto)](https://github.com/rosacarla/Dio-desafio-dataproc) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/024%20desafio-projeto-hadoop-gcp-dataproc)
 
 - **Mentorias (lives):** <br/>
     10/03/2022 - Mentoria #2: Apresentação da empresa e empregabilidade na Cognizant <br/>
@@ -44,6 +44,13 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
     04/04/2022 - Mentoria #5: Introdução ao IOT (Internet das coisas) </br>
     07/04/2022 - Mentoria #6: IOT e o fluxo de dados </br>
     11/04/2022 - Mentoria #7: Como se tornar um desenvolvedor de sucesso na Cognizant
+
+---
+
+## Dados adicionais 
+Carga horária: 91 hs </br>
+Data de conclusão: 16/04/2022 </br>
+Credencial do certificado nº: [0B2C33B1](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/001%20bootcamp-cognizant-cloud-data-engineer%232#readme)
 
 ---
 
