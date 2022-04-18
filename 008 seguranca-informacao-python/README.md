@@ -2,7 +2,7 @@
 
 ## Conteúdos do curso:
 
-* Introdução aos conceitos de Segurança da Informação e Ping
+* Introdução aos conceitos de Segurança da Informação e Ping </br>
 	Por que Python?  </br>
 	O que é segurança da informação?  </br>
 	O que é Ping?  </br>
