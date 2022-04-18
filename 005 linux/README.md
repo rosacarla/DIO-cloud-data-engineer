@@ -13,7 +13,7 @@ A trilha do bootcamp incluiu os seguintes cursos: </br>
 ## Ferramentas utilizadas
 
 VMWare Workstation Player 15 </br>
-https://www.vmware.com/go/getplayer-win </br>
+https://www.vmware.com/ </br>
 Observação: Se ocorrer erro "_waiting for process with pid 1234..._", será preciso reiniciar a VM. 
 
 Distribuição Linux Ubuntu 20.04 LTS: https://ubuntu.com/download/desktop
