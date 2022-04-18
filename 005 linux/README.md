@@ -1,6 +1,6 @@
 # Linux
 
-<p align="center"><img src="" width="500"></p>
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/005%20linux/images/linux-xcowsay.jpg"></p>
 
 A trilha do bootcamp incluiu os seguintes cursos: </br>
 * Linux: Introdução ao Sistema Operacional e Terminal
