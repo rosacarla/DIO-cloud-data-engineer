@@ -16,9 +16,7 @@ VMWare Workstation Player 15 </br>
 https://www.vmware.com/go/getplayer-win </br>
 Observação: Se ocorrer erro "_waiting for process with pid 1234..._", será preciso reiniciar a VM. 
 
-
-Distribuição Linux Ubuntu 20.04 LTS </br>
-https://ubuntu.itsbrasil.net/ubuntu-releases/20.04/ubuntu-20.04-desktop-amd64.iso
+Distribuição Linux Ubuntu 20.04 LTS: https://ubuntu.com/download/desktop
 
 Emulador JSLinux </br> 
 https://bellard.org/jslinux/
