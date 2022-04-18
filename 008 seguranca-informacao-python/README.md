@@ -30,6 +30,8 @@
 
 ## Prática: ferramenta gráfica OpenBrowserTool
 
+Objetivo: desenvolver uma janela com botão para abrir o navegador Google. </br>
+
 <p align="center"> 
 <img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/008%20seguranca-informacao-python/images/045OpenBrowserTool.gif">
 </p>
