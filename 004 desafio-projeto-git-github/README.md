@@ -17,5 +17,4 @@ Disponível em: https://github.com/rosacarla/DIO-cloud-data-engineer
 ---
 
 * Links Úteis </br>
-[Slides]() </br>
 [Markdown Guide](https://www.markdownguide.org/)
