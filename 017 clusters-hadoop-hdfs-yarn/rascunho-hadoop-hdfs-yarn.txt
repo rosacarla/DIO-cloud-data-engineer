@@ -24,7 +24,7 @@ nó é um computador individual. Nó master é o driver.
 pública, mantendo menor quantidade de recurso computacional
 e escalando mais quando preciso, faz tanto de maneira manual
 quanto automatica. Ex.: fazer um ElasticMapReduce na AWS. 
-Hadoop é chamado de SO de big data; framework para computação
+Hadoop é chamado de SO de big data; framework pra computação
 distribuída que elimina a ideia de dificuldade.
 -Core do Hadoop-
 Processing = Spark + MapReduce
@@ -65,7 +65,7 @@ hdfs dfs -put file_teste.txt /user/everis-bigdata/
 Configurar com 4 cpus, 4gb (ou 8gb) memoria - VM  Everis
 Não tem problema se estiver sem conexão de internet.
 Login VM Everis: usuario = everis e senha = everis2021
-É melor trabalhar com editor Moba.
+É melhor trabalhar com editor Moba.
 ## Usar "ifconfig" para pegar endereço de rede no meio
 ou em nro começando por inet 192.xxx.x.xxx.
 #Se falhar ifconfig, instalar o comando:
@@ -97,8 +97,8 @@ Motivo: namenode não está ativo
 Solução: reiniciar a VM (não funcionou)
 #Para desativar safemode com comando hdfs:
 sudo -u hdfs hdfs dfsadmin -safemode leave
-Após execução foi possível fazer a ingestão manual de arquivo
-com o comando -put.
+Após execução foi possível fazer a ingestão manual 
+de arquivo com o comando -put.
 #copiar arq em outro diretorio:
 hdfs dfs -cp /tmp/file_teste.txt /tmp/delete/
 #mover arq pra outro diretorio:
@@ -113,7 +113,8 @@ hdfs dfs -du -h /user
 hdfs fsck /tmp/ -files -blocks 
 #lista comandos hdfs: hdfs fsck
 Bloco subreplicado deve ser tratado pelo gestor porque
-não podem cair datanodes nem replicacoes abaixo do esperado.
+não podem cair datanodes nem haver replicacoes abaixo
+do esperado.
 Mensagem do fsck:
 /tmp/file_teste.txt 4784 bytes, 1 block(s):  Under replicated 
 BP-295589643-10.0.2.15-1610551694034:blk_1073741925_1109.Target
