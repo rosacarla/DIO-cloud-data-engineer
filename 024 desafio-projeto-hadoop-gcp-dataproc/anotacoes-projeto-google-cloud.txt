@@ -25,42 +25,42 @@ Criar conta Gmail, acessar console GCP, alerta de budget (controle de uso).
 Links de 2 papers pra leitur prévia?
 
 
-- Criando sua conta no GCP
+- Criando sua conta no GCP. OK
 ### Nome do projeto: desafiodataproc-347418
 ### ID do projeto: desafiodataproc-347418
 Nº do projeto: 1027
 
-- Introdução da etapa 2: Preparando o ambiente
+- Introdução da etapa 2: Preparando o ambiente. OK
 Budget Notification; APIs de serviços; Compute Engine (VM)
 
 - A interface de faturamento OK
 
-- Entendendo o Compute Engine 
+- Entendendo o Compute Engine OM
 
-- Introdução da etapa 3: Dataproc
+- Introdução da etapa 3: Dataproc. OK
 Criar cluster (console e SDK); Dataproc, Workload de teste do cluster.
 
-- Ativando o serviço Dataproc
+- Ativando o serviço Dataproc. OK
 ID cliente OAuth: 1027[...].apps.googleusercontent.com
 
 ### bucket: dataproc-cesrs
 URL do console cloud: https://console.cloud.google.com/storage/browser/dataproc-cesrs
 URL da gsutil: gs://dataproc-cesrs
 
-- Como criar um cluster
+- Como criar um cluster. OK
 ### Nome do cluster: cluster-dataproc
 Criado cluster e enviados job por gcloud e shell.
 Copiados codigos em gcloud, rest, shell.
 
-- Introdução da etapa 4: Workload
+- Introdução da etapa 4: Workload. OM
 Exe Workload no cluster dataproc
 Val Workload no cluster dataproc
 End!
 
-- Resolvendo o desafio
-Deu tudo certo como previsto.
+- Resolvendo o desafio. OK
+Deu tudo certo como previsto! 
 
-- Entendendo o desafio
+- Entendendo o desafio. Ok
 Descrição do Desafio
 Sua missão será criar um ecossistema de Big Data usando o Google Cloud Plat
 form (GCP). Para isso, o expert te ensinará a configurar o Google Cloud 
