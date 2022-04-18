@@ -14,7 +14,7 @@ A trilha do bootcamp incluiu os seguintes cursos: </br>
 
 VMWare Workstation Player 15 </br>
 https://www.vmware.com/go/getplayer-win </br>
-Observações: Se ocorrer erro "_waiting for process with pid 1234..._", será preciso reiniciar a VM. Foi necessário configurar a inicialização limpa do Windows para a VM funcionar.
+Observação: Se ocorrer erro "_waiting for process with pid 1234..._", será preciso reiniciar a VM. 
 
 
 Distribuição Linux Ubuntu 20.04 LTS </br>
