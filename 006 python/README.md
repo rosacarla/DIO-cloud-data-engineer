@@ -1,9 +1,5 @@
 # Introdução à programação com Python
 
-<p align="center"><img src=""></p>
-
----
-
 Conteúdos do curso: </br>
 
 * Aprenda o que é a linguagem Python e como configurar o ambiente de desenvolvimento
@@ -23,7 +19,30 @@ Conteúdos do curso: </br>
 **Ferramentas utilizadas:** </br>
 Viacep API: site http://viacep.com.br/ </br>
 Pesquisa por CEP (json): http://viacep.com.br/ws/01001000/json/ </br>
-Pokemon API: https://pokeapi.co/api/v2/pokemon </br>
+API PokeApi: https://pokeapi.co/api/v2/pokemon </br>
+
+---
+
+## Prática: chamada de API com biblioteca _requests_ do Python
+Objetivos: consumir API do Pokemon com Python, fazer uma requisição http. 
+```
+  import requests
+
+  def retorna_dados_pokemon(pokemon):  #define a funcao 
+      response = requests.get('https://pokeapi.co/api/v2/pokemon/{}/'.format(pokemon))  #requisicao da API PokeApi
+      dados_pokemon = response.json()  #converte resposta em bytes para formato de dicionario em Json
+      return dados_pokemon  #retorna o resultado da funcao
+
+  if __name__ == '__main__':   #execucao direta pra testar a funcao e mostrar somente a saída da estrutura do if
+      dados_pokemon = retorna_dados_pokemon('pikachu')  #variavel recebe dados do Pikachu
+      print(dados_pokemon['sprites']['front_shiny'])  #parametro do print é conteudo filtrado da variável dados_pokemon
+      #retorna link da imagem do Pikachu
+
+  # saida esperada: #https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png
+  # fim do codigo
+```
+
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/006%20python/images/image%20pikachu.jpg" width="750"></p>
 
 ---
 
