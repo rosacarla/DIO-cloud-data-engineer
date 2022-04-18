@@ -52,7 +52,7 @@ URL da gsutil: gs://dataproc-cesrs
 Criado cluster e enviados job por gcloud e shell.
 Copiados codigos em gcloud, rest, shell.
 
-- Introdução da etapa 4: Workload. OM
+- Introdução da etapa 4: Workload. OK
 Exe Workload no cluster dataproc
 Val Workload no cluster dataproc
 End!
