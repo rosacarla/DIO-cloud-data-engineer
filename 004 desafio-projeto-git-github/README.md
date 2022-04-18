@@ -9,8 +9,10 @@ o primeiro (de muitos) projetos do seu portfólio ;)
 
 ---
 
-* Projeto entregue
-<p align="center"><img src="" width="500"></p>
+* Projeto entregue </br>
+Nome do repositório: DIO-cloud-data-engineer </br>
+Disponível em: https://github.com/rosacarla/DIO-cloud-data-engineer
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/004%20desafio-projeto-git-github/images/project-done01.jpg"></p>
 
 ---
 
