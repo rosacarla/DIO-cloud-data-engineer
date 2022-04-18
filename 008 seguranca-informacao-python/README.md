@@ -1,6 +1,6 @@
 # Segurança da informação com Python
 
-## Conteúdos do curso
+## Conteúdos do curso:
 
 * Introdução aos conceitos de Segurança da Informação e Ping
 	Por que Python?  </br>
@@ -28,15 +28,17 @@
 
 ---
 
-## Prática: ferramenta gráfica OpenBrowserTool <br/> 
+## Prática: ferramenta gráfica OpenBrowserTool
 
-![](
+<p align="center"> 
+<img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/008%20seguranca-informacao-python/images/045OpenBrowserTool.gif">
+</p>
 
 ---
 
 ## Ferramentas utilizadas
 
-Consultar IP: http://ipinfo.io/json
-Conversor Ezgif (vídeo para GIF): https://ezgif.com/video-to-gif
-Md5 Online Decrypt & Encrypt (hash md5): https://md5decrypt.net/en/
-Screen Recorder & Video Editor Screencast-O-Matic: https://screencast-o-matic.com/
+Consultar IP: http://ipinfo.io/json </br>
+Conversor Ezgif (vídeo para GIF): https://ezgif.com/video-to-gif </br>
+Md5 Online Decrypt & Encrypt (hash md5): https://md5decrypt.net/en/ </br>
+Screen Recorder & Video Editor Screencast-O-Matic: https://screencast-o-matic.com/ </br>
