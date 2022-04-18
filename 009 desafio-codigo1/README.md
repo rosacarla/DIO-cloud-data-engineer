@@ -1,6 +1,8 @@
 # Desafios Iniciais em Python 
 
-<p align="justify"><img src="" width="200"></p>
+<p align="justify"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/009%20desafio-codigo1/code-challenge1.jpg"></p>
+
+---
 
 ## 1/3 MÉDIA 1
 Leia 2 valores de ponto flutuante de dupla precisão A e B, que correspondem a 2 
