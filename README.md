@@ -20,6 +20,7 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [Introdução à programação com Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/006%20python)
 - [Princípios de Pensamento Computacional com Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/007%20pensamento-computacional-python)
 - [Segurança da informação com Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/008%20seguranca-informacao-python)
+- [Desafios Iniciais em Python (desafio de código)](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/009%20desafio-codigo1)
 - [Descomplicando a criação de pacotes em Python (desafio de projeto)](https://github.com/rosacarla/package_simple_project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/012%20desafio-projeto-pacotes-python)
 - [MySql - Trabalhando com as suas primeiras tabelas](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
 - [MySql - Explorando relacionamentos com workbench](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
