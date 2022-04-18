@@ -54,7 +54,7 @@ Credencial do certificado nº: [0B2C33B1](https://github.com/rosacarla/DIO-cloud
 ---
 
 ## Autora
-Carla Edila Silveira
+Carla Edila Silveira</br>
 Contato: rosa.carla@pucpr.edu.br
 
 ---
