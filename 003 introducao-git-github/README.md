@@ -13,7 +13,7 @@
 ---
 ## Dados adicionais  
 
-<p align="center"><img src=" " width="200"></p>
+<p align="left"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/003%20introducao-git-github/github-ssh-token.jpg"></p>
 
 Foram incluídos conteúdos novos (chave SSH e token), conforme documentação do GitHub:
 - Gerar uma nova chave SSH e adicioná-la ao ssh-agent [[1]](https://docs.github.com/pt/enterprise-server@3.4/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
