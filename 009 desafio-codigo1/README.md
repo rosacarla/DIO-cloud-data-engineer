@@ -72,3 +72,11 @@ Exemplo de Entrada | Exemplo de Saída
 -|-
 556 | 0:9:16
 1 | 0:0:1
+
+---
+
+## Soluções propostas  
+
+Ver código [testes123.py](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/009%20desafio-codigo1/testes123/testes123.py).
+
+---
