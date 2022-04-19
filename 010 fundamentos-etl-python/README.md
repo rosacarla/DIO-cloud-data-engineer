@@ -9,9 +9,9 @@
 ---
 ## Amostra de prática realizada: projeto ETL  
 
-Notebook [projeto-etl](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/projeto_etl.ipynb)  
+Notebook [projeto-etl](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/projeto-etl/projeto_etl.ipynb)  
 
-<p align="left"><img src=""></p>
+<p align="left"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/images/notebook-project.jpg"></p>
 
 ---
 
