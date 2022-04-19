@@ -12,14 +12,13 @@ A trilha do bootcamp incluiu os seguintes cursos: </br>
 ---
 ## Ferramentas utilizadas
 
-VMWare Workstation Player 15 </br>
-https://www.vmware.com/ </br>
-Observação: Se ocorrer erro "_waiting for process with pid 1234..._", será preciso reiniciar a VM. 
+VMWare Workstation Player 15: https://www.vmware.com/ </br>
+Observação: Se ocorrer erro "_waiting for process with pid 1234..._", será preciso reiniciar a VM.   
 
-Distribuição Linux Ubuntu 20.04 LTS: https://ubuntu.com/download/desktop
+Distribuição Linux Ubuntu 20.04 LTS: https://ubuntu.com/download/desktop  
 
-Emulador JSLinux </br> 
-https://bellard.org/jslinux/
+Emulador JSLinux: https://bellard.org/jslinux/  
 
-Distribuição GNU/Linux Fedora </br>
-https://getfedora.org/pt_BR/
+Distribuição GNU/Linux Fedora: https://getfedora.org/pt_BR/
+
+---
