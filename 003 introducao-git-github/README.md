@@ -3,7 +3,7 @@
 ## Tópicos do curso  
 
 * Introdução ao Git  
-* Navegação via command line e instalação  
+* Navegação via _command line_ e instalação  
 * Entendendo como o Git funciona por baixo dos panos  
 * Primeiros comandos com Git  
 * Ciclo de vida dos arquivos no Git  
