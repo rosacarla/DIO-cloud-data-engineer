@@ -1,6 +1,6 @@
 # Introdução à programação com Python
 
-Conteúdos do curso: </br>
+## Conteúdos do curso: </br>
 
 * Aprenda o que é a linguagem Python e como configurar o ambiente de desenvolvimento
 * O que são variáveis e como manipulá-las através de operadores aritméticos e interação com usuário
@@ -16,14 +16,17 @@ Conteúdos do curso: </br>
 * Gerenciando e criando exceções customizadas com `try`, `except`, `else` e `finally`
   </br>Ver "_Exception hierarchy_" em [[2]](https://docs.python.org/3/library/exceptions.html#exception-hierarchy).
 * Instalando e utilizando pacotes em Python e realizar requisição com `requests` </br>
-**Ferramentas utilizadas:** </br>
+
+---
+
+## Ferramentas utilizadas </br>
 Viacep API: site http://viacep.com.br/ </br>
 Pesquisa por CEP (json): http://viacep.com.br/ws/01001000/json/ </br>
 API PokeApi: https://pokeapi.co/api/v2/pokemon </br>
 
 ---
 
-## Prática: chamada de API com biblioteca _requests_ do Python
+## Amostra de prática realizada: chamada de API com biblioteca _requests_ do Python
 Objetivos: consumir API do Pokemon com Python, fazer uma requisição http. 
 ``` python
   import requests
