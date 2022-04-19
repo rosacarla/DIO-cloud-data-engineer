@@ -96,3 +96,5 @@ else:
 
 Interpretador online [Repl.it](https://replit.com/) </br>
 IDE [PyCharm](https://www.jetbrains.com/pycharm/promo/)
+
+---
