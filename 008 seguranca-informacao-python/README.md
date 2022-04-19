@@ -28,7 +28,7 @@
 
 ---
 
-## Prática: ferramenta gráfica OpenBrowserTool
+## Amostra de prática realizada: ferramenta gráfica OpenBrowserTool
 
 Objetivo: desenvolver uma janela com botão para abrir o navegador Google. </br>
 ``` python
@@ -61,3 +61,5 @@ Consultar IP: http://ipinfo.io/json </br>
 Conversor Ezgif (vídeo para GIF): https://ezgif.com/video-to-gif </br>
 Md5 Online Decrypt & Encrypt (hash md5): https://md5decrypt.net/en/ </br>
 Screen Recorder & Video Editor Screencast-O-Matic: https://screencast-o-matic.com/ </br>
+
+---
