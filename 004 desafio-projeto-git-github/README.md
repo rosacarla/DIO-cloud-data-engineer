@@ -9,12 +9,18 @@ o primeiro (de muitos) projetos do seu portfólio ;)
 
 ---
 
-* Projeto entregue </br>
+## Projeto entregue </br>
 Nome do repositório: DIO-cloud-data-engineer </br>
 Disponível em: https://github.com/rosacarla/DIO-cloud-data-engineer
 <p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/004%20desafio-projeto-git-github/images/project-done01.jpg"></p>
 
 ---
 
-* Links Úteis </br>
-[Markdown Guide](https://www.markdownguide.org/)
+## Links úteis  
+
+[GitHub README Templates](https://www.readme-templates.com/)  
+[Markdown Guide](https://www.markdownguide.org/)  
+[Repository templates](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/)  
+[Sobre READMEs - GitHubs Docs](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+
+---
