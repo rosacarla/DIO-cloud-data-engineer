@@ -30,5 +30,6 @@
 
 ## Links úteis  
 
-Leitura: [Fundamentos da Programação de Computadores - Pearson](https://www.amazon.com.br/Fundamentos-programa%C3%A7%C3%A3o-computadores-algoritmos-pascal/dp/8564574160/ref=asc_df_8564574160/?tag=googleshopp00-20&linkCode=df0&hvadid=379816198799&hvpos=&hvnetw=g&hvrand=226491206251702130&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9102031&hvtargid=pla-812000218785&psc=1)  
+Leituras sugeridas  
+[Fundamentos da Programação de Computadores - Pearson](https://www.amazon.com.br/Fundamentos-programa%C3%A7%C3%A3o-computadores-algoritmos-pascal-ebook/dp/B00KDOM10U)  
 [Algoritmos MIT](https://mittechreview.com.br/tag/algoritmos/)
