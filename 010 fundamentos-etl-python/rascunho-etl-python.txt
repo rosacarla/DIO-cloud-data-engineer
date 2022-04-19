@@ -52,7 +52,7 @@ comunidade de desenvolvimento.
 - Instalação e configuração do ambiente - Jupyter no navegador
 Jupyter é usado com diversas lgs, como Markdown. Opções de uso pelo navegador
 ou instalando o JupyterLab (montar laboratorio online para projetos).
-Criado o notebook "projeto": https://jupyter.org/try-jupyter/lab?path=notebooks%2Fprojeto.ipynb
+Criado notebook "projeto": https://jupyter.org/try-jupyter/lab?path=notebooks%2Fprojeto.ipynb
 
 - Instalação e configuração do ambiente - Jupyter na máquina
 comando: pip install jupyterlab no Windows PowerShell, porque travou no cmd.
