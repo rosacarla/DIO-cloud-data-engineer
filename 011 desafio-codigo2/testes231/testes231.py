@@ -17,8 +17,9 @@ while (X != Y):
         print("Crescente")
     elif (X > Y):
         print("Decrescente")
-if (X == Y):
-        print('Numeros iguais. Leitura encerrada.')
+    X, Y = map(int, input().split())
+#if (X == Y):
+#        print('Numeros iguais. Leitura encerrada.')
 
 # #RESTO DA DIVISAO
 X = int(input('Informe o primeiro numero: '))
