@@ -1,6 +1,6 @@
 # Desafios Intermediários Python
 
-<p align="justify"><img src=""></p>
+<p align="justify"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/011%20desafio-codigo2/code-challenge2.jpg"></p>
 
 ---
 
@@ -81,6 +81,6 @@ Sample Input | Sample Output
 
 ## Soluções propostas  
 
-Ver código [testes231.py]().
+Ver código [testes231.py](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/011%20desafio-codigo2/testes231/testes231.py).
 
 ---
