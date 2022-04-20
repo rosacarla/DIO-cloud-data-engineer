@@ -9,16 +9,16 @@ print("{} valores positivos".format(counter))
 
 
 #CRESCENTE E DESCRESCENTE
-# X, Y = map(int, input().split())
-# while (X != Y):
-#     floor = min(X, Y)
-#     top = max(X, Y)
-#     if (X < Y):
-#         print("Crescente")
-#     elif (X > Y):
-#         print("Decrescente")
-#     X, Y = map(int, input().split())
-
+X, Y = map(int, input('Informe dois numeros inteiros diferentes: ').split())
+while (X != Y):
+    floor = min(X, Y)
+    top = max(X, Y)
+    if (X < Y):
+        print("Crescente")
+    elif (X > Y):
+        print("Decrescente")
+if (X == Y):
+        print('Numeros iguais. Leitura encerrada.')
 
 # #RESTO DA DIVISAO
 X = int(input('Informe o primeiro numero: '))
@@ -35,3 +35,4 @@ elif (X > Y):
     for i in range(Y + 1, X):
         if (i % 5 == 2) or (i % 5 == 3):
             print(i)
+#fim do codigo
