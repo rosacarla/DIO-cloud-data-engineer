@@ -7,9 +7,13 @@
  - Desenvolvimento do projeto ETL - Tranformação  
 
 ---
-## Amostra de prática realizada: projeto ETL  
+## Principais práticas realizadas  
 
-Notebook [projeto-etl](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/projeto-etl/projeto_etl.ipynb)  
+Notebook [Extração e Limpeza](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/projeto-etl/limpeza.ipynb)
+
+Notebook [Transformação](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/projeto-etl/transformacao.ipynb)
+
+Notebook [Projeto ETL](https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/projeto-etl/projeto_etl.ipynb)  
 
 <p align="left"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/010%20fundamentos-etl-python/images/notebook-project.jpg"></p>
 

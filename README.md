@@ -22,6 +22,7 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [Segurança da informação com Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/008%20seguranca-informacao-python)
 - [Desafios Iniciais em Python (desafio de código)](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/009%20desafio-codigo1)
 - [Fundamentos de ETL com Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/010%20fundamentos-etl-python)
+- [Desafios Intermediários Python](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/011%20desafio-codigo2)
 - [Descomplicando a criação de pacotes em Python (desafio de projeto)](https://github.com/rosacarla/package_simple_project) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/012%20desafio-projeto-pacotes-python)
 - [MySql - Trabalhando com as suas primeiras tabelas](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
 - [MySql - Explorando relacionamentos com workbench](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/013%20SQL)
@@ -37,6 +38,7 @@ Repositório criado para o desafio de projeto do bootcamp *Cognizant Cloud Data 
 - [Introdução a Engenharia de Dados na AWS](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/022%20engenharia-dados-aws)
 - [Introdução a Engenharia de Dados na Azure]()
 - [Criando um Ecossistema Hadoop Totalmente Gerenciado com Google Cloud (desafio de projeto)](https://github.com/rosacarla/Dio-desafio-dataproc) - [material de apoio](https://github.com/rosacarla/DIO-cloud-data-engineer/tree/main/024%20desafio-projeto-hadoop-gcp-dataproc)
+- [Desafios Finais Python]()
 
 - **Mentorias (lives):** <br/>
     10/03/2022 - Mentoria #2: Apresentação da empresa e empregabilidade na Cognizant <br/>
