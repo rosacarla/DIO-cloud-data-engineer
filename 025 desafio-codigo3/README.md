@@ -1,6 +1,6 @@
 # Desafios Finais Python
 
-<p align="justify"><img src=""></p>
+<p align="justify"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/025%20desafio-codigo3/code-challenge3.jpg"></p>
 
 ---
 
@@ -45,9 +45,9 @@ Para cada posição do vetor, escreva "N[**i**] = **X**", onde **i** é a posiç
 Exemplo de Entrada | Exemplo de Saída
 -|-
 1 | N[0] = 1
- | N[1] = 2
- | N[2] = 4
- | ...
+| N[1] = 2
+| N[2] = 4
+| ...
 
 ---
 
