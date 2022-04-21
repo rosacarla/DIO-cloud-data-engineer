@@ -29,7 +29,7 @@ API PokeApi: https://pokeapi.co/api/v2/pokemon </br>
 ## Amostra de prática realizada: chamada de API com biblioteca _requests_ do Python
 Objetivos: consumir API do Pokemon com Python, fazer uma requisição http. 
 ``` python
-  import requests
+  import requests  #importa biblioteca HTTP para Python
 
   def retorna_dados_pokemon(pokemon):  #define a funcao 
       response = requests.get('https://pokeapi.co/api/v2/pokemon/{}/'.format(pokemon))  #requisicao da API PokeApi
