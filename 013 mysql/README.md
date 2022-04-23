@@ -1,6 +1,6 @@
 # MySQL
 
-<p align="center"><img src=""></p>
+<p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/013%20mysql/tabelas-cursos1e2.jpg"></p>
 
 A trilha do bootcamp incluiu os seguintes cursos:  
 * [MySql - Trabalhando com as suas primeiras tabelas]()  
@@ -11,6 +11,15 @@ A trilha do bootcamp incluiu os seguintes cursos:
 
 ## Principais práticas realizadas  
 ```sql
+CREATE TABLE pessoa (
+    id INT NOT NULL PRYMARY KEY AUTOINCREMENT,
+    nome VARCHAR (30) NOT NULL,
+    nascimento DATE
+)
+
+INSERT INTO pessoa (nome, nascimento) VALUES ('Nathally', '1990-05-22');
+INSERT INTO pessoa (nome, nascimento) VALUES ('Pedro', '1995-07-18');
+INSERT INTO pessoa (nome, nascimento) VALUES ('Marcela', '2000-04-05');
 SELECT nome, nascimento FROM pessoa
 
 UPDATE pessoa SET nome='Nathally Souza';
@@ -23,7 +32,7 @@ SELECT * FROM pessoa WHERE id=3;
 DELETE FROM pessoa WHERE id=3;
 ```
 ```sql
-REATE TABLE videos (
+CREATE TABLE videos (
     id_video INT NOT NULL PRYMARY KEY AUTOINCREMENT,
     id_author INT NOT NULL,
     title VARCHAR (30) NOT NULL,
@@ -40,9 +49,6 @@ INSERT INTO videos (id_author, title, likes, dislikes) VALUES ('Joao', 'PHP', 28
 ```
 
 ```sql
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `canais`
 --
 
@@ -67,8 +73,8 @@ INSERT INTO `canais` (`id_canal`, `nome_canal`) VALUES
 ---
 
 ## Ferramentas utilizadas  
-[Workbench](https://www.mysql.com/products/workbench/)
-[XAMPP](https://www.apachefriends.org/es/index.html)
----
+[Workbench](https://www.mysql.com/products/workbench/)  
+[XAMPP](https://www.apachefriends.org/es/index.html)  
 
 ---
+             
