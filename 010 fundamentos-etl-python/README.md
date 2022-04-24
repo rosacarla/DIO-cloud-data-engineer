@@ -5,6 +5,7 @@
  - Preparação do projeto ETL  
  - Desenvolvimento do projeto ETL - Extração e Validação  
  - Desenvolvimento do projeto ETL - Tranformação  
+ - GitHub: [dio-curso-etl](https://github.com/ftiosso/dio-curso-etl)
 
 ---
 ## Principais práticas realizadas  
