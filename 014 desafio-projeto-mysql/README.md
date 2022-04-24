@@ -27,3 +27,11 @@ Disponível em: https://github.com/rosacarla/Movies-control-project
 <p align="center"><img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/014%20desafio-projeto-mysql/screenshots/project-done.jpg"></p>
 
 ---
+
+## Links úteis  
+
+GitHub [movies-controll](https://github.com/nathyts/movies-controll)  
+[MySQL](https://www.mysql.com/)  
+[MySQL Workbench](https://www.mysql.com/products/workbench/)
+
+---
