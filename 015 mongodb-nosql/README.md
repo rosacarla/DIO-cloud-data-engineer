@@ -27,7 +27,7 @@
 
 ## Principais práticas realizadas  
 
-* **Neo4j Sandbox**  
+* **Neo4j Sandbox (banco de dados orientado a grafos)**  
 ```
 /*
 :server connect
@@ -56,14 +56,14 @@ CREATE (:Client {name: "Lula Molusco", age: 30, hobbies: ['Tocar clarinete']}) -
 MATCH (todos) RETURN todos;
 ```
 
-* **Cassandra CQL**  
+* **Cassandra CQL (banco de dados orientado a colunas)**  
 </br>
 
 <p align="center">
 	<img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/015%20mongodb-nosql/scripts/cassandra1-cql.jpg">
 </p>
 
-* **Try Redis**  
+* **Try Redis (banco de dados de chave-valor)**  
 ```
 Welcome to Try Redis, a demonstration of the Redis database!
 
@@ -84,7 +84,7 @@ OK
 OK
 ```
 
-* **MongoDB Cloud**  
+* **MongoDB Cloud (banco de dados orientado a documentos)**  
 ```
 use fenda_bikini
 
