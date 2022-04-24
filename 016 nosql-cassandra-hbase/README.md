@@ -3,7 +3,7 @@
 ## Conteúdos do curso:  
 
 * Conceitos de NoSQL e Arquitetura
-    - Introducao, objetivos e requisitos básicos
+    - Introdução, objetivos e requisitos básicos
     - Introdução a NoSQL
     - Relacional x NoSQL
     - Tipos de NoSQL
@@ -26,8 +26,8 @@
 
 # Principais práticas realizadas  
 
-[em edição...] 
-[em edição...]
+[em edição...]  
+[em edição...]  
 [em edição...]  
 
 ---
