@@ -3,31 +3,31 @@
 ## Conteúdos do curso:  
 
 * Introdução ao NoSQL  
-- Apresentação do curso
-- Introdução
+	- Apresentação do curso
+	- Introdução
 * Conhecendo os tipos de bancos de dados NOSQL  
-- Tipos de bancos NoSQL
-- Coluna/Família de colunas
-- Chave-valor 
-- Documento 
+	- Tipos de bancos NoSQL
+	- Coluna/Família de colunas
+	- Chave-valor 
+	- Documento 
 * Introdução ao MongoDB e instalação  
-- Introdução ao MongoDB
-- Instalação
-- MongoDB Cloud
+	- Introdução ao MongoDB
+	- Instalação
+	- MongoDB Cloud
 * Schema Design e boas práticas  
-- Schema Design
-- Boas práticas
-- JSON vs BSON
+	- Schema Design
+	- Boas práticas
+	- JSON vs BSON
 * Alguns conceitos na prática  
-- Operaçoes de manipulação de dados
-- Performance e índices
-- Agregações
+	- Operaçoes de manipulação de dados
+	- Performance e índices
+	- Agregações
 
 ---
 
 ## Principais práticas realizadas  
 
-* Neo4j Sandbox  
+* **Neo4j Sandbox**  
 ```
 /*
 :server connect
@@ -56,15 +56,14 @@ CREATE (:Client {name: "Lula Molusco", age: 30, hobbies: ['Tocar clarinete']}) -
 MATCH (todos) RETURN todos;
 ```
 
----
+* **Cassandra CQL**  
+</br>
 
-* Cassandra CQL  
+<p align="center">
+	<img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/015%20mongodb-nosql/scripts/cassandra1-cql.jpg">
+</p>
 
-src='cassandra1-cql'
-
----
-
-* Try Redis  
+* **Try Redis**  
 ```
 Welcome to Try Redis, a demonstration of the Redis database!
 
@@ -85,9 +84,7 @@ OK
 OK
 ```
 
----
-
-* MongoDB Cloud  
+* **MongoDB Cloud**  
 ```
 use fenda_bikini
 
@@ -126,7 +123,7 @@ db.getCollection('clientes').find({name: "Cliente0"}).explain(true)
 [MongoDB Community Download](https://www.mongodb.com/try/download/community)  
 [Neo4j Sandbox](https://sandbox.neo4j.com)  
 [Robomongo | Robo 3T](https://robomongo.org/)  
-[Sublime Text](https://www.sublimetext.com/)
+[Sublime Text](https://www.sublimetext.com/)  
 [Try Redis](https://try.redis.io/)  
 
 ---
