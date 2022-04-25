@@ -26,12 +26,7 @@
 
 # Principais práticas realizadas  
 
-<<<<<<< Updated upstream
-[em edição...]  
-[em edição...]  
-[em edição...]  
-=======
-* Comandos do HBase  
+* Comandos no HBase  
 ```
 hbase(main):008:0> create 'funcionario', 'pessoais', 'profissionais'
 0 row(s) in 5.3410 seconds
@@ -52,13 +47,12 @@ ROW COLUMN+CELL
 1 row(s) in 0.0740 seconds
 ```  
 
-* Comandos do Cassandra (ambiente interativo Bash Terminal do curso [Cassandra Query Language (CQL)](https://www.katacoda.com/datastax/courses/cassandra-try-it-out/try-cql))  
+* Comandos no Cassandra (Bash Terminal do curso [Cassandra Query Language (CQL)](https://www.katacoda.com/datastax/courses/cassandra-try-it-out/try-cql))  
 </br>
 
 <p align="center">
-	<img src="">
+	<img src="https://github.com/rosacarla/DIO-cloud-data-engineer/blob/main/016%20nosql-cassandra-hbase/screenshots/cassandra-add-column.jpg" width="750">
 </p>
->>>>>>> Stashed changes
 
 ---
 
@@ -69,7 +63,7 @@ ROW COLUMN+CELL
 [Apache Phoenix](https://phoenix.apache.org)  
 [Apache Spark](https://spark.apache.org/)  
 [Cliente Beeline](https://docs.microsoft.com/pt-br/azure/hdinsight/hadoop/connect-install-beeline#install-beeline-client)  
-[¿Cómo se Aplica el Teorema CAP Y El Reto de la Escalabilidad en las RDBMS y NoSQL?](http://asesoftware.com/como-se-aplica-el-teorema-cap-y-el-reto-de-la-escalabilidad-en-las-rdbms-y-nosql/)
+[¿Cómo se Aplica el Teorema CAP Y El Reto de la Escalabilidad en las RDBMS y NoSQL?](http://asesoftware.com/como-se-aplica-el-teorema-cap-y-el-reto-de-la-escalabilidad-en-las-rdbms-y-nosql/)  
 [E-book "Cassandra: The Definitive Guide - 3rd Edition | O'Reilly"](https://www.datastax.com/resources/ebook/oreilly-cassandra-the-definitive-guide)  
 [LDAP X Kerberos](https://www.geeksforgeeks.org/difference-between-ldap-and-kerberos/)  
 [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html)  
