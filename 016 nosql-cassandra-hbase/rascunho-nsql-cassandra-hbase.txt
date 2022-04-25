@@ -13,7 +13,7 @@ Forma de armazenamento que não seja a tabular. NoSQL é mais antigo
 que o big data, possibilita manuseio de carga de dados massivos e
 processamento distribuído de dados. Na época em que surgiu foi pra
 atender necessidade do alto nível de gravação, precisava escalar a
-gravação e leitura de dados para ser mais rápida. Adequado para 
+gravação e leitura de dados pra serem mais rápidas. Adequado para 
 atender requisições muito altas de usuários simultâneos. Acabou por
 atender também as necessidades do Big Data.
 
@@ -40,6 +40,7 @@ NoSQL tem processamento, armazenamento e localização distribuídos.
 - Tipos de NoSQL
 Key-value, Column-Family, Graph (redes sociais), Document 
 Hbase = key-value + column family
+Tipos de SQL = relational, analytical (OLAP)
 
 - Teorema de CAP
 Feito por Brewer. Armazenamento de dados distribuídos só atende 2
@@ -69,11 +70,12 @@ Performance é a maior dor dos BD. Busca sequencial de dados tem
 custo mais alto (espera de máquina, processamento de cluster).
 Consulta aleatória não depende da leitura de todo o dataset.
 NoSQL tem por default versionamento guardado do mesmo registro
-para facilitar o uso do BD.
+para facilitar o uso do BD. Exemplos de BD pra cons. aleatoria:
+HBase, Cassandra, Dynamo, MongoDB. 
 
 - O que é Apache HBase
-Apesar de orientado a colunas, não é obrigatorio definir as colunas
-na criação porque só precisa definir a familia de col. Na gravação 
+Apesar de orientado a colunas, não é obrigatorio definir col. na
+criação porque só precisa definir a familia de col. Na gravação 
 é gerada a coluna dentro da familia.
 HBase é representado por um Map, que tem o par de chave e valor,
 pois uma col tem sempre chave e valor. Tem comandos específicos,
@@ -83,47 +85,48 @@ consultar col que não tem chave, é feita leitura em todo dataset,
 como ocorre no Hadoop. Mesmo tipo de consulta do MapReduce.
 A dica é fazer consulta da linha pela chave. Integração nativa e
 mais fácil com Hadoop, já vem instalado. No DB Cassandra requer  
-configuração pra integrar com Hadoop. HBase guarda docs e formatos
+configuração pra integrar com Hadoop.HBase guarda docs e formatos
 no array, que pode receber qualquer informação.
 As chaves são únicas, não se soberpõem com alteração do dado, por
 ex, na 1a. inserção é gravada e na 2a. inserção em mesma chave há
 atualização UPSET sem alterar a chave dentro da tabela.
-Muldimensional = criar lista dentro de lista ou Map que contém Maps,
-Exemplo: numa representação tabular, temos row key como id ou linha
+Muldimensional = criar lista dentro de lista ou Map com Maps.
+Exemplo: em representação tabular, temos row key como id ou linha
 chave da tab, a familia de colunas com respectivos nomes, Columns
 Identifiers que sao nomes de colunas, valor (dado) que completa o
-par com a chave do Map. Famílias de colunas orientam o consumo e a
-modificação da estrutura. 
+par com a chave do Map. Famílias de colunas orientam o consumo e 
+a modificação da estrutura. 
 
 - Arquitetura do HBase
-Entender a arquitetura ajuda na resolução de falhas na execução do
+Entender a arquitetura ajuda na resolução de falhas na execução 
 do processo, conforme o erro dá pra saber em qual componente foi,
-como na region server que ficou down, hmaster que parou, falha de
+como no regionserver que ficou down, hmaster que parou, falha de
 segurança, zookeeper que está fora. Componentes:
 Cliente = API, shell
-Zookeeper = faz a conversa entre nós, gestão da informação, tem os
+Zookeeper = faz a conversa entre nós, gestão da informação; tem
 dados da configuração de ambiente, como IP, DNS, hmaster, HDFS.
 HMaster = recebe requisiçoes do cliente, procura a region server
 da tabela; dá visibilidade ao nós.
 Region server = consulta no HMFS, gestao de memoria
 HDFS = faz replicação, atende requisito de partição tolerante a 
 falhas, recupera com outro nó um registro perdido.
-HBase depende do HDFS!
+HBase depende do HDFS! Comunica-se com RegionServer por meio do
+Zookeeper.
 
 - O que é Apache Cassandra, sua arquitetura e componentes
 JOIN não é possível no Cassandra!! Permite consultar em colunas
-diferentes que não sao chaves, com a criação de indice secundario.
+diferentes que não sao chaves, com criação de indice secundario.
 Supera o HBase na modelagem de dados. Para definir o tipo de 
-replicação de uma tabela, há distribuição da tab para nós proximos.
+replicação de uma tab, há distribuição da tab pra nós proximos.
 Não tem um ponto de falha central, a arquitetura se reconstroi 
 sozinha na perda de nó. Replicação garantida por 3 servidores.
-Atende o CAP de disponibilidade por não ter ponto central de falha,
+Atende CAP de disponibilidade por não ter ponto central de falha,
 ter nós independentes e replicação de nós, em caso de falha.
-Commit log tem operações de escrita, em caso de falha tem registro
+Commit log tem operações de escrita, em caso de falha há registro
 do nó que caiu, para usar na recuperação de informações.
 Mem-table é estagio intermediário antes de chegar na tab final,
-dados são preparados para gravação em disco.
-SSTable é representação da tabela final.
+dados são preparados para gravação em disco. Conexao entre nós é
+pelo protocolo Gossip. SSTable é representação da tabela final.
 
 2) Comandos Gerais
 - Introdução aos comandos HBase
@@ -140,12 +143,14 @@ https://mobaxterm.mobatek.net/download-home-edition.html
 Instalar o cliente Beeline na VM Linux (falhou!):
 https://docs.microsoft.com/pt-br/azure/hdinsight/hadoop/connect-install-beeline#install-beeline-client
 ##Códigos utilizados##
-#Conectar ao hive: beeline -u jdbc:hive2://localhost:10000
+#Conectar ao hive: beeline -u jdbc:hive2://localhost:10000 
+(deu erro, mas conectou ao beeline)
 #Acessar Hbase Shell: hbase shell
 #Confirmar entrada no hb shell: list (mostra as tabelas) 
-Se der erro e não mostrar pode ser que o yarn esteja no safe mode.
-#Fazer checkup do yarn: sudo -u hdfs hadoop fsck / | egrep -v '^\.+$' | grep -v eplica
-Pede senha, enter, comando acima funciona como um fdisc em 
+Se der erro e não mostrar, pode ser que yarn esteja no safe mode.
+#Fazer checkup do yarn (mostra arq corrompidos): 
+sudo -u hdfs hadoop fsck / | egrep -v '^\.+$' | grep -v eplica
+Pede senha, enter, comando acima funciona como um fdisk em 
 sistema de arq. Output: tinha 8 arq corrompidos, por isso entrou
 no modo de segurança e nada funciona no Hadoop enquanto não sair
 do modo de segurança ou resolver apagando os arq corrompidos.
@@ -154,7 +159,11 @@ de log (history), de jobs, de processamento; se fosse tabela
 seria pior pra resolver. Devem ser apagados por ter só 1 nó, 
 se fosse ambiente de cluster podia recuperar os corrompidos;
 tratar cada um dos arq com comando para apagar abaixo.
-#Apagar: sudo -u hdfs dfs -rm /caminho/arquivo... 
+##Apagar: sudo -u hdfs hdfs dfs -rm /caminho/arquivo... 
+#Só funcionou depois de destativar safemode com comando hdfs:
+sudo -u hdfs hdfs dfsadmin -safemode leave
+#Insere outro identificador de col na column family:
+put 'funcionario', '1', 'pessoais:cidade', 'Sao Paulo'
 #Acessar Cassandra: cqlsh
 #Acompanhar operações dentro do cluster do Hadoop: yarn top
 Criação de usuário e versionamento é feita com Kerberos e LDAP
@@ -163,15 +172,19 @@ Consulta: https://www.geeksforgeeks.org/difference-between-ldap-and-kerberos/
 - Comando para criação de manipulação de dados
 #Criar tabela: create 'funcionario', 'pessoais', 'profissionais'
 Tem apenas a carcaça da tab com seu nome e 2 column family.
-#Inserir dados na tab: put 'funcionario', '1', 'pessoais:nome', 'Maria'
+#Inserir dados na tab (identificador de col na column family:
+put 'funcionario', '1', 'pessoais:nome', 'Maria'
 1 = row key; nome = nome da col e chave da col family pessoais; Maria =
 dado da col 
 #Mostrar registros da tab: scan 'funcionario'
-Mostra tab do hbase com timestamp da data de inserção/alter do registro,
-tem mesmo padrão do Cassandra, guarda versoes do mesmo registro na tab.
-#Inserir + 1 identificador de col = 
+Mostra tab hbase com timestamp da data de inserção/alter do registro,
+tem mesmo padrão Cassandra, guarda versoes do mesmo registro na tab.
+#Inserir + 1 identificador de col na column family: 
 put 'funcionario', '1', 'pessoais:cidade', 'São Paulo'
-scan 'funcionario' (para ver o map da tab atualizado)
+#Exibe tabela(map): scan 'funcionario'
+Dá visão do map com nro da row key, traz linhas como col (não
+se vê uma tab); visualiza-se o map = nº row key, column family,
+column identifier e seu valor.
 No dia a dia, a manipulação nao é manual, será carregado o HBase por
 meio de um software de processamento distribuído, como o Spark que 
 faz leituras e gravações no HBase. Em geral, consultas são via shell.
@@ -184,7 +197,7 @@ flexibilidade do NoSQL pela qual cada registro pode ter seu schema).
 Incluida mais uma column family, informa que guardará versoes
 #Habilita tab: enable 'funcionario'
 Uso de disable/enable garante que tenha consistencia nos dados, pois
-impede que ocorra outra alteração simulatenae no mesmo campo da tab.
+impede que ocorra outra alteração simultanea no mesmo campo da tab.
 #Inserir dados na col hobby:
 put 'funcionario', '1', 'hobby:nome', 'Ler livros'
 put 'funcionario', '1', 'hobby:nome', 'Pescar'
@@ -223,22 +236,32 @@ dTTL e quantos segundos terá.
 HBase não suporta query como: select * from funcionario!!!
 
 - Conceitos básicos dos comandos no Cassandra
-#Acessar Cassandra na VM: cqlsh
+#Acessar Cassandra na VM: cqlsh (erro de conexao impediu acesso!)
 #Abrir guia de comandos do shell: help
-#Ajuda de um comando: help alter 
+#Ajuda de um comando: help alter
+Práticas foram feitas no ambiente (shell) do curso Cassandra CQL,
+disponível em: https://www.katacoda.com/datastax/courses/cassandra-try-it-out/try-cql
+#Criar keyspace:
+CREATE KEYSPACE IF NOT EXISTS empresa
+WITH replication = {
+  'class' : 'SimpleStrategy',
+  'replication_factor' : 3
+}; 
+
 - Cenários de utilização
 Cenario 1 de utilização: Cassandra feito pra atender aplicativos,
 APIs, isso não entrou no HBase em sua criação, foi melhorado pra
 fazer também, seu foco não é esse. É possivel criar um app que
 acesse informações do HBase pra consumir.
 Cenario 2 de utilização: mais usado no Big Data, tem eventos que
-surgem dentro do cluster Kafka, como mensagens de negócio (faturas),
+surgem dentro do cluster Kafka, como messages de negócio (faturas)
 que são tratadas por framework de processamento distribuído (Spark
 Streaming), há leitura das msg, dos registros novos; pode fazer um
 enriquecimento ou processar os dados do Kafka com n fontes de dados
 (usando HBase ou Cassandra), até colocar dados como intermediários;
-por fim devolve a um destino variado no Cassandra, HDFS, HBase etc.
-NoSQL ajuda a dar agilidade para o cenario 2 funcionar.
+por fim devolve a destino variado (Cassandra, HDFS, HBase, Elastic
+Search etc.). NoSQL ajuda a dar agilidade pro cenario 2 funcionar,
+que é o mais pedido por clientes no mercado.
 Cenario 3 de utilização: cenario mais simples de estar o NoSQL; não
 precisa de dado vindo de evento, pode ter n origem, sendo usado via
 streaming ou por processo normal do Sparking; com enriquecimento no
@@ -250,11 +273,22 @@ Operações massivas, inserir muitos registros no HBase através de
 aplicações intermediárias (Sqoop, Spark, Apache Phoenix etc.).
 HBase sozinho não atua no ecossistema Hadoop, sempre interage com
 outro software/ambiente.
+Próximos passos + referências e bibliografia:
+Apache Spark (arquitetura de eventos no big data)
+Apache Phoenix (https://phoenix.apache.org)
+(https://phoenix.apache.org/who_is_using.html)
+Apache Cassandra (versão Cassandra As A Service da DATASTAX)
+(https://datastax.com)
+E-book "Cassandra: The Definitive Guide - 3rd Edition | O'Reilly"
+(https://www.datastax.com/resources/ebook/oreilly-cassandra-the-definitive-guide)
+
 
 - Dúvidas e comentários finais
-HBase é mais falado e usado fora do país. 
+HBase é mais falado e usado fora do país; usado principalmente por
+clientes com mais maturidade em engenharia de dados.
 ElasticSearch não tem proposta para Big Data, mas é compatível.
-Facebook nasceu com Cassandra.
+Facebook nasceu com Cassandra. Cassandra às vezes é usado por defi-
+nição de empresas de fora, é menos usado no Brasil.
 Firebase está mais vinculado a aplicações web e app, não tem suporte
 para Big Data.Firebase Google é usado para aplicaçoes web e mobile,
 não é NoSQL puro, mas um database as a service; funciona mais como
@@ -273,7 +307,7 @@ hdfs dfs -ls /hbase (hbase de dados, metadados, entre tab da mostra acima)
 hdfs dfs -ls /hbase/data (onde estão os dados)
 hdfs dfs -ls /hbase/data/default (tem tab criadas nos exercicios)
 HBase depende do HDFS pra armazenar os dados!!
-Hive e Phoenix dão conjunto de funcionalidades para HBase. Hive é um
-centralizador de dados.
-Linguagens mais comuns no Big Data são Scala (base Java) e Python pra
-construir pipeline. Boa parte do Hadoop é Java, sendo Scala compatível.
+Hive e Phoenix dão conjunto de funcionalidades para HBase. 
+Hive é um centralizador de dados.
+Linguagens + comuns no Big Data são Scala (base Java) e Python pra
+construir pipeline. Boa parte do Hadoop é Java, Scala é compatível.

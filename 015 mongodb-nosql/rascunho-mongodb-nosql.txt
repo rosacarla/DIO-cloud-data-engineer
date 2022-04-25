@@ -48,7 +48,7 @@ BD de colunas é o que menos difere de BD tradicionais.
 Grafos sao estruturas matematicas compostas por nós (em BD sao
 dados) e vértices (em BD sao relacionamentos). 
 Exemplo: BD Neo4j (aplica ACID)
-Prática em: sandbox.neo4j.com; fornece chave e endereço para 
+##Prática em: sandbox.neo4j.com; fornece chave e endereço pra 
 usar o BD concatenado em aplicações. 
 NÓ pode ter propriedades e labels ou não ter nenhuma delas.
 Comando CREATE não precisa ser replicado para criar proximo
@@ -72,7 +72,7 @@ adequado com consultas feitas por chave primaria, pode buscar
 por outros dados com uso de índices, mas a performance cai. 
 Chave primaria = row key, com sentido pensado p/ consulta.
 Cassandra tem ausência total de transações.
-Prática no site O'Reilly katacoda.com sem opção de integrar
+## Prática no site O'Reilly katacoda.com sem opção de integrar
 BD com aplicação. É ambiente de curso Cassandra CQL.
 https://www.katacoda.com/datastax/courses/cassandra-try-it-out/try-cql
 Tem diferença em nomenclaturas e arquitetura. Ao criar keyspace
