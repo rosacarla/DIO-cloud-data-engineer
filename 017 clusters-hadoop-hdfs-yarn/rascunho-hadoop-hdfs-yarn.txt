@@ -50,7 +50,7 @@ NN guarda informações dos metadados e sua distribuição.
 Se um dos nós é perdido, é possivel recuperar blocos
 em outros nós, pois o sistema de arquivo distribuído é
 tolerante à falha e os arq estão sempre disponíveis.
-Perguntamos pelo log? sistema responde o nº de B(loco).
+Perguntamos pelo log? sistema responde nº de B(loco).
 #copiar arq do HDFS para local
 hdfs dfs -get /tmp/file_test.txt
 #ingestao manual
