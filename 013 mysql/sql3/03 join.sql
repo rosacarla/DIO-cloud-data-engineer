@@ -160,7 +160,7 @@ consulta estendida em videos_canais junto com videos para mostrar todos os video
 */;
 SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_canal = v.id_video
 /*
-mesma onsulta resumida (com apelidos para tabelas) em videos canais de todos os videos por id_video, nome,autor
+mesma consulta resumida (com apelidos para tabelas) em videos canais de todos os videos por id_video, nome,autor
 */;
 
 SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_video = v.id_video
