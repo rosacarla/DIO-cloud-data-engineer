@@ -105,7 +105,7 @@ successfully
 * Comandos com YARN - Parte 3  
 ```  
 [everis@bigdata-srv ~]$ sudo -u hdfs yarn logs -applicationId 
-application_1649633181319_0001 |m
+application_1649633181319_0001 |more
 [sudo] password for everis:
 22/04/11 00:16:07 INFO client.RMProxy: Connecting to ResourceManager at 
 /0.0.0.0:8032  
@@ -115,9 +115,9 @@ application_1649633181319_0001 |m
 
 ## Links úteis  
 
-[Azure HDInsight](https://azure.microsoft.com/pt-br/services/hdinsight/#overview)
-[Hadoop Cluster](https://alissonmachado.com.br/hadoop-cluster/)
-[VirtualBox](https://www.treinaweb.com.br/blog/criando-uma-maquina-virtual-com-a-virtualbox)
-[VM Everis](https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing)
+[Azure HDInsight](https://azure.microsoft.com/pt-br/services/hdinsight/#overview)  
+[Hadoop Cluster](https://alissonmachado.com.br/hadoop-cluster/)  
+[VirtualBox](https://www.treinaweb.com.br/blog/criando-uma-maquina-virtual-com-a-virtualbox)  
+[VM Everis](https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing)  
 
 ---
